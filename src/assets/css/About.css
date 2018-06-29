@@ -1,0 +1,18 @@
+.profile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	flex-flow: column;
+}
+
+.profile > img {
+	width: 300px;
+}
+
+h1 {
+	font-size: 5em;
+	font-family: sans-serif;
+	color: white;
+	text-align: left;
+}

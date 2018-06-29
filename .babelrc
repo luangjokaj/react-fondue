@@ -1,0 +1,20 @@
+{
+	"presets": [
+		[
+			"env",
+			{
+				"targets": {
+					"browsers": ["last 2 versions"]
+				},
+				"debug": false
+			}
+		],
+		"babel-preset-react"
+	],
+	"plugins": ["syntax-dynamic-import", "universal-import", "transform-class-properties"],
+	"env": {
+		"development": {
+			"plugins": ["react-hot-loader/babel"]
+		}
+	}
+}
