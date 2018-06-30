@@ -42,7 +42,22 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: [MiniCSSExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+				use: [
+					MiniCSSExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true,
+							localIdentName: '[name]__[local]--[hash:base64:5]',
+						},
+					},
+					{
+						loader: 'postcss-loader',
+						options: {
+							ident: 'postcss',
+						},
+					},
+				],
 			},
 			{
 				test: /\.(jpg|svg|png|gif)$/,
@@ -66,7 +81,10 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new MiniCSSExtractPlugin(),
+		new MiniCSSExtractPlugin({
+			filename: '[name].css',
+			chunkFilename: '[name]-[hash:8].css',
+		}),
 		new OptimizeCssAssetsPlugin({
 			assetNameRegExp: /\.css$/g,
 			cssProcessor: require('cssnano'),

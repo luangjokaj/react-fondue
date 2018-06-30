@@ -27,12 +27,22 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: {
-					loader: 'css-loader',
-					options: {
-						minimize: true,
+				use: [
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true,
+							localIdentName: '[name]__[local]--[hash:base64:5]',
+							minimize: true,
+						},
 					},
-				},
+					{
+						loader: 'postcss-loader',
+						options: {
+							ident: 'postcss',
+						},
+					},
+				],
 			},
 			{
 				test: /\.(jpg|svg|png|gif)$/,

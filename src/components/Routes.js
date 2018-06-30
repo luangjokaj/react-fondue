@@ -1,18 +1,16 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import universal from 'react-universal-component';
 import { Switch } from 'react-router';
-import '../assets/css/nav.css';
+import styles from '../assets/css/nav.css';
+import '../assets/css/globals.css';
+import Nav from './Nav';
 
 const UniversalComponent = universal(props => import(`./${props.page}`));
 
 export default () => (
 	<div>
-		<div className="nav">
-			<Link to="/">Gallery</Link>
-			<Link to="/about">About</Link>
-			<Link to="/article">Article</Link>
-		</div>
+		<Nav />
 		<Switch>
 			<Route exact path="/">
 				<UniversalComponent page="Gallery" />

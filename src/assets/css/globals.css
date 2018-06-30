@@ -5,21 +5,3 @@ body {
 	background-color: var(--body);
 	font-family: Helvetica;
 }
-
-.content {
-	background-color: var(--bg);
-	font-family: sans-serif;
-	line-height: 1.5em;
-	width: 740px;
-	margin: 0 auto;
-	padding: 20px;
-	border-radius: 10px;
-	transition: all 0.3s ease;
-}
-
-.content > h1 {
-	font-size: 2em;
-	color: black;
-	text-shadow: none;
-	text-align: left;
-}

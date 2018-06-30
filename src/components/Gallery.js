@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import '../assets/css/Gallery.css';
+import styles from '../assets/css/Gallery.css';
 
 const getBundle = () => {
 	import('lodash').then(_ => {
