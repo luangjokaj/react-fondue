@@ -20,20 +20,9 @@ export default ({ clientStats }) => (req, res) => {
 		chunkNames: flushChunkNames(),
 	});
 
-	res.send(`
-	<!doctype html>
-	<html>
-		<head>
-			${styles}
-			${helmet.title}
-			${helmet.meta.toString()}
-			${helmet.link.toString()}
-		</head>
-		<body>
-			<div id="react-root">${app}</div>
-			${js}
-			${cssHash}
-		</body>
-	</html>
-`);
+	res.send(
+		`<!doctype html><html><head>${styles}${
+			helmet.title
+		}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`
+	);
 };
