@@ -20,37 +20,20 @@ export default ({ clientStats }) => (req, res) => {
 		chunkNames: flushChunkNames(),
 	});
 
-	// res.send(`<!doctype html>
-	// <html ${helmet.htmlAttributes.toString()}>
-	// 	<head>
-	// 		${styles}
-	// 		${helmet.title}
-	// 		${helmet.meta.toString()}
-	// 		${helmet.link.toString()}
-	// 	</head>
-	// 	<body ${helmet.bodyAttributes.toString()}>
-	// 		<div id="react-root">${renderToString(
-	// 			<StaticRouter location={req.url} context={{}}>
-	// 				<Routes />
-	// 			</StaticRouter>
-	// 		)}</div>
-	// 		${js}
-	// 	</body>
-	// </html>`);
-
 	res.send(`
-  <html>
-  <head>
-   		${styles}
-   		${helmet.title}
-   		${helmet.meta.toString()}
-   		${helmet.link.toString()}
-   	</head>
-    <body>
-      <div id="react-root">${app}</div>
-      ${js}
-      ${cssHash}
-    </body>
-  </html>
+	<!doctype html>
+	<html>
+		<head>
+			${styles}
+			${helmet.title}
+			${helmet.meta.toString()}
+			${helmet.link.toString()}
+		</head>
+		<body>
+			<div id="react-root">${app}</div>
+			${js}
+			${cssHash}
+		</body>
+	</html>
 `);
 };
