@@ -8,27 +8,49 @@ import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 
 export default ({ clientStats }) => (req, res) => {
+	const app = renderToString(
+		<StaticRouter location={req.url} context={{}}>
+			<Routes />
+		</StaticRouter>
+	);
+
+	const helmet = Helmet.renderStatic();
+
 	const { js, styles, cssHash } = flushChunks(clientStats, {
 		chunkNames: flushChunkNames(),
 	});
 
-	const helmet = Helmet.renderStatic();
+	// res.send(`<!doctype html>
+	// <html ${helmet.htmlAttributes.toString()}>
+	// 	<head>
+	// 		${styles}
+	// 		${helmet.title}
+	// 		${helmet.meta.toString()}
+	// 		${helmet.link.toString()}
+	// 	</head>
+	// 	<body ${helmet.bodyAttributes.toString()}>
+	// 		<div id="react-root">${renderToString(
+	// 			<StaticRouter location={req.url} context={{}}>
+	// 				<Routes />
+	// 			</StaticRouter>
+	// 		)}</div>
+	// 		${js}
+	// 	</body>
+	// </html>`);
 
-	res.send(`<!doctype html>
-<html ${helmet.htmlAttributes.toString()}>
-	<head>
-		${styles}
-		${helmet.title}
-		${helmet.meta.toString()}
-		${helmet.link.toString()}
-	</head>
-	<body ${helmet.bodyAttributes.toString()}>
-		<div id="react-root">${renderToString(
-			<StaticRouter location={req.url} context={{}}>
-				<Routes />
-			</StaticRouter>
-		)}</div>
-		${js}
-	</body>
-</html>`);
+	res.send(`
+  <html>
+  <head>
+   		${styles}
+   		${helmet.title}
+   		${helmet.meta.toString()}
+   		${helmet.link.toString()}
+   	</head>
+    <body>
+      <div id="react-root">${app}</div>
+      ${js}
+      ${cssHash}
+    </body>
+  </html>
+`);
 };
