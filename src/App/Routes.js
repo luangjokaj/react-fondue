@@ -2,11 +2,10 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import universal from 'react-universal-component';
 import { Switch } from 'react-router';
-import styles from '../assets/css/nav.css';
+import Nav from '../Components/Nav';
 import '../assets/css/globals.css';
-import Nav from './Nav';
 
-const UniversalComponent = universal(props => import(`./${props.page}`));
+const UniversalComponent = universal(props => import(`../Views/${props.page}`));
 
 export default () => (
 	<div>

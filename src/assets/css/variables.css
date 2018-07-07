@@ -1,4 +1,153 @@
 :root {
-	--body: darkgray;
-	--bg: lightgray;
+	--primary-color: #00508c;
+	--primary-color-hovered: color(var(--primary-color) lightness(45%));
+	--secondary-color: #002d50;
+	--extra-color: #ff4900;
+	--white: #ffffff;
+	--black: #000000;
+	--light-gray: #e5e5e5;
+	--medium-gray: #7a7a7a;
+	--dark-gray: #4a4a4a;
+	--success-color: #2ecc71;
+	--error-color: #e74c3c;
+}
+
+@custom-media --screen-tiny (max-width: 320px);
+@custom-media --screen-mobile (max-width: 640px);
+@custom-media --screen-phablet (max-width: 800px);
+@custom-media --screen-tablet print, (max-width: 1000px);
+@custom-media --screen-desktop print, (min-width: 1024px);
+@custom-media --screen-middle-max (max-width: 1300px);
+@custom-media --screen-middle-min (min-width: 1300px);
+@custom-media --screen-big print, (min-width: 2000px);
+@custom-media --screen-4k (min-width: 3870px);
+
+:root {
+	--font-text: 'Frutiger Roman';
+	--font-light: 'Frutiger Light';
+	--font-bold: 'Frutiger Bold';
+	--font-head: 'Lora', serif;
+	--font-special: var(--font-head);
+
+	--smaller-font-size: 12px;
+	--smaller-line-height: 1.3;
+
+	--small-font-size: 14px;
+	--small-line-height: 1.5;
+
+	--default-font-size: 16px;
+	--default-line-height: 1.5;
+
+	--big-font-size: 48px;
+	--big-line-height: 1.5;
+
+	--bigger-font-size: 64px;
+	--bigger-line-height: 1.5;
+
+	--h1-font-size: 48px;
+	--h1-line-height: 1.5;
+
+	--h1-font-size-mobile: 48px;
+	--h1-line-height-mobile: 1.5;
+
+	--h2-font-size: 36px;
+	--h2-line-height: 1.5;
+
+	--h2-font-size-mobile: 36px;
+	--h2-line-height-mobile: 1.5;
+
+	--h3-font-size: 28px;
+	--h3-line-height: 1.5;
+
+	--h3-font-size-mobile: 28px;
+	--h3-line-height-mobile: 1.5;
+
+	--h4-font-size: 24px;
+	--h4-line-height: 1.5;
+
+	--h4-font-size-mobile: 24px;
+	--h4-line-height-mobile: 1.5;
+
+	--h5-font-size: 18px;
+	--h5-line-height: 1.5;
+
+	--h5-font-size-mobile: 18px;
+	--h5-line-height-mobile: 1.5;
+
+	--h6-font-size: 16px;
+	--h6-line-height: 1.5;
+
+	--h6-font-size-mobile: 16px;
+	--h6-line-height-mobile: 1.5;
+
+	--h3-editor-font-size: var(--h1-font-size);
+	--h3-editor-line-height: var(--h1-line-height);
+
+	--h4-editor-font-size: var(--h2-font-size);
+	--h4-editor-line-height: var(--h2-line-height);
+}
+
+:root {
+	--clearfix: {
+		clear: both;
+
+		&:before,
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+
+	--noList: {
+		box-sizing: border-box;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		& li {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	--resetButton: {
+		appearance: none;
+		border: none;
+		background: none;
+		outline: none;
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+	}
+
+	--maxWidth: {
+		box-sizing: border-box;
+		max-width: 1300px;
+		margin: auto;
+
+		@media (--screen-middle-max) {
+			padding: 0 20px;
+		}
+	}
+
+	--fullWidth: {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100vw;
+	}
+
+	--container: {
+		margin: 0 auto;
+		max-width: 1024px;
+		box-sizing: border-box;
+	}
+
+	--centerBg: {
+		background-size: cover !important;
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+	}
 }

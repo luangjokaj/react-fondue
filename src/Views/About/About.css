@@ -1,4 +1,4 @@
-@import './variables';
+@import '../../assets/css/variables.css';
 
 .profile {
 	display: flex;
@@ -20,7 +20,8 @@
 }
 
 .content {
-	background-color: var(--bg);
+	background-color: var(--primary-color);
+	color: var(--white);
 	font-family: sans-serif;
 	line-height: 1.5em;
 	width: 740px;

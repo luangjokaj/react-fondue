@@ -1,7 +1,8 @@
 @import './variables.css';
+@import '../../../node_modules/normalize.css/normalize.css';
 
 body {
 	margin: 0;
-	background-color: var(--body);
+	background-color: var(--light-gray);
 	font-family: Helvetica;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-const MarkdownData = require('../../data/post.md');
-const imagePath = require('../assets/images/logo.svg');
-import styles from '../assets/css/About.css';
+const MarkdownData = require('../../../data/post.md');
+const imagePath = require('../../assets/images/logo.svg');
+import styles from './About.css';
 import { Helmet } from 'react-helmet';
 
 export default () => (

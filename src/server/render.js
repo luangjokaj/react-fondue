@@ -1,7 +1,7 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
-import Routes from '../components/Routes';
+import Routes from '../App/Routes';
 import { Helmet } from 'react-helmet';
 
 import { flushChunkNames } from 'react-universal-component/server';
