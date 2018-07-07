@@ -1,11 +1,53 @@
+@import '../../assets/css/variables.css';
+
 .navigation {
 	width: 100%;
 	line-height: 2em;
-	background-color: black;
-}
+	background-color: var(--primary-color);
+	display: flex;
+	justify-content: space-between;
 
-.navigation a {
-	color: white;
-	text-decoration: none;
-	padding: 0 20px;
+	& .logo {
+		box-sizing: border-box;
+		padding: 20px;
+
+		& img {
+			width: 22px;
+			height: 20px;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+
+		& span {
+			vertical-align: middle;
+			color: var(--white);
+			font-weight: bold;
+			font-size: var(--h5-font-size);
+		}
+	}
+
+	& .menu {
+		@apply --noList;
+		display: flex;
+		padding: 0 10px 0 0;
+
+		& li {
+			& a {
+				display: inline-block;
+				color: var(--white);
+				box-sizing: border-box;
+				font-size: var(--h5-font-size);
+				font-weight: 100;
+				padding: 20px 10px;
+
+				&:hover {
+					color: var(--extra-color);
+				}
+
+				&.active {
+					color: var(--extra-color);
+				}
+			}
+		}
+	}
 }

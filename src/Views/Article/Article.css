@@ -1,5 +1,10 @@
 @import '../../assets/css/variables.css';
 
-h1 {
-	color: blue;
+.article {
+	& .title {
+		font-size: var(--big-font-size);
+		line-height: var(--big-line-height);
+		font-weight: bold;
+		margin: 20px 0;
+	}
 }

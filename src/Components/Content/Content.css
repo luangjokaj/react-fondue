@@ -1,0 +1,5 @@
+@import '../../assets/css/variables.css';
+
+.content {
+	@apply --maxWidth;
+}

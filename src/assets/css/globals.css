@@ -1,8 +1,64 @@
 @import './variables.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
 @import '../../../node_modules/normalize.css/normalize.css';
 
+html,
 body {
 	margin: 0;
-	background-color: var(--light-gray);
-	font-family: Helvetica;
+	padding: 0;
+	height: 100%;
+	font-family: var(--font-text);
+	font-size: var(--default-font-size);
+	line-height: var(--default-line-height);
+}
+
+body {
+	font-size-adjust: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: none;
+}
+
+a {
+	outline: none;
+
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+figure {
+	margin: 0;
+}
+
+strong,
+b {
+	font-family: var(--font-head);
+	font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-head);
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: var(--h1-font-size);
+	line-height: var(--h1-line-height);
+}
+
+h2 {
+	font-size: var(--h2-font-size);
+	line-height: var(--h2-line-height);
+}
+
+p {
+	font-family: var(--font-text);
+	font-size: var(--default-font-size);
+	color: var(--medium-gray);
 }

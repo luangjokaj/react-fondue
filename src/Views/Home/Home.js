@@ -1,19 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import data from '../../../data/bio';
-
-const getBundle = () => {
-	import('lodash').then(_ => {
-		console.log('imported', _);
-	});
-};
+import Content from '../../Components/Content';
+import styles from './Home.css';
 
 export default () => (
 	<div>
 		<Helmet encodeSpecialCharacters={true}>
-			<title>Home Page</title>
+			<title>React SSR Boilerplate • Home</title>
 		</Helmet>
-		<h1 onClick={getBundle}>Home page</h1>
-		<div>{data}</div>
+		<div className={styles.intro}>
+			<h1 className={styles.title}>React Boilerplate</h1>
+			<p className={styles.desc}>A minimal React boilerplate with Server side rendering.</p>
+		</div>
 	</div>
 );

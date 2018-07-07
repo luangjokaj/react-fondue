@@ -1,8 +1,8 @@
 :root {
-	--primary-color: #00508c;
+	--primary-color: #21242a;
 	--primary-color-hovered: color(var(--primary-color) lightness(45%));
-	--secondary-color: #002d50;
-	--extra-color: #ff4900;
+	--secondary-color: #292c34;
+	--extra-color: #60dbfb;
 	--white: #ffffff;
 	--black: #000000;
 	--light-gray: #e5e5e5;
@@ -23,10 +23,8 @@
 @custom-media --screen-4k (min-width: 3870px);
 
 :root {
-	--font-text: 'Frutiger Roman';
-	--font-light: 'Frutiger Light';
-	--font-bold: 'Frutiger Bold';
-	--font-head: 'Lora', serif;
+	--font-text: 'Roboto', sans-serif;
+	--font-head: var(--font-text);
 	--font-special: var(--font-head);
 
 	--smaller-font-size: 12px;
@@ -39,28 +37,28 @@
 	--default-line-height: 1.5;
 
 	--big-font-size: 48px;
-	--big-line-height: 1.5;
+	--big-line-height: 1.3;
 
 	--bigger-font-size: 64px;
-	--bigger-line-height: 1.5;
+	--bigger-line-height: 1.4;
 
 	--h1-font-size: 48px;
-	--h1-line-height: 1.5;
+	--h1-line-height: 1.3;
 
 	--h1-font-size-mobile: 48px;
-	--h1-line-height-mobile: 1.5;
+	--h1-line-height-mobile: 1.3;
 
 	--h2-font-size: 36px;
-	--h2-line-height: 1.5;
+	--h2-line-height: 1.3;
 
 	--h2-font-size-mobile: 36px;
-	--h2-line-height-mobile: 1.5;
+	--h2-line-height-mobile: 1.3;
 
 	--h3-font-size: 28px;
-	--h3-line-height: 1.5;
+	--h3-line-height: 1.4;
 
 	--h3-font-size-mobile: 28px;
-	--h3-line-height-mobile: 1.5;
+	--h3-line-height-mobile: 1.3;
 
 	--h4-font-size: 24px;
 	--h4-line-height: 1.5;

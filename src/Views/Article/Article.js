@@ -1,19 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Content from '../../Components/Content';
 import data from '../../../data/bio';
-
-const getBundle = () => {
-	import('lodash').then(_ => {
-		console.log('imported', _);
-	});
-};
+import styles from './Article.css';
 
 export default () => (
 	<div>
 		<Helmet encodeSpecialCharacters={true}>
-			<title>Interfaces 4 Humans - Gallery</title>
+			<title>React SSR Boilerplate • Article</title>
 		</Helmet>
-		<h1 onClick={getBundle}>Gallery</h1>
-		<div>{data}</div>
+		<Content>
+			<div className={styles.article}>
+				<h1 className={styles.title}>Article</h1>
+				<div>{data}</div>
+			</div>
+		</Content>
 	</div>
 );
