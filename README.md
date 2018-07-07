@@ -3,7 +3,7 @@
 # Interfaces4Humans [![Dependencies](https://david-dm.org/luangjokaj/react-ssr-boilerplate.svg)](https://david-dm.org/luangjokaj/react-ssr-boilerplate)
 This project has been created with Webpack. 
 
-https://www.interfaces4humans.com/
+Demo: https://stormy-reef-46692.herokuapp.com/
 
 **It includes:**
 - Babel
