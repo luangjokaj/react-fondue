@@ -61,6 +61,7 @@
 	},
 	"scripts": {
 		"start": "NODE_ENV=production node src/server/main.js",
+		"prod": "NODE_ENV=production node src/server/main.js",
 		"dev": "NODE_ENV=development nodemon --watch src/server --watch config --inspect src/server/main.js"
 	},
 	"devDependencies": {
