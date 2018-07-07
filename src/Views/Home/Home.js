@@ -11,9 +11,9 @@ const getBundle = () => {
 export default () => (
 	<div>
 		<Helmet encodeSpecialCharacters={true}>
-			<title>Interfaces 4 Humans - Gallery</title>
+			<title>Home Page</title>
 		</Helmet>
-		<h1 onClick={getBundle}>Gallery 1</h1>
+		<h1 onClick={getBundle}>Home page</h1>
 		<div>{data}</div>
 	</div>
 );

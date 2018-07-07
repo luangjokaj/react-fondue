@@ -6,7 +6,7 @@ function Nav() {
 	return (
 		<div>
 			<div className={styles.navigation}>
-				<Link to="/">Gallery</Link>
+				<Link to="/">Home</Link>
 				<Link to="/about">About</Link>
 				<Link to="/article">Article</Link>
 			</div>

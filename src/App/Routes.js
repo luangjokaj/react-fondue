@@ -12,7 +12,7 @@ export default () => (
 		<Nav />
 		<Switch>
 			<Route exact path="/">
-				<UniversalComponent page="Gallery" />
+				<UniversalComponent page="Home" />
 			</Route>
 			<Route path="/about">
 				<UniversalComponent page="About" />
