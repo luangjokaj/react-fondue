@@ -5,8 +5,11 @@ import { Switch } from 'react-router';
 import Nav from '../Components/Nav';
 import '../assets/css/globals.css';
 import { Helmet } from 'react-helmet';
+import Loading from '../Components/Loading';
 
-const UniversalComponent = universal(props => import(`../Views/${props.page}`));
+const UniversalComponent = universal(props => import(`../Views/${props.page}`), {
+	loading: () => <Loading />,
+});
 
 export default () => (
 	<div>

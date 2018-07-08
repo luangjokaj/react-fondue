@@ -1,4 +1,4 @@
-![react-ssr-boilerplate](https://i.imgur.com/ZBbEiPg.png)
+![react-ssr-boilerplate](https://i.imgur.com/YbNmbKJ.png)
 
 # Interfaces4Humans [![Dependencies](https://david-dm.org/luangjokaj/react-ssr-boilerplate.svg)](https://david-dm.org/luangjokaj/react-ssr-boilerplate)
 This project has been created with Webpack. 
