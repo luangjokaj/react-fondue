@@ -23,17 +23,14 @@ export default () => (
 		</Helmet>
 		<Nav />
 		<Switch>
-			<Route exact path="/">
-				<UniversalComponent page="Home" />
-			</Route>
 			<Route exact path="/about">
 				<UniversalComponent page="About" />
 			</Route>
 			<Route exact path="/article">
 				<UniversalComponent page="Article" />
 			</Route>
-			<Route exact>
-				<UniversalComponent page="NotFound" />
+			<Route path="/">
+				<UniversalComponent page="Home" />
 			</Route>
 		</Switch>
 	</div>
