@@ -16,6 +16,7 @@ export default () => (
 				href="https://res.cloudinary.com/riangle/image/upload/v1531060402/favicon_zxkyaz.ico"
 				type="image/x-icon"
 			/>
+			<title>React SSR Boilerplate</title>
 		</Helmet>
 		<Nav />
 		<Switch>
