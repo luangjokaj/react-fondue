@@ -22,10 +22,10 @@ export default () => (
 			<Route exact path="/">
 				<UniversalComponent page="Home" />
 			</Route>
-			<Route path="/about">
+			<Route exact path="/about">
 				<UniversalComponent page="About" />
 			</Route>
-			<Route path="/article">
+			<Route exact path="/article">
 				<UniversalComponent page="Article" />
 			</Route>
 		</Switch>
