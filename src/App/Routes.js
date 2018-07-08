@@ -1,11 +1,12 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import universal from 'react-universal-component';
-import { Switch } from 'react-router';
+import { Switch, Redirect } from 'react-router';
 import Nav from '../Components/Nav';
 import '../assets/css/globals.css';
 import { Helmet } from 'react-helmet';
 import Loading from '../Components/Loading';
+import NotFound from '../Views/NotFound';
 
 const UniversalComponent = universal(props => import(`../Views/${props.page}`), {
 	loading: () => <Loading />,
@@ -23,14 +24,18 @@ export default () => (
 		</Helmet>
 		<Nav />
 		<Switch>
+			<Redirect exact from="/" to="/home" />
 			<Route exact path="/about">
 				<UniversalComponent page="About" />
 			</Route>
 			<Route exact path="/article">
 				<UniversalComponent page="Article" />
 			</Route>
-			<Route path="/">
+			<Route exact path="/home">
 				<UniversalComponent page="Home" />
+			</Route>
+			<Route>
+				<NotFound />
 			</Route>
 		</Switch>
 	</div>
