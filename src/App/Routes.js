@@ -29,7 +29,7 @@ export default () => (
 			<Route exact path="/article">
 				<UniversalComponent page="Article" />
 			</Route>
-			<Route>
+			<Route exact>
 				<UniversalComponent page="NotFound" />
 			</Route>
 		</Switch>
