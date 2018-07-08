@@ -5,7 +5,7 @@ const externals = require('./node-externals');
 module.exports = {
 	name: 'server',
 	target: 'node',
-	externals: externals,
+	externals,
 	entry: './src/server/render.js',
 	mode: 'production',
 	output: {
@@ -49,7 +49,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: 'images/[name].[ext]',
+							name: '/images/[name].[ext]',
 							emitFile: false,
 						},
 					},
