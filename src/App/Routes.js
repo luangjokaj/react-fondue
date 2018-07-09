@@ -1,18 +1,17 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 import universal from 'react-universal-component';
-import { Switch, Redirect } from 'react-router';
+import { Route, Switch, Redirect } from 'react-router';
 import Nav from '../Components/Nav';
 import '../assets/css/globals.css';
 import { Helmet } from 'react-helmet';
 import Loading from '../Components/Loading';
-import NotFound from '../Views/NotFound';
+import { RedirectWithStatus } from '../Components/RedirectStatus';
 
 const UniversalComponent = universal(props => import(`../Views/${props.page}`), {
 	loading: () => <Loading />,
 });
 
-export default () => (
+export default ({ staticContext, lang }: Props) => (
 	<div>
 		<Helmet>
 			<link
@@ -20,23 +19,28 @@ export default () => (
 				href="https://res.cloudinary.com/riangle/image/upload/v1531060402/favicon_zxkyaz.ico"
 				type="image/x-icon"
 			/>
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<title>React SSR Boilerplate</title>
 		</Helmet>
-		<Nav />
+		<Nav lang={lang} />
 		<Switch>
-			<Redirect exact from="/" to="/home" />
-			<Route exact path="/about">
-				<UniversalComponent page="About" />
-			</Route>
-			<Route exact path="/article">
-				<UniversalComponent page="Article" />
-			</Route>
-			<Route exact path="/home">
-				<UniversalComponent page="Home" />
-			</Route>
-			<Route>
-				<NotFound />
-			</Route>
+			<Route
+				exact
+				path="/:lang"
+				render={routeProps => <UniversalComponent page="Home" {...routeProps} />}
+			/>
+			<Route
+				exact
+				path="/:lang/about"
+				render={routeProps => <UniversalComponent page="About" {...routeProps} />}
+			/>
+			<Route
+				exact
+				path="/:lang/article"
+				render={routeProps => <UniversalComponent page="Article" {...routeProps} />}
+			/>
+			<RedirectWithStatus status={301} exact from="/" to={`/${lang}`} />
+			<Route render={routeProps => <UniversalComponent page="NotFound" {...routeProps} />} />
 		</Switch>
 	</div>
 );
