@@ -1,4 +1,4 @@
-[![react-ssr-boilerplate](https://i.imgur.com/YbNmbKJ.png)](https://react-ssr-boilerplate.herokuapp.com/)
+[![react-ssr-boilerplate](https://i.imgur.com/YbNmbKJ.png)](https://github.com/luangjokaj/react-ssr-boilerplate)
 
 # React SSR Boilerplate [![Dependencies](https://david-dm.org/luangjokaj/react-ssr-boilerplate.svg)](https://david-dm.org/luangjokaj/react-ssr-boilerplate)
 This project has been created with Webpack. 
