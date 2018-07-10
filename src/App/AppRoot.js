@@ -2,7 +2,6 @@ import 'babel-polyfill';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './Routes';
-import guessLocale from '../client-locale/guessLocale';
 
 export default class extends React.Component {
 	constructor(props) {
@@ -11,10 +10,12 @@ export default class extends React.Component {
 	}
 
 	render() {
-		const currentLang = navigator && navigator.language.substr(0, 2);
+		const isEn = location.pathname.substr(1, 2) == 'en' && 'en';
+		const isDe = location.pathname.substr(1, 2) == 'de' && 'de';
+		const currentLang = isEn || isDe || navigator.language.substr(0, 2);
 		return (
 			<Router>
-				<Routes lang={(currentLang && currentLang) || 'en'} />
+				<Routes lang={navigator && currentLang} />
 			</Router>
 		);
 	}

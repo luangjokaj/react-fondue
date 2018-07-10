@@ -12,7 +12,16 @@ import guessLocale from '../client-locale/guessLocale';
 
 export default ({ clientStats }) => (req, res) => {
 	const userLocales = extractLocalesFromReq(req);
-	const lang = guessLocale(['de', 'en'], userLocales, 'en');
+	let lang = guessLocale(['de', 'en'], userLocales, 'en');
+
+	if (req.originalUrl.substr(1, 2) == 'de') {
+		lang = 'de';
+	}
+
+	if (req.originalUrl.substr(1, 2) == 'en') {
+		lang = 'en';
+	}
+
 	const context = {};
 	const app = renderToString(
 		<StaticRouter location={req.url} context={context}>
@@ -29,7 +38,7 @@ export default ({ clientStats }) => (req, res) => {
 	const status = context.status || 200;
 
 	if (context.status == 404) {
-		console.log('Error');
+		console.log('Error 404: ', req.originalUrl);
 	}
 
 	if (context.url) {
