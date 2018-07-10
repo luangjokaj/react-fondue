@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import Content from '../../Components/Content';
 import data from '../../../data/bio';
 import styles from './NotFound.css';
 import AppearAfter from '../../Components/AppearAfter';
+import { Status } from '../../Components/Status';
 
 function NotFound() {
 	return (
-		<div>
+		<Fragment>
 			<Helmet encodeSpecialCharacters={true}>
 				<title>React SSR Boilerplate • Not Found</title>
 			</Helmet>
+			<Status code={404} />
 			<AppearAfter className={styles.content} delay={500}>
 				<Content>
 					<div className={styles.notFound}>
@@ -19,7 +21,7 @@ function NotFound() {
 					</div>
 				</Content>
 			</AppearAfter>
-		</div>
+		</Fragment>
 	);
 }
 
