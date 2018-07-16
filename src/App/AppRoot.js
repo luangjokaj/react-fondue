@@ -12,7 +12,7 @@ export default class extends React.Component {
 	render() {
 		const isEn = location.pathname.substr(1, 2) == 'en' && 'en';
 		const isDe = location.pathname.substr(1, 2) == 'de' && 'de';
-		const currentLang = isEn || isDe || navigator.language.substr(0, 2);
+		const currentLang = isEn || isDe || 'en';
 		return (
 			<Router>
 				<Routes lang={navigator && currentLang} />
