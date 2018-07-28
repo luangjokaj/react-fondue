@@ -20,14 +20,6 @@ module.exports = {
 		path: path.resolve(__dirname, '../dist'),
 		publicPath: '/',
 	},
-	devServer: {
-		contentBase: 'dist',
-		overlay: true,
-		hot: true,
-		stats: {
-			colors: true,
-		},
-	},
 	devtool: 'source-map',
 	module: {
 		rules: [
