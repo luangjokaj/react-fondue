@@ -8,7 +8,7 @@ const translationsDe = {
 
 const translationsEn = {
 	language: {
-		title: 'A minimal React boilerplate with Server side rendering.',
+		title: 'A minimal React boilerplate with server side rendering.',
 	},
 };
 

@@ -1,5 +1,11 @@
 @import '../../assets/css/variables.css';
 
 .content {
-	@apply --maxWidth;
+	box-sizing: border-box;
+	max-width: 1300px;
+	margin: auto;
+
+	@media (--screen-middle-max) {
+		padding: 0 20px;
+	}
 }

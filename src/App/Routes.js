@@ -6,6 +6,7 @@ import '../assets/css/globals.css';
 import { Helmet } from 'react-helmet';
 import Loading from '../Components/Loading';
 import { RedirectWithStatus } from '../Components/RedirectStatus';
+import riangle from '../assets/images/riangle.svg';
 
 const UniversalComponent = universal(props => import(`../Views/${props.page}`), {
 	loading: () => <Loading />,
@@ -42,5 +43,10 @@ export default ({ staticContext, lang }) => (
 			<RedirectWithStatus status={301} exact from="/" to={`/${lang}`} />
 			<Route render={routeProps => <UniversalComponent page="NotFound" {...routeProps} />} />
 		</Switch>
+		<footer>
+			<a href="https://www.riangle.com/">
+				<img src={riangle} alt="Riangle Logo" />
+			</a>
+		</footer>
 	</div>
 );

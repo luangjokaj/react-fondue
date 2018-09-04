@@ -27,11 +27,18 @@
 	}
 
 	& .menu {
-		@apply --noList;
+		box-sizing: border-box;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 		display: flex;
 		padding: 0 10px 0 0;
 
 		& li {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+
 			& a {
 				display: inline-block;
 				color: var(--white);

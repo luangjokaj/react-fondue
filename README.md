@@ -1,4 +1,4 @@
-[![react-ssr-boilerplate](https://i.imgur.com/YbNmbKJ.png)](https://github.com/luangjokaj/react-ssr-boilerplate)
+[![react-ssr-boilerplate](https://i.imgur.com/c4BqIax.png)](https://github.com/luangjokaj/react-ssr-boilerplate)
 
 # React SSR Boilerplate
 This project has been created with Webpack. 
@@ -6,13 +6,13 @@ This project has been created with Webpack.
 Demo: https://react-ssr-boilerplate.herokuapp.com/
 
 **It includes:**
-- Babel
-- React
-- PostCSS
-- Express
-- Hot Module Replacement
-- Code Splitting
-- Server Side Rendering
+- Babel ⚙
+- React ⚛
+- PostCSS 🎨
+- Express Server 🤖
+- Hot Module Replacement 🔥
+- Code Splitting ✂️
+- Server Side Rendering 🛎
 
 ### Install dependencies
 ```

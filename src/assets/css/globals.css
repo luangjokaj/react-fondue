@@ -62,3 +62,27 @@ p {
 	font-size: var(--default-font-size);
 	color: var(--medium-gray);
 }
+
+footer {
+	text-align: center;
+
+	& a {
+		display: inline-block;
+		text-align: center;
+		margin: auto;
+		box-sizing: border-box;
+		padding: 20px;
+		transition: all .5s ease;
+
+		& img {
+			display: inline-block;
+			transition: all .5s ease;
+		}
+
+		&:hover {
+			& img {
+				transform: perspective(400px) rotateY(180deg) scale(1);
+			}
+		}
+	}
+}
