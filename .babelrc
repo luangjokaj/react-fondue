@@ -1,20 +1,29 @@
 {
 	"presets": [
 		[
-			"env",
+			"@babel/preset-env",
 			{
 				"targets": {
-					"browsers": ["last 2 versions"]
+					"browsers": [
+						"last 2 versions"
+					]
 				},
 				"debug": false
 			}
 		],
-		"babel-preset-react"
+		"@babel/preset-react"
 	],
-	"plugins": ["syntax-dynamic-import", "universal-import", "transform-class-properties", "transform-object-rest-spread"],
+	"plugins": [
+		"@babel/plugin-syntax-dynamic-import",
+		"universal-import",
+		"@babel/plugin-proposal-class-properties",
+		"@babel/plugin-proposal-object-rest-spread"
+	],
 	"env": {
 		"development": {
-			"plugins": ["react-hot-loader/babel"]
+			"plugins": [
+				"react-hot-loader/babel"
+			]
 		}
 	}
 }

@@ -11,7 +11,7 @@ const UniversalComponent = universal(props => import(`../Views/${props.page}`), 
 	loading: () => <Loading />,
 });
 
-export default ({ staticContext, lang }: Props) => (
+export default ({ staticContext, lang }) => (
 	<div>
 		<Helmet>
 			<link

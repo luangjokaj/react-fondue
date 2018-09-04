@@ -12,7 +12,7 @@ const translationsEn = {
 	},
 };
 
-const t = (lang, key, params): string => {
+const t = (lang, key, params) => {
 	const langTranslations = lang === 'de' ? translationsDe : translationsEn;
 	const translation = key
 		.split('.')

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 
 class AppearAfter extends Component {
-
 	componentWillMount() {
 		setTimeout(() => this.setState({ isVisible: true }), this.props.delay || 0);
 	}
@@ -12,16 +11,13 @@ class AppearAfter extends Component {
 		this.state = { isVisible: false };
 	}
 	render() {
-		const { isVisible }: Props = this.state;
+		const { isVisible } = this.state;
 		const { children, className } = this.props;
 		return React.cloneElement(children, {
-			className: classNames(
-				className,
-				{
-					'visible': isVisible,
-					'hidden': !isVisible,
-				}
-			),
+			className: classNames(className, {
+				visible: isVisible,
+				hidden: !isVisible,
+			}),
 		});
 	}
 }
