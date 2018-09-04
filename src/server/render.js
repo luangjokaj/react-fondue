@@ -26,7 +26,7 @@ export default ({ clientStats }) => (req, res) => {
 	const app = renderToString(
 		<StaticRouter location={req.url} context={context}>
 			<Routes context={context} lang={lang} />
-		</StaticRouter>
+		</StaticRouter>,
 	);
 
 	const helmet = Helmet.renderStatic();
@@ -52,6 +52,6 @@ export default ({ clientStats }) => (req, res) => {
 		.send(
 			`<!doctype html><html><head>${styles}${
 				helmet.title
-			}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`
+			}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`,
 		);
 };
