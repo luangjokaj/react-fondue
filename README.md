@@ -30,5 +30,5 @@ Build and open your browser to http://localhost:8080.
 
 ### Builds and runs the app in production
 ```
-> $ npm start
+> $ npm run prod
 ```
