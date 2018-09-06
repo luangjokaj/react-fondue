@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 
 class AppearAfter extends Component {
-	componentWillMount() {
+	componentDidMount() {
 		setTimeout(() => this.setState({ isVisible: true }), this.props.delay || 0);
 	}
 
