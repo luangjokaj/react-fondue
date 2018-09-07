@@ -10,6 +10,10 @@ function Home({ match }) {
 		<div>
 			<Helmet encodeSpecialCharacters={true}>
 				<title>React SSR Boilerplate • Home</title>
+				<meta
+					name="description"
+					content="A minimal React boilerplate with support for code splitting, hot module reload and server side rendering."
+				/>
 			</Helmet>
 			<div className={styles.intro}>
 				<h1 className={styles.title}>React Boilerplate</h1>

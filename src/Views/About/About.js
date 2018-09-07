@@ -10,6 +10,10 @@ function About() {
 		<div>
 			<Helmet encodeSpecialCharacters={true}>
 				<title>React SSR Boilerplate • About</title>
+				<meta
+					name="description"
+					content="A minimal React boilerplate with support for code splitting, hot module reload and server side rendering."
+				/>
 			</Helmet>
 			<Content>
 				<div className={styles.profile}>

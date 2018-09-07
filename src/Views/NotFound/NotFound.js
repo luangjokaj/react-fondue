@@ -11,6 +11,10 @@ function NotFound() {
 		<Fragment>
 			<Helmet encodeSpecialCharacters={true}>
 				<title>React SSR Boilerplate • Not Found</title>
+				<meta
+					name="description"
+					content="A minimal React boilerplate with support for code splitting, hot module reload and server side rendering."
+				/>
 			</Helmet>
 			<Status code={404} />
 			<AppearAfter className={styles.content} delay={500}>

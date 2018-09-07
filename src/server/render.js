@@ -4,6 +4,8 @@ import { StaticRouter } from 'react-router';
 import accepts from 'accepts';
 import Routes from '../App/Routes';
 import { Helmet } from 'react-helmet';
+import sitemap from './sitemap';
+import robots from './robots';
 
 import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
@@ -41,6 +43,20 @@ export default ({ clientStats }) => (req, res) => {
 		console.log('Error 404: ', req.originalUrl);
 	}
 
+	if (req.url == '/sitemap.xml') {
+		return res
+			.header('Content-Type', 'application/xml')
+			.status(status)
+			.send(sitemap);
+	}
+
+	if (req.url == '/robots.txt' || req.url == '/Robots.txt') {
+		return res
+			.header('Content-Type', 'text/plain')
+			.status(status)
+			.send(robots);
+	}
+
 	if (context.url) {
 		const redirectStatus = context.status || 302;
 		res.redirect(redirectStatus, context.url);
@@ -50,7 +66,7 @@ export default ({ clientStats }) => (req, res) => {
 	res
 		.status(status)
 		.send(
-			`<!doctype html><html><head>${styles}${
+			`<!doctype html><html lang="${lang}"><head>${styles}${
 				helmet.title
 			}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`,
 		);
