@@ -6,6 +6,7 @@ import Routes from '../App/Routes';
 import { Helmet } from 'react-helmet';
 import sitemap from './sitemap';
 import robots from './robots';
+import manifest from './manifest';
 
 import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
@@ -57,17 +58,25 @@ export default ({ clientStats }) => (req, res) => {
 			.send(robots);
 	}
 
+	if (req.url == '/manifest.json' || req.url == '/Manifest.json') {
+		return res
+			.header('Content-Type', 'application/manifest+json')
+			.status(status)
+			.send(manifest);
+	}
+
 	if (context.url) {
 		const redirectStatus = context.status || 302;
 		res.redirect(redirectStatus, context.url);
 		return;
 	}
 
-	res
-		.status(status)
-		.send(
-			`<!doctype html><html lang="${lang}"><head>${styles}${
-				helmet.title
-			}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`,
-		);
+	res.setHeader('Cache-Control', 'public, max-age=2628000');
+
+	res.status(status).send(
+		`<!doctype html><html lang="${lang}"><head><link rel="manifest" href="./manifest.json">  <meta name="theme-color" content="#000000"/>
+			${styles}${
+			helmet.title
+		}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`,
+	);
 };
