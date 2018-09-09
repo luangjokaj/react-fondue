@@ -1,7 +1,9 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
+import routes from './routes';
 const server = express();
 server.use(cookieParser());
+server.use(routes);
 import path from 'path';
 const expressStaticGzip = require('express-static-gzip');
 import webpack from 'webpack';

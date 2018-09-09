@@ -12,6 +12,24 @@ const UniversalComponent = universal(props => import(`../Views/${props.page}`), 
 	loading: () => <Loading />,
 });
 
+export const routes =  [
+  {
+    exact: true,
+    path: "/:lang",
+    page: "Home",
+  },
+  {
+    exact: true,
+    path: "/:lang/about",
+    page: "About",
+  },
+  {
+    exact: true,
+    path: "/:lang/article",
+    page: "Article",
+  },
+];
+
 export default ({ staticContext, lang }) => (
 	<div>
 		<Helmet>
@@ -25,21 +43,13 @@ export default ({ staticContext, lang }) => (
 		</Helmet>
 		<Nav lang={lang} />
 		<Switch>
-			<Route
-				exact
-				path="/:lang"
-				render={routeProps => <UniversalComponent page="Home" {...routeProps} />}
-			/>
-			<Route
-				exact
-				path="/:lang/about"
-				render={routeProps => <UniversalComponent page="About" {...routeProps} />}
-			/>
-			<Route
-				exact
-				path="/:lang/article"
-				render={routeProps => <UniversalComponent page="Article" {...routeProps} />}
-			/>
+			{routes.map(route => (
+				<Route
+					key={route.path}
+					render={routeProps => <UniversalComponent page={route.page} {...routeProps} />}
+					{ ...route }
+				/>
+			))}
 			<RedirectWithStatus status={301} exact from="/" to={`/${lang}`} />
 			<Route render={routeProps => <UniversalComponent page="NotFound" {...routeProps} />} />
 		</Switch>
