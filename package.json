@@ -53,7 +53,7 @@
 		"react-router": "^4.3.1",
 		"react-router-dom": "^4.3.1",
 		"react-universal-component": "^2.0.9",
-		"style-loader": "^0.23.0",
+		"style-loader": "^0.23.1",
 		"uglifyjs-webpack-plugin": "^2.0.1",
 		"url-loader": "1.1.1",
 		"webpack": "^4.20.2",
@@ -61,7 +61,7 @@
 		"webpack-cli": "^3.1.2",
 		"webpack-dev-middleware": "3.4.0",
 		"webpack-flush-chunks": "^2.0.3",
-		"webpack-hot-middleware": "2.24.2",
+		"webpack-hot-middleware": "2.24.3",
 		"webpack-hot-server-middleware": "^0.5.0",
 		"webpack-node-externals": "^1.7.2"
 	},
