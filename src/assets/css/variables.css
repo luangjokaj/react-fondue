@@ -84,3 +84,79 @@
 	--h4-editor-font-size: var(--h2-font-size);
 	--h4-editor-line-height: var(--h2-line-height);
 }
+
+@define-mixin clearFix {
+	clear: both;
+
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@define-mixin noList {
+	box-sizing: border-box;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	& li {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+@define-mixin resetButton {
+	appearance: none;
+	border: none;
+	background: none;
+	outline: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+@define-mixin maxWidth {
+	box-sizing: border-box;
+	max-width: 1100px;
+	margin: auto;
+
+	@media (--screen-middle-max) {
+		padding: 0 20px;
+	}
+}
+
+@define-mixin fullWidth {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+}
+
+@define-mixin container {
+	margin: 0 auto;
+	max-width: 1024px;
+	box-sizing: border-box;
+}
+
+@define-mixin centerBg {
+	background-size: cover !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+}
+
+@define-mixin title {
+	font-size: var(--big-font-size);
+	line-height: var(--big-line-height);
+	font-weight: bold;
+	margin: 20px 0;
+
+	@media (--screen-mobile) {
+		font-size: var(--h1-font-size-mobile);
+		line-height: var(--h1-line-height-mobile);
+		margin: 0 0 10px;
+	}
+}
