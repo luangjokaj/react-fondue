@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import Content from '../../Components/Content';
-import data from '../../../data/bio';
 import styles from './NotFound.css';
 import AppearAfter from '../../Components/AppearAfter';
 import { Status } from '../../Components/Status';
