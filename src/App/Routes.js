@@ -10,6 +10,7 @@ import riangle from '../assets/images/riangle.svg';
 
 const UniversalComponent = universal(props => import(`../Views/${props.page}`), {
 	loading: () => <Loading />,
+	ignoreBabelRename: true,
 });
 
 export default ({ staticContext, lang }) => (

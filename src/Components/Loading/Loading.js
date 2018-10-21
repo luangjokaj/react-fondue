@@ -5,12 +5,8 @@ import AppearAfter from '../../Components/AppearAfter';
 
 function Loading() {
 	return (
-		<div>
-			<AppearAfter delay={300} className={styles.loading}>
-				<div>
-					<img src={logo} alt="Loading Logo" />
-				</div>
-			</AppearAfter>
+		<div className={styles.loading}>
+			<img src={logo} alt="Loading Logo" />
 		</div>
 	);
 }

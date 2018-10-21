@@ -8,13 +8,7 @@
 	top: 50%;
 	left: 50%;
 	transition: all 0.3s ease;
-	transform: translate(-50%, calc(-50% + 30px));
-	opacity: 0;
-
-	&:global(.visible) {
-		transform: translate(-50%, calc(-50% + 0));
-		opacity: 1;
-	}
+	transform: translate(-50%, calc(-50% + 0));
 
 	& img {
 		animation: spinner infinite 1s forwards;
