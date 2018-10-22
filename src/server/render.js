@@ -73,10 +73,11 @@ export default ({ clientStats }) => (req, res) => {
 
 	res.setHeader('Cache-Control', 'public, max-age=2628000');
 
-	res.status(status).send(
-		`<!doctype html><html lang="${lang}"><head><link rel="manifest" href="./manifest.json">  <meta name="theme-color" content="#000000"/>
-			${styles}${
-			helmet.title
-		}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`,
-	);
+	res
+		.status(status)
+		.send(
+			`<!doctype html><html lang="${lang}"><head><meta name="theme-color" content="#000000"/>${styles}${
+				helmet.title
+			}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`,
+		);
 };

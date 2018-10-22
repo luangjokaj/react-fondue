@@ -3,7 +3,7 @@ import universal from 'react-universal-component';
 import { Route, Switch, Redirect } from 'react-router';
 import Nav from '../Components/Nav';
 import '../assets/css/globals.css';
-import { Helmet } from 'react-helmet';
+import Head from '../Components/Head';
 import Loading from '../Components/Loading';
 import { RedirectWithStatus } from '../Components/RedirectStatus';
 import riangle from '../assets/images/riangle.svg';
@@ -15,15 +15,7 @@ const UniversalComponent = universal(props => import(`../Views/${props.page}`), 
 
 export default ({ staticContext, lang }) => (
 	<div>
-		<Helmet>
-			<link
-				rel="shortcut icon"
-				href="https://res.cloudinary.com/riangle/image/upload/v1531060402/favicon_zxkyaz.ico"
-				type="image/x-icon"
-			/>
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
-			<title>React SSR Boilerplate</title>
-		</Helmet>
+		<Head />
 		<Nav lang={lang} />
 		<Switch>
 			<Route

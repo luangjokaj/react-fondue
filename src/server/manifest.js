@@ -18,7 +18,6 @@ module.exports = {
 			type: 'image/png',
 		},
 	],
-	Scope: '/',
 	start_url: './',
 	display: 'standalone',
 	theme_color: '#000000',
