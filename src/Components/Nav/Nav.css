@@ -44,7 +44,7 @@
 				color: var(--white);
 				box-sizing: border-box;
 				font-size: var(--h5-font-size);
-				font-weight: 100;
+				font-weight: 400;
 				padding: 20px 10px;
 
 				&:hover {

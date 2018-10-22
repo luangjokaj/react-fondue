@@ -21,6 +21,11 @@ function Nav({ lang }) {
 						Article
 					</NavLink>
 				</li>
+				<li>
+					<a href="https://github.com/luangjokaj/react-ssr-boilerplate" target="_blank">
+						GitHub
+					</a>
+				</li>
 			</ul>
 		</div>
 	);
