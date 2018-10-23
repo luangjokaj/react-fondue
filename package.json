@@ -42,7 +42,7 @@
 		"postcss-calc": "^7.0.0",
 		"postcss-flexbugs-fixes": "^4.1.0",
 		"postcss-for": "^2.1.1",
-		"postcss-import": "^12.0.0",
+		"postcss-import": "^12.0.1",
 		"postcss-loader": "^3.0.0",
 		"postcss-mixins": "^6.2.0",
 		"postcss-preset-env": "^6.2.0",
