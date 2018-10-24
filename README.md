@@ -9,7 +9,7 @@ Demo: https://react-ssr-boilerplate.herokuapp.com/
 |:-:|:---|
 |⚙| Babel 7|
 |📦| Webpack 4|
-|⚛| React 16.5|
+|⚛| React 16.6|
 |🕸| CSS Modules|
 |🎨| PostCSS|
 |🤖| Express Server|
