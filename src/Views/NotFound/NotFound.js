@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Helmet } from 'react-helmet';
+import Head from '../../Components/Head';
 import Content from '../../Components/Content';
 import styles from './NotFound.css';
 import AppearAfter from '../../Components/AppearAfter';
@@ -8,13 +8,7 @@ import { Status } from '../../Components/Status';
 function NotFound() {
 	return (
 		<Fragment>
-			<Helmet encodeSpecialCharacters={true}>
-				<title>React SSR Boilerplate • Not Found</title>
-				<meta
-					name="description"
-					content="A minimal React boilerplate with support for code splitting, hot module reload and server side rendering."
-				/>
-			</Helmet>
+			<Head title="React SSR Boilerplate • Not Found" />
 			<Status code={404} />
 			<AppearAfter className={styles.content} delay={500}>
 				<Content>
