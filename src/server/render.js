@@ -1,8 +1,6 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router';
-import accepts from 'accepts';
-import Routes from '../App/Routes';
+import { StaticRouter } from 'react-router';import Routes from '../App/Routes';
 import { Helmet } from 'react-helmet';
 import sitemap from './sitemap';
 import robots from './robots';
@@ -12,6 +10,7 @@ import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 import extractLocalesFromReq from '../client-locale/extractLocalesFromReq';
 import guessLocale from '../client-locale/guessLocale';
+import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from '../client-locale/constants';
 
 export default ({ clientStats }) => (req, res) => {
 	const userLocales = extractLocalesFromReq(req);
@@ -27,8 +26,8 @@ export default ({ clientStats }) => (req, res) => {
 
 	const context = {};
 	const app = renderToString(
-		<StaticRouter location={req.url} context={context}>
-			<Routes context={context} lang={lang} />
+		<StaticRouter location={req.originalUrl} context={context}>
+			<Routes lang={lang} />
 		</StaticRouter>,
 	);
 
@@ -71,10 +70,9 @@ export default ({ clientStats }) => (req, res) => {
 		return;
 	}
 
-	res.setHeader('Cache-Control', 'public, max-age=2628000');
-
 	res
 		.status(status)
+		.cookie(LOCALE_COOKIE_NAME, lang, { maxAge: COOKIE_MAX_AGE, httpOnly: false })
 		.send(
 			`<!doctype html><html lang="${lang}"><head><meta name="theme-color" content="#000000"/>${styles}${
 				helmet.title
