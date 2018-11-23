@@ -15,8 +15,8 @@ module.exports = {
 	},
 	mode: 'development',
 	output: {
-		filename: '[name]-bundle.js',
-		chunkFilename: '[name].js',
+		filename: '[name]-bundle.[hash].js',
+		chunkFilename: '[name].[hash].js',
 		path: path.resolve(__dirname, '../dist'),
 		publicPath: '/',
 	},
@@ -77,7 +77,7 @@ module.exports = {
 	},
 	plugins: [
 		new ExtractCssChunks({
-			filename: '[name].css',
+			filename: '[name].[contenthash].css',
 			chunkFilename: '[name]-[hash:8].css',
 			hot: true,
 		}),

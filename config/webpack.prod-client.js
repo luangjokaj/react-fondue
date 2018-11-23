@@ -82,7 +82,7 @@ module.exports = {
 	},
 	plugins: [
 		new ExtractCssChunks({
-			filename: '[name].css',
+			filename: '[name].[contenthash].css',
 			chunkFilename: '[name]-[hash:8].css',
 		}),
 		new OptimizeCssAssetsPlugin({
