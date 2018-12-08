@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const externals = require('./node-externals');
+const OptimizeCssnanoPlugin = require('@intervolga/optimize-cssnano-plugin');
 
 module.exports = {
 	name: 'server',
@@ -28,11 +29,11 @@ module.exports = {
 				test: /\.css$/,
 				use: [
 					{
-						loader: 'css-loader/locals',
+						loader: 'css-loader',
 						options: {
 							modules: true,
+							exportOnlyLocals: true,
 							localIdentName: '[hash:base64:5]',
-							minimize: true,
 						},
 					},
 					{
@@ -72,6 +73,18 @@ module.exports = {
 		new webpack.DefinePlugin({
 			'process.env': {
 				NODE_ENV: JSON.stringify('production'),
+			},
+		}),
+		new OptimizeCssnanoPlugin({
+			cssnanoOptions: {
+				preset: [
+					'default',
+					{
+						discardComments: {
+							removeAll: true,
+						},
+					},
+				],
 			},
 		}),
 	],

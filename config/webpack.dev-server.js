@@ -29,11 +29,11 @@ module.exports = {
 				test: /\.css$/,
 				use: [
 					{
-						loader: 'css-loader/locals',
+						loader: 'css-loader',
 						options: {
+							exportOnlyLocals: true,
 							modules: true,
 							localIdentName: '[name]__[local]--[hash:base64:5]',
-							minimize: true,
 						},
 					},
 					{
