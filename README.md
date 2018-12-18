@@ -1,6 +1,6 @@
 [![react-ssr-boilerplate](https://i.imgur.com/c4BqIax.png)](https://github.com/luangjokaj/react-ssr-boilerplate)
 
-# React SSR Boilerplate
+# React SSR Boilerplate [![Dependencies](https://david-dm.org/luangjokaj/react-ssr-boilerplate/status.svg)](https://david-dm.org/luangjokaj/react-ssr-boilerplate)
 A minimal React boilerplate with support for code splitting, hot module reload and server side rendering.
 
 Demo: https://react-ssr-boilerplate.herokuapp.com/
