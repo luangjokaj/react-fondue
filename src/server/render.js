@@ -1,6 +1,7 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router';import Routes from '../App/Routes';
+import { StaticRouter } from 'react-router';
+import Routes from '../App/Routes';
 import { Helmet } from 'react-helmet';
 import sitemap from './sitemap';
 import robots from './robots';
