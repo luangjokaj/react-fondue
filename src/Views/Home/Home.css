@@ -8,7 +8,7 @@
 	box-sizing: border-box;
 	padding: 20px;
 
-	&:before {
+	&::before {
 		content: '';
 		display: block;
 		position: absolute;
@@ -18,7 +18,7 @@
 		width: 200px;
 		height: 200px;
 		background: url('../../assets/images/bg.svg') no-repeat center center;
-		opacity: 0.2;
+		opacity: .2;
 		z-index: 1;
 	}
 

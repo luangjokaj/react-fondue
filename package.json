@@ -72,6 +72,11 @@
 	},
 	"scripts": {
 		"prod": "NODE_ENV=production node src/server/main.js",
-		"dev": "NODE_ENV=development nodemon --watch src/server --watch config --inspect src/server/main.js"
+		"dev": "NODE_ENV=development nodemon --watch src/server --watch config --inspect src/server/main.js",
+		"lint:css": "stylelint 'src/**/*.css'"
+	},
+	"devDependencies": {
+		"stylelint": "^9.10.1",
+		"stylelint-config-recommended": "^2.1.0"
 	}
 }

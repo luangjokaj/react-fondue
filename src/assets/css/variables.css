@@ -3,8 +3,8 @@
 	--primary-color-hovered: color(var(--primary-color) lightness(45%));
 	--secondary-color: #292c34;
 	--extra-color: #60dbfb;
-	--white: #ffffff;
-	--black: #000000;
+	--white: #fff;
+	--black: #000;
 	--light-gray: #e5e5e5;
 	--medium-gray: #7a7a7a;
 	--dark-gray: #4a4a4a;
@@ -22,6 +22,7 @@
 @custom-media --screen-big print, (min-width: 2000px);
 @custom-media --screen-4k (min-width: 3870px);
 
+/* stylelint-disable no-duplicate-selectors  */
 :root {
 	--font-text: 'Roboto', sans-serif;
 	--font-head: var(--font-text);
@@ -88,8 +89,8 @@
 @define-mixin clearFix {
 	clear: both;
 
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		content: '';
 		display: table;
 		clear: both;
@@ -143,6 +144,7 @@
 }
 
 @define-mixin centerBg {
+	/* stylelint-disable declaration-no-important */
 	background-size: cover !important;
 	background-position: center center !important;
 	background-repeat: no-repeat !important;

@@ -27,10 +27,11 @@ body {
 	}
 }
 
-a, button {
+a,
+button {
 	outline: none;
 	text-decoration: none;
-	transition: all 0.3s ease;
+	transition: all .3s ease;
 }
 
 figure {
@@ -38,10 +39,10 @@ figure {
 }
 
 svg {
-	transition: all 0.3s ease;
+	transition: all .3s ease;
 
 	& * {
-		transition: all 0.3s ease;
+		transition: all .3s ease;
 	}
 }
 
