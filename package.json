@@ -52,6 +52,7 @@
 		"postcss-preset-env": "^6.5.0",
 		"react": "^16.7.0",
 		"react-dom": "^16.7.0",
+		"react-google-tag-manager": "^2.2.1",
 		"react-helmet": "^5.2.0",
 		"react-hot-loader": "^4.6.3",
 		"react-router": "^4.3.1",

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import Head from '../../Components/Head';
 import Content from '../../Components/Content';
-import styles from './NotFound.css';
 import AppearAfter from '../../Components/AppearAfter';
 import { Status } from '../../Components/Status';
+import styles from './NotFound.css';
 
 function NotFound() {
 	return (

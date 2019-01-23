@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import universal from 'react-universal-component';
 import { Route, Switch, Redirect } from 'react-router';
 import Nav from '../Components/Nav';
@@ -14,7 +14,8 @@ const UniversalComponent = universal(props => import(`../Views/${props.page}`), 
 });
 
 export default ({ staticContext, lang }) => (
-	<div>
+	<Fragment>
+		{/* <GoogleTagManager gtmId="GTM-XXXXXXX" /> */}
 		<Head />
 		<Nav lang={lang} />
 		<Switch>
@@ -41,5 +42,5 @@ export default ({ staticContext, lang }) => (
 				<img src={riangle} alt="Riangle Logo" />
 			</a>
 		</footer>
-	</div>
+	</Fragment>
 );

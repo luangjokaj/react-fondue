@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Head from '../../Components/Head';
 import Content from '../../Components/Content';
 const MarkdownData = require('../../../data/post.md');
@@ -7,7 +7,7 @@ import styles from './About.css';
 
 function About() {
 	return (
-		<div>
+		<Fragment>
 			<Head title="React SSR Boilerplate • About" />
 			<Content>
 				<div className={styles.profile}>
@@ -19,7 +19,7 @@ function About() {
 					/>
 				</div>
 			</Content>
-		</div>
+		</Fragment>
 	);
 }
 

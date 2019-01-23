@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Head from '../../Components/Head';
 import Content from '../../Components/Content';
 import data from '../../../data/bio';
@@ -6,7 +6,7 @@ import styles from './Article.css';
 
 function Article() {
 	return (
-		<div>
+		<Fragment>
 			<Head title="React SSR Boilerplate • Article" />
 			<Content>
 				<div className={styles.article}>
@@ -14,7 +14,7 @@ function Article() {
 					<div>{data}</div>
 				</div>
 			</Content>
-		</div>
+		</Fragment>
 	);
 }
 

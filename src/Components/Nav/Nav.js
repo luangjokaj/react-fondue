@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import styles from './Nav.css';
 import logo from '../../assets/images/logo.svg';
+import styles from './Nav.css';
 
 function Nav({ lang }) {
 	return (
-		<div className={styles.navigation}>
+		<header className={styles.navigation}>
 			<Link to={`/${lang}`} className={styles.logo}>
 				<img src={logo} alt="Logo" />
 				<span>React SSR Boilerplate</span>
@@ -27,7 +27,7 @@ function Nav({ lang }) {
 					</a>
 				</li>
 			</ul>
-		</div>
+		</header>
 	);
 }
 
