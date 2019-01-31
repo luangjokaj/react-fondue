@@ -54,7 +54,7 @@
 		"react-dom": "^16.7.0",
 		"react-google-tag-manager": "^2.2.1",
 		"react-helmet": "^5.2.0",
-		"react-hot-loader": "^4.6.3",
+		"react-hot-loader": "^4.6.5",
 		"react-router": "^4.3.1",
 		"react-router-dom": "^4.3.1",
 		"react-universal-component": "^3.0.3",
