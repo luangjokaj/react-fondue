@@ -8,7 +8,7 @@ function render(Component) {
 		<AppContainer>
 			<Component />
 		</AppContainer>,
-		document.getElementById('react-root'),
+		document.getElementById('react-root')
 	);
 }
 render(AppRoot);
