@@ -8,7 +8,7 @@ function Footer({ className }) {
 	return (
 		<footer className={classNames(styles.footer, className)}>
 			<ContentPusher>
-				<a href="https://github.com/DEEP-IMPACT-AG/cherry" target="_blank">
+				<a href="https://github.com/luangjokaj/react-fondue" target="_blank">
 					<GitHub />
 				</a>
 			</ContentPusher>
