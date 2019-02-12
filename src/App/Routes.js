@@ -9,6 +9,8 @@ import { RedirectWithStatus } from '../Components/RedirectStatus';
 import { Loading } from '../Components/Layout';
 import '../assets/css/styles.css';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const UniversalComponent = universal(props => import(`../Views/${props.page}`), {
 	loading: () => <Loading />,
 	ignoreBabelRename: true,
@@ -16,7 +18,7 @@ const UniversalComponent = universal(props => import(`../Views/${props.page}`), 
 
 export default ({ staticContext, lang }) => (
 	<Fragment>
-		{/* <GoogleTagManager gtmId="GTM-XXXXXXX" /> */}
+		{isProd ? <GoogleTagManager gtmId="GTM-WFTXGC8" /> : ''}
 		<Head />
 		<Nav lang={lang} />
 		<Switch>
