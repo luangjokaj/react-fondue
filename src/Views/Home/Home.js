@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import Head from '../../Components/Head';
 import { ContentPusher, Container, Readable } from '../../Components/Layout';
 import styles from './Home.css';
-const dataEn = require('../../../README.md');
-const dataDe = require('../../../README.md');
+const dataEn = require('./data-home-en.md');
+const dataDe = require('./data-home-de.md');
 import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
 import css from 'highlight.js/lib/languages/css';
@@ -31,8 +31,6 @@ class Home extends Component {
 				<ContentPusher>
 					<Container>
 						<Readable>
-							{t(lang, 'title')}
-							
 							{lang === 'en' && (
 								<div
 									className={styles.content}
