@@ -1,0 +1,27 @@
+@import '../../../assets/css/variables.css';
+
+.button {
+	@mixin resetButton;
+	display: inline-block;
+	padding: 15px 30px;
+	color: var(--color-primary);
+	border: solid 1px var(--color-gray-light);
+	border-radius: 30px;
+	margin: 10px 0;
+	white-space: nowrap;
+	
+	box-shadow: 0 0 0 0 var(--color-secondary);
+	transform: translate(0, 0);
+
+	&:hover {
+		box-shadow: 0 5px 0 0 var(--color-primary);
+		transform: translate(0, -5px);
+	}
+
+	& svg {
+		width: 32px;
+		height: 32px;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+}

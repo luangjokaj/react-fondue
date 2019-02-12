@@ -1,58 +1,298 @@
 @import '../../assets/css/variables.css';
 
 .navigation {
+	position: fixed;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	transition: all 0.5s ease;
+	transform: translateY(-66px) perspective(400px) rotateX(15deg);
 	width: 100%;
-	line-height: 2em;
-	background-color: var(--primary-color);
-	display: flex;
-	justify-content: space-between;
+	border-bottom: solid 1px var(--color-gray-light);
+	background: var(--color-light);
+	z-index: 10;
 
-	& .logo {
-		box-sizing: border-box;
-		padding: 20px;
+	&.visible {
+		opacity: 1;
+		transform: translateY(0) scale(1) perspective(400px) rotateX(0);
+		transition-delay: 0s;
+	}
 
-		& img {
-			width: 22px;
-			height: 20px;
-			vertical-align: middle;
-			margin-right: 10px;
+	& .list {
+		@mixin noList;
+		display: block;
+		border-top: solid 1px var(--color-gray-light);
+		background: var(--color-light);
+		height: calc(100vh - 66px);
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		opacity: 1;
+		pointer-events: all;
+		position: absolute;
+		width: 100%;
+		opacity: 0;
+		transform: translateY(-20px);
+		transition: all 0.5s ease;
+		pointer-events: none;
+
+		&.active {
+			opacity: 1;
+			transform: translateY(0);
+			pointer-events: all;
 		}
 
-		& span {
-			vertical-align: middle;
-			color: var(--white);
-			font-weight: bold;
-			font-size: var(--h5-font-size);
+		& .navItem,
+		& > li {
+			display: block;
+			border-bottom: solid 1px var(--color-gray-light);
+
+			& .link,
+			& a {
+				@mixin resetButton;
+				text-align: left;
+				color: var(--color-primary);
+				display: block;
+				width: 100%;
+				padding: 20px;
+				font-size: var(--size-desktop-subtitle);
+				position: relative;
+
+				& .label {
+					position: absolute;
+					display: inline-block;
+					color: var(--color-light);
+					background: var(--color-secondary);
+					border-radius: 3px;
+					font-size: var(--size-mobile-small);
+					line-height: 1;
+					vertical-align: middle;
+					padding: 2px 4px;
+					margin: 3px 0 0 5px;
+				}
+
+				& .arrow {
+					position: absolute;
+					right: 20px;
+					top: 30px;
+					transition: all 0.5s ease;
+				}
+
+				6.active {
+					color: var(--color-primary);
+				}
+			}
+
+			&.opened {
+				& .link,
+				& a {
+					& .arrow {
+						transform: rotate(180deg);
+					}
+				}
+
+				& .sub {
+					max-height: 1000px;
+					padding: 20px;
+					border-top: solid 1px var(--color-gray-light);
+				}
+			}
+
+			& .sub {
+				@mixin noList;
+				display: block;
+				background: var(--color-tertiary);
+				padding: 0 20px;
+				border-top: solid 1px transparent;
+				max-height: 0;
+				overflow: hidden;
+				transition: all 0.3s ease;
+
+				& .link,
+				& a {
+					border-bottom: none;
+					border-top: none;
+					color: var(--color-secondary);
+					font-size: var(--size-desktop-eyebrow);
+					padding: 10px;
+
+					&:hover,
+					&.active {
+						color: var(--color-primary);
+					}
+				}
+			}
 		}
 	}
 
-	& .menu {
-		box-sizing: border-box;
-		list-style: none;
+	& .logo {
+		display: inline-block;
+		padding: 20px 20px 2px;
+		position: relative;
+
+		& h1 {
+			pointer-events: none;
+			color: var(--color-light);
+			position: absolute;
+			font-size: 1px;
+		}
+
+		& svg {
+			max-width: 109px;
+			width: 100%;
+			height: 41px;
+
+			& :global(.text) {
+				display: none;
+			}
+		}
+		
+	}
+
+	@media (--screen-lg) {
+		border-bottom: none;
+		border-right: solid 1px var(--color-gray-light);
+		width: 30%;
+		height: 100vh;
+		transform: translateX(-100px) scale(0.9) perspective(400px) rotateY(15deg);
+
+		&.visible {
+			transform: translate(0) scale(1) perspective(400px) rotateY(0);
+			transition-delay: 0.3s;
+		}
+
+		& .logo {
+			padding: 64px;
+
+			& svg {
+				max-width: 209px;
+				height: auto;
+
+				& :global(.text) {
+					display: initial;
+				}
+			}
+		}
+
+		& .list {
+			position: static;
+			opacity: 1;
+			transform: none;
+			pointer-events: all;
+			height: calc(100vh - 262px);
+		}
+	}
+
+	@media (--screen-xl) {
+		width: 20%;
+	}
+
+	& .burger {
+		display: block;
 		margin: 0;
 		padding: 0;
-		display: flex;
-		padding: 0 10px 0 0;
+		position: absolute;
+		border: none;
+		width: 28px;
+		height: 28px;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		background: transparent;
+
+		@media (--screen-lg) {
+			display: none;
+		}
+
+		&:before {
+			top: 0;
+		}
+
+		&:after {
+			bottom: 0;
+		}
+
+		&:before,
+		&:after {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 100%;
+			height: 4px;
+			background: var(--color-dark);
+			transition: all 0.3s ease;
+		}
+
+		& span {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 4px;
+			width: 100%;
+			background: var(--color-dark);
+			transition: all 0.3s ease;
+			z-index: -1;
+		}
+
+		&.active {
+			&:before {
+				transform: translateY(10px) rotate(45deg);
+			}
+
+			&:after {
+				transform: translateY(-14px) rotate(-45deg);
+			}
+
+			& span {
+				width: 0;
+			}
+		}
+	}
+
+	& .poweredBy {
+		@mixin noList;
+		justify-content: center;
+		width: 100%;
+		margin: auto;
+		padding: 0;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		border-top: solid 1px var(--color-gray-light);
+		transform: translateX(-50%);
+		display: none;
+		background: var(--color-light);
+		height: 61px;
+
+		@media (--screen-lg) {
+			display: flex;
+		}
 
 		& li {
-			box-sizing: border-box;
-			padding: 0;
-			margin: 0;
+			display: flex;
 
 			& a {
-				display: inline-block;
-				color: var(--white);
-				box-sizing: border-box;
-				font-size: var(--h5-font-size);
-				font-weight: 400;
-				padding: 20px 10px;
+				display: flex;
+				padding: 10px;
+				margin: auto;
 
-				&:hover {
-					color: var(--extra-color);
+				& svg {
+					margin: auto;
+					transform: scale(1);
 				}
 
-				&.active {
-					color: var(--extra-color);
+				&:hover {
+					& svg {
+						transform: scale(1.1);
+					}
+				}
+
+				&:active {
+					& svg {
+						transform: scale(1);
+					}
 				}
 			}
 		}

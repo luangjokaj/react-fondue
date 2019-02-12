@@ -1,0 +1,34 @@
+@import '../../assets/css/variables.css';
+
+.footer {
+	box-sizing: border-box;
+	width: 100%;
+	margin: auto;
+	padding: 0;
+	text-align: center;
+	border-top: solid 1px var(--color-gray-light);
+
+	& a {
+		height: 60px;
+		display: flex;
+
+		& svg {
+			width: 20px;
+			vertical-align: middle;
+			margin: auto;
+			transform: scale(1);
+		}
+
+		&:hover {
+			& svg {
+				transform: scale(1.1);
+			}
+		}
+
+		&:active {
+			& svg {
+				transform: scale(1);
+			}
+		}
+	}
+}

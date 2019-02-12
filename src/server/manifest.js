@@ -1,19 +1,24 @@
 module.exports = {
-	name: 'React SSR Boilerplate',
-	short_name: 'Boilerplate',
+	name: 'ReactFondue',
+	short_name: 'ReactFondue',
 	icons: [
 		{
-			src: 'https://i.imgur.com/j2UuUt7.png',
-			size: '152x152',
+			src: 'https://i.postimg.cc/qqqPr7Wv/120.png',
+			size: '120x120',
 			type: 'image/png',
 		},
 		{
-			src: 'https://i.imgur.com/mMOR6Y7.png',
+			src: 'https://i.postimg.cc/4y0rxgTb/180.png',
+			size: '180x180',
+			type: 'image/png',
+		},
+		{
+			src: 'https://i.postimg.cc/jqkVXzJw/192.png',
 			size: '192x192',
 			type: 'image/png',
 		},
 		{
-			src: 'https://i.imgur.com/NJSbBsO.png',
+			src: 'https://i.postimg.cc/v8PyNJCm/512.png',
 			size: '512x512',
 			type: 'image/png',
 		},

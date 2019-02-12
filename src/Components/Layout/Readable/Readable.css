@@ -1,0 +1,24 @@
+@import '../../../assets/css/variables.css';
+
+.readable {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 992px;
+	margin: 20px auto;
+	min-height: calc(100vh - var(--padding-top-body-mobile));
+
+	@media (--screen-lg) {
+		min-height: 100vh;
+		margin: 64px auto;
+	}
+
+	& h1,
+	& h2,
+	& h3,
+	& h4,
+	& h5,
+	& h6 {
+		padding: 0;
+		margin: 20px 0;
+	}
+}

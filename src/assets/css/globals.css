@@ -1,42 +1,75 @@
+/*********************************************************************
+**********************************************************************
+Cherry 0.0.1 - Design System
+Global Styles
+**********************************************************************
+*********************************************************************/
+
 @import './variables.css';
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
-@import '../../../node_modules/normalize.css/normalize.css';
 
 html,
 body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	font-family: var(--font-text);
-	font-size: var(--default-font-size);
-	line-height: var(--default-line-height);
 }
 
 body {
 	font-size-adjust: none;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	font-family: var(--font-text);
+	font-size: var(--size-mobile-text);
+	line-height: var(--lineheight-mobile-text);
+	padding-top: var(--padding-top-body-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-desktop-text);
+		line-height: var(--lineheight-desktop-text);
+		padding-top: var(--padding-top-body-desktop);
+	}
 }
 
 * {
 	box-sizing: border-box;
 
 	&::selection {
-		background: var(--black);
-		color: var(--white);
+		background: var(--color-dark);
+		color: var(--color-light);
 	}
 }
 
-a, button {
+a,
+button {
 	outline: none;
 	text-decoration: none;
 	transition: all 0.3s ease;
+}
+
+a {
+	color: var(--color-primary);
+
+	&:hover {
+		color: var(--color-secondary);
+	}
 }
 
 figure {
 	margin: 0;
 }
 
+hr {
+	border: none;
+	border-bottom: solid 1px var(--color-gray-light);
+}
+
+fieldset {
+	appearance: none;
+	border: none;
+}
+
+img,
 svg {
 	transition: all 0.3s ease;
 
@@ -45,10 +78,19 @@ svg {
 	}
 }
 
+img {
+	max-width: 100%;
+	width: 100%;
+}
+
 strong,
 b {
-	font-family: var(--font-head);
 	font-weight: 700;
+	color: var(--color-primary);
+}
+
+small {
+	@mixin small;
 }
 
 h1,
@@ -57,99 +99,74 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-head);
-	font-weight: normal;
-	margin: 0;
-	padding: 0;
+	@mixin heading;
 }
 
 h1 {
-	font-size: var(--h1-font-size);
-	line-height: var(--h1-line-height);
-
-	@media (--screen-mobile) {
-		font-size: var(--h1-font-size-mobile);
-		line-height: var(--h1-line-height-mobile);
-	}
+	@mixin h1;
 }
 
 h2 {
-	font-size: var(--h2-font-size);
-	line-height: var(--h2-line-height);
-
-	@media (--screen-mobile) {
-		font-size: var(--h2-font-size-mobile);
-		line-height: var(--h2-line-height-mobile);
-	}
+	@mixin h2;
 }
 
 h3 {
-	font-size: var(--h3-font-size);
-	line-height: var(--h3-line-height);
-
-	@media (--screen-mobile) {
-		font-size: var(--h3-font-size-mobile);
-		line-height: var(--h3-line-height-mobile);
-	}
+	@mixin h3;
 }
 
 h4 {
-	font-size: var(--h4-font-size);
-	line-height: var(--h4-line-height);
-
-	@media (--screen-mobile) {
-		font-size: var(--h4-font-size-mobile);
-		line-height: var(--h4-line-height-mobile);
-	}
+	@mixin h4;
 }
 
 h5 {
-	font-size: var(--h5-font-size);
-	line-height: var(--h5-line-height);
-
-	@media (--screen-mobile) {
-		font-size: var(--h5-font-size-mobile);
-		line-height: var(--h5-line-height-mobile);
-	}
+	@mixin h5;
 }
 
 h6 {
-	font-size: var(--h6-font-size);
-	line-height: var(--h6-line-height);
-
-	@media (--screen-mobile) {
-		font-size: var(--h6-font-size-mobile);
-		line-height: var(--h6-line-height-mobile);
-	}
+	@mixin h6;
 }
 
 p {
-	font-family: var(--font-text);
-	font-size: var(--default-font-size);
-	line-height: var(--default-line-height);
-	color: var(--medium-gray);
+	@mixin paragraph;
 }
 
-footer {
-	text-align: center;
+table {
+	border-collapse: collapse;
+	border: solid 1px var(--color-gray-light);
+}
 
-	& a {
-		display: inline-block;
-		text-align: center;
-		margin: auto;
-		box-sizing: border-box;
-		padding: 20px;
-		transition: all .5s ease;
+table td,
+table th {
+	font-weight: 400;
+	padding: 4px 7px;
+}
 
-		& img {
-			display: inline-block;
-			transition: all .5s ease;
-		}
+table th {
+	font-weight: 700;
+	background: var(--color-tertiary);
+}
 
-		&:hover {
-			& img {
-				transform: perspective(400px) rotateY(180deg) scale(1);
-			}
-		}
-	}
+table td {
+	color: var(--color-secondary);
+}
+
+table th:first-child,
+table td:first-child {
+	padding-left: 8px;
+}
+
+table tr th {
+	border: 0;
+}
+
+table tr td {
+	border: 0;
+}
+
+table tr:nth-child(even) {
+	background: var(--color-tertiary);
+}
+
+table tr:nth-child(odd) {
+	background: var(--color-light);
 }
