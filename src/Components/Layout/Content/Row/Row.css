@@ -1,0 +1,37 @@
+@import '../../../../assets/css/variables.css';
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: calc(var(--gutter-col-mobile) - var(--gutter-col-mobile) * 2);
+	margin-left: calc(var(--gutter-col-mobile) - var(--gutter-col-mobile) * 2);
+
+	@media (--screen-lg) {
+		margin-right: calc(var(--gutter-col-desktop) - var(--gutter-col-desktop) * 2);
+		margin-left: calc(var(--gutter-col-desktop) - var(--gutter-col-desktop) * 2);
+	}
+}
+
+.alignItems-center {
+	align-items: center;
+}
+
+.alignItems-flex-end {
+	align-items: flex-end;
+}
+
+.alignItems-flex-start {
+	align-items: flex-start;
+}
+
+.justifyContent-center {
+	justify-content: center;
+}
+
+.justifyContent-space-between {
+	justify-content: space-between;
+}
+
+.justifyContent-space-around {
+	justify-content: space-around;
+}

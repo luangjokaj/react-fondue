@@ -1,34 +1,92 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/images/logo.svg';
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import AppearAfter from '../AppearAfter';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 import styles from './Nav.css';
 
-function Nav({ lang }) {
-	return (
-		<header className={styles.navigation}>
-			<Link to={`/${lang}`} className={styles.logo}>
-				<img src={logo} alt="Logo" />
-				<span>React SSR Boilerplate</span>
-			</Link>
-			<ul className={styles.menu}>
-				<li>
-					<NavLink to={`/${lang}/about`} activeClassName={styles.active}>
-						About
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to={`/${lang}/article`} activeClassName={styles.active}>
-						Article
-					</NavLink>
-				</li>
-				<li>
-					<a href="https://github.com/luangjokaj/react-ssr-boilerplate" target="_blank">
-						GitHub
-					</a>
-				</li>
-			</ul>
-		</header>
-	);
+import NavItem from './NavItem';
+import { Logo, Riangle } from '../../assets/svg';
+
+class Nav extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			menu: false,
+		};
+	}
+
+	toggleMenu = () => {
+		this.setState({ menu: !this.state.menu });
+	};
+
+	closeMenu = () => {
+		this.setState({ menu: false });
+	};
+
+	render() {
+		const { menu } = this.state;
+		const { location, lang } = this.props;
+
+		return (
+			<AppearAfter className={styles.navigation} visibleClassName={styles.visible}>
+				<header>
+					<Link to={`/${lang}`} className={styles.logo}>
+						<Logo />
+						<h1>ReactFondue - Minimal boilerplate with code splitting, hot module reload and server side rendering</h1>
+					</Link>
+					<button
+						onClick={this.toggleMenu}
+						className={classNames(styles.burger, {
+							[styles.active]: menu,
+						})}
+					>
+						<span />
+					</button>
+					<ul
+						className={classNames(styles.list, {
+							[styles.active]: menu,
+						})}
+					>
+						<NavItem
+							title="Overview"
+							link="/"
+							active={
+								location.pathname == `/${lang}` || location.pathname == '`/${lang}`/code-guidelines' ? true : false
+							}
+						>
+							<ul className={styles.sub}>
+								<li>
+									<NavLink to="/" activeClassName={styles.active} onClick={this.closeMenu} exact>
+										Introduction
+									</NavLink>
+								</li>
+							</ul>
+						</NavItem>
+						<NavItem
+							title="About"
+							link="/"
+							active={location.pathname == '/about' ? true : false}
+							label="New"
+						>
+							<ul className={styles.sub}>
+								<li>
+									<a href="#">Luan Gjokaj</a>
+								</li>
+							</ul>
+						</NavItem>
+					</ul>
+					<ul className={styles.poweredBy}>
+						<li>
+							<a href="https://www.riangle.com/" target="_blank">
+								<Riangle />
+							</a>
+						</li>
+					</ul>
+				</header>
+			</AppearAfter>
+		);
+	}
 }
 
-export default Nav;
+export default withRouter(Nav);

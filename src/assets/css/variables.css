@@ -1,162 +1,137 @@
-:root {
-	--primary-color: #21242a;
-	--primary-color-hovered: color(var(--primary-color) lightness(45%));
-	--secondary-color: #292c34;
-	--extra-color: #60dbfb;
-	--white: #ffffff;
-	--black: #000000;
-	--light-gray: #e5e5e5;
-	--medium-gray: #7a7a7a;
-	--dark-gray: #4a4a4a;
-	--success-color: #2ecc71;
-	--error-color: #e74c3c;
-}
+/*********************************************************************
+**********************************************************************
+Cherry 0.0.1 - Design System
+Variables & Mixins
+**********************************************************************
+*********************************************************************/
 
-@custom-media --screen-tiny (max-width: 320px);
-@custom-media --screen-mobile (max-width: 640px);
-@custom-media --screen-phablet (max-width: 800px);
-@custom-media --screen-tablet print, (max-width: 1000px);
-@custom-media --screen-desktop print, (min-width: 1024px);
-@custom-media --screen-middle-max (max-width: 1300px);
-@custom-media --screen-middle-min (min-width: 1300px);
-@custom-media --screen-big print, (min-width: 2000px);
-@custom-media --screen-4k (min-width: 3870px);
+@import './mixins.css';
+
+@custom-media --screen-xs (min-width: 0);
+@custom-media --screen-sm (min-width: 576px);
+@custom-media --screen-md (min-width: 768px);
+@custom-media --screen-lg (min-width: 992px);
+@custom-media --screen-xl (min-width: 1200px);
+@custom-media --screen-xxl (min-width: 1440px);
+@custom-media --screen-xxxl (min-width: 1920px);
 
 :root {
+
+	/* Spacing ----------------------------------------------- */
+	--padding-top-body-mobile: 70px;
+	--padding-top-body-desktop: 0;
+	--gutter-col-mobile: 10px;
+	--gutter-col-desktop: 10px;
+	--margin-container-mobile: 20px;
+	--margin-container-desktop: 20px;
+
+	/* Colors ----------------------------------------------------- */
+	--color-primary: #1F2D3D;
+	--color-secondary: #8492A6;
+	--color-tertiary: #F9FAFC;
+
+	--color-dark: #000;
+	--color-light: #fff;
+
+	--color-gray-light: #E5E5E5;
+	--color-gray-medium: #666666;
+	--color-gray-dark: #4a4a4a;
+
+	--color-success: #28a745;
+	--color-error: #dc3545;
+	--color-warning: #ffc107;
+	--color-info: #17a2b8;
+
+	/* Fonts ------------------------------------------------------ */
 	--font-text: 'Roboto', sans-serif;
-	--font-head: var(--font-text);
-	--font-special: var(--font-head);
+	--font-head: 'Roboto', sans-serif;
+	--font-special: var(--font-text);
+	--font-mono: 'Roboto Mono', monospace;
 
-	--smaller-font-size: 12px;
-	--smaller-line-height: 1.3;
+	/* Font Sizes ------------------------------------------------- */
+	/* --> Hero --------------------------------------------------- */
+	--size-mobile-hero1: 52px;
+	--lineheight-mobile-hero1: 1.35;
+	--size-desktop-hero1: 62px;
+	--lineheight-desktop-hero1: 1.15;
 
-	--small-font-size: 14px;
-	--small-line-height: 1.5;
+	--size-mobile-hero2: 42px;
+	--lineheight-mobile-hero2: 1.35;
+	--size-desktop-hero2: 52px;
+	--lineheight-desktop-hero2: 1.15;
 
-	--default-font-size: 16px;
-	--default-line-height: 1.5;
+	--size-mobile-hero3: 32px;
+	--lineheight-mobile-hero3: 1.35;
+	--size-desktop-hero3: 42px;
+	--lineheight-desktop-hero3: 1.15;
 
-	--big-font-size: 48px;
-	--big-line-height: 1.3;
+	/* --> Eyebrow ------------------------------------------------ */
+	--size-mobile-eyebrow: 16px;
+	--lineheight-mobile-eyebrow: 1.35;
+	--size-desktop-eyebrow: 18px;
+	--lineheight-desktop-eyebrow: 1.15;
 
-	--bigger-font-size: 64px;
-	--bigger-line-height: 1.4;
+	/* --> Heading ------------------------------------------------ */
+	--size-mobile-h1: 38px;
+	--lineheight-mobile-h1: 1.35;
+	--size-desktop-h1: 40px;
+	--lineheight-desktop-h1: 1.15;
 
-	--h1-font-size: 48px;
-	--h1-line-height: 1.3;
+	--size-mobile-h2: 28px;
+	--lineheight-mobile-h2: 1.35;
+	--size-desktop-h2: 32px;
+	--lineheight-desktop-h2: 1.15;
 
-	--h1-font-size-mobile: 48px;
-	--h1-line-height-mobile: 1.3;
+	--size-mobile-h3: 24px;
+	--lineheight-mobile-h3: 1.35;
+	--size-desktop-h3: 28px;
+	--lineheight-desktop-h3: 1.15;
 
-	--h2-font-size: 36px;
-	--h2-line-height: 1.3;
+	--size-mobile-h4: 22px;
+	--lineheight-mobile-h4: 1.35;
+	--size-desktop-h4: 24px;
+	--lineheight-desktop-h4: 1.15;
 
-	--h2-font-size-mobile: 36px;
-	--h2-line-height-mobile: 1.3;
+	--size-mobile-h5: 18px;
+	--lineheight-mobile-h5: 1.35;
+	--size-desktop-h5: 20px;
+	--lineheight-desktop-h5: 1.15;
 
-	--h3-font-size: 28px;
-	--h3-line-height: 1.4;
+	--size-mobile-h6: 14px;
+	--lineheight-mobile-h6: 1.35;
+	--size-desktop-h6: 16px;
+	--lineheight-desktop-h6: 1.15;
 
-	--h3-font-size-mobile: 28px;
-	--h3-line-height-mobile: 1.3;
+	/* --> Subtitle ----------------------------------------------- */
+	--size-mobile-subtitle: 18px;
+	--lineheight-mobile-subtitle: 1.35;
+	--size-desktop-subtitle: 20px;
+	--lineheight-desktop-subtitle: 1.15;
+	
 
-	--h4-font-size: 24px;
-	--h4-line-height: 1.5;
+	/* --> Lead --------------------------------------------------- */
+	--size-mobile-lead: 16px;
+	--lineheight-mobile-lead: 1.5;
+	--size-desktop-lead: 18px;
+	--lineheight-desktop-lead: 1.75;
 
-	--h4-font-size-mobile: 24px;
-	--h4-line-height-mobile: 1.5;
+	/* --> Text --------------------------------------------------- */
+	--size-mobile-text: 16px;
+	--lineheight-mobile-text: 1.5;
+	--size-desktop-text: 18px;
+	--lineheight-desktop-text: 1.7;
 
-	--h5-font-size: 18px;
-	--h5-line-height: 1.5;
+	/* --> Small -------------------------------------------------- */
+	--size-mobile-small: 12px;
+	--lineheight-mobile-small: 1.7;
+	--size-desktop-small: 14px;
+	--lineheight-desktop-small: 1.7;
 
-	--h5-font-size-mobile: 18px;
-	--h5-line-height-mobile: 1.5;
+	/* --> Blockquote --------------------------------------------- */
+	--size-mobile-blockquote: var(--size-mobile-h3);
+	--size-desktop-blockquote: var(--size-desktop-h3);
 
-	--h6-font-size: 16px;
-	--h6-line-height: 1.5;
-
-	--h6-font-size-mobile: 16px;
-	--h6-line-height-mobile: 1.5;
-
-	--h3-editor-font-size: var(--h1-font-size);
-	--h3-editor-line-height: var(--h1-line-height);
-
-	--h4-editor-font-size: var(--h2-font-size);
-	--h4-editor-line-height: var(--h2-line-height);
-}
-
-@define-mixin clearFix {
-	clear: both;
-
-	&:before,
-	&:after {
-		content: '';
-		display: table;
-		clear: both;
-	}
-}
-
-@define-mixin noList {
-	box-sizing: border-box;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-
-	& li {
-		box-sizing: border-box;
-		padding: 0;
-		margin: 0;
-	}
-}
-
-@define-mixin resetButton {
-	appearance: none;
-	border: none;
-	background: none;
-	outline: none;
-	margin: 0;
-	padding: 0;
-	cursor: pointer;
-}
-
-@define-mixin maxWidth {
-	box-sizing: border-box;
-	max-width: 1100px;
-	margin: auto;
-
-	@media (--screen-middle-max) {
-		padding: 0 20px;
-	}
-}
-
-@define-mixin fullWidth {
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100vw;
-}
-
-@define-mixin container {
-	margin: 0 auto;
-	max-width: 1024px;
-	box-sizing: border-box;
-}
-
-@define-mixin centerBg {
-	background-size: cover !important;
-	background-position: center center !important;
-	background-repeat: no-repeat !important;
-}
-
-@define-mixin title {
-	font-size: var(--big-font-size);
-	line-height: var(--big-line-height);
-	font-weight: bold;
-	margin: 20px 0;
-
-	@media (--screen-mobile) {
-		font-size: var(--h1-font-size-mobile);
-		line-height: var(--h1-line-height-mobile);
-		margin: 0 0 10px;
-	}
+	/* --> List --------------------------------------------------- */
+	--size-mobile-list: var(--size-mobile-text);
+	--size-desktop-list: var(--size-desktop-text);
 }

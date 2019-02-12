@@ -1,0 +1,62 @@
+@import '../../../assets/css/variables.css';
+
+.text {
+	@mixin paragraph;
+
+	&.eyebrow {
+		@mixin eyebrow;
+	}
+
+	&.subtitle {
+		@mixin subtitle;
+	}
+
+	&.small {
+		@mixin small;
+	}
+
+	&.blockquote {
+		@mixin blockquote;
+
+		& .quoteIcon {
+			vertical-align: middle;
+			display: inline-block;
+
+			&.first {
+				margin-right: 10px;
+
+				& svg {
+					transform: rotate(170deg);
+				}
+			}
+
+			&.last {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	& ul {
+		@mixin unorderedList;
+
+		&:global([data-special]) {
+			@mixin specialList;
+		}
+	}
+	
+	& ol {
+		@mixin orderedList;
+	}
+
+	&.textLeft {
+		text-align: left;
+	}
+
+	&.textCenter {
+		text-align: center;
+	}
+
+	&.textRight {
+		text-align: right;
+	}
+}

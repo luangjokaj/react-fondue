@@ -1,0 +1,33 @@
+@import '../../assets/css/variables.css';
+
+.heading {
+	@mixin heading;
+}
+
+.like-h1 {
+	@mixin h1;
+}
+
+.like-h2 {
+	@mixin h2;
+}
+
+.like-h3 {
+	@mixin h3;
+}
+
+.like-h4 {
+	@mixin h4;
+}
+
+.like-h5 {
+	@mixin h5;
+}
+
+.like-h6 {
+	@mixin h6;
+}
+
+.bold {
+	font-weight: 900;
+}

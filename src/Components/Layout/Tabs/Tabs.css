@@ -1,0 +1,68 @@
+@import '../../../assets/css/variables.css';
+
+.tabsWrapper {
+	background: var(--super-light);
+
+	&.wrap {
+		& .tabList {
+			flex-wrap: wrap;
+		}
+	}
+
+	& .tabList {
+		@mixin noList;
+		display: flex;
+		flex-wrap: nowrap;
+		border-radius: 5px;
+		border: solid 1px var(--color-gray-light);
+		background: var(--color-light);
+		padding: 0;
+		position: relative;
+		z-index: 10;
+
+		& .tabListItem {
+			&.active {
+				& .tabButton {
+					background: var(--color-primary);
+					color: var(--color-light);
+					border-radius: 5px;
+
+					&:hover {
+						background: var(--color-primary);
+					}
+				}
+			}
+
+			& .tabButton {
+				@mixin resetButton;
+				box-sizing: border-box;
+				padding: 5px 10px;
+				margin: 3px;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				hyphens: auto;
+				overflow: hidden;
+				font-weight: 500;
+
+				&:hover {
+					background: color-mod(var(--color-primary) alpha(10%));
+				}
+			}
+		}
+	}
+
+	& .tabContent {
+		border: solid 1px var(--color-gray-light);
+		margin-top: -20px;
+		padding: 20px 20px 0;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		
+		& p {
+			@mixin paragraph;
+		}
+	}
+}

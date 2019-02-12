@@ -1,0 +1,58 @@
+@import '../../../assets/css/variables.css';
+
+.loading {
+	width: 100%;
+	height: 100vh;
+
+	& .inner {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		& .spinner {
+			position: relative;
+			width: 45px;
+			height: 45px;
+			margin: 0 auto;
+		}
+
+		& .bubble1,
+		& .bubble2 {
+			position: absolute;
+			top: 0;
+			width: 25px;
+			height: 25px;
+			border-radius: 100%;
+			background-color: var(--color-primary);
+			animation: bounce 2s ease-in-out infinite;
+		}
+
+		& .bubble2 {
+			top: auto;
+			bottom: 0;
+			animation-delay: -1.0s;
+		}
+
+		& .spinner {
+			animation: loadingI 2s linear infinite;
+		}
+	}
+}
+
+@keyframes loadingI {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes bounce {
+	0%,
+	100% {
+		transform: scale(0.0);
+	}
+
+	50% {
+		transform: scale(1.0);
+	}
+}

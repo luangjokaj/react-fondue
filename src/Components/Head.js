@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet';
 const isProd = process.env.NODE_ENV === 'production';
 
 function Head({
-	title = 'React SSR Boilerplate',
-	description = '⚛ A minimal React boilerplate with support for code splitting, hot module reload and server side rendering.',
+	title = 'ReactFondue • Minimal boilerplate with code splitting, hot module reload and server side rendering',
+	description = 'ReactFondue is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.',
 	image = 'https://i.imgur.com/lvzUVyf.jpg',
 	children,
 }) {
