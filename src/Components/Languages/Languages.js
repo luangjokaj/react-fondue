@@ -1,15 +1,14 @@
+import de from './de';
+import en from './en';
+
 const language = 'de';
 
 const translationsDe = {
-	language: {
-		title: 'Eine minimale React-Kesselplatte mit serverseitigem Rendering.',
-	},
+	...de,
 };
 
 const translationsEn = {
-	language: {
-		title: 'A minimal React boilerplate with server side rendering.',
-	},
+	...en,
 };
 
 const t = (lang, key, params) => {

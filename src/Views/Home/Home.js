@@ -7,6 +7,7 @@ const dataDe = require('../../../README.md');
 import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
 import css from 'highlight.js/lib/languages/css';
+import { t } from '../../Components/Languages';
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 
@@ -30,6 +31,8 @@ class Home extends Component {
 				<ContentPusher>
 					<Container>
 						<Readable>
+							{t(lang, 'title')}
+							
 							{lang === 'en' && (
 								<div
 									className={styles.content}
