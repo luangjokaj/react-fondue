@@ -25,6 +25,11 @@ export default ({ staticContext, lang }) => (
 				path="/:lang"
 				render={routeProps => <UniversalComponent page="Home" {...routeProps} />}
 			/>
+			<Route
+				exact
+				path="/:lang/about"
+				render={routeProps => <UniversalComponent page="About" {...routeProps} />}
+			/>
 			<RedirectWithStatus status={301} exact from="/" to={`/${lang}`} />
 			<Route render={routeProps => <UniversalComponent page="NotFound" {...routeProps} />} />
 		</Switch>

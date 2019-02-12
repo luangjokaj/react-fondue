@@ -1,4 +1,4 @@
-# ReactFondue [![CircleCI](https://circleci.com/gh/luangjokaj/react-ssr-boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/luangjokaj/react-ssr-boilerplate/tree/master) [![Dependencies](https://david-dm.org/luangjokaj/react-ssr-boilerplate/status.svg)](https://david-dm.org/luangjokaj/react-ssr-boilerplate)
+# ReactFondue De [![CircleCI](https://circleci.com/gh/luangjokaj/react-ssr-boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/luangjokaj/react-ssr-boilerplate/tree/master) [![Dependencies](https://david-dm.org/luangjokaj/react-ssr-boilerplate/status.svg)](https://david-dm.org/luangjokaj/react-ssr-boilerplate)
 
 [ReactFondue](https://www.reactfondue.co/) is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.
 

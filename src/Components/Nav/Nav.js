@@ -52,12 +52,12 @@ class Nav extends Component {
 							title="Overview"
 							link="/"
 							active={
-								location.pathname == `/${lang}` || location.pathname == '`/${lang}`/code-guidelines' ? true : false
+								location.pathname == `/${lang}` ? true : false
 							}
 						>
 							<ul className={styles.sub}>
 								<li>
-									<NavLink to="/" activeClassName={styles.active} onClick={this.closeMenu} exact>
+									<NavLink to={`/${lang}`} activeClassName={styles.active} onClick={this.closeMenu} exact>
 										Introduction
 									</NavLink>
 								</li>
@@ -66,12 +66,14 @@ class Nav extends Component {
 						<NavItem
 							title="About"
 							link="/"
-							active={location.pathname == '/about' ? true : false}
+							active={location.pathname == `/${lang}/about` ? true : false}
 							label="New"
 						>
 							<ul className={styles.sub}>
 								<li>
-									<a href="#">Luan Gjokaj</a>
+									<NavLink to={`/${lang}/about`} activeClassName={styles.active} onClick={this.closeMenu} exact>
+										ReactFondue
+									</NavLink>
 								</li>
 							</ul>
 						</NavItem>
