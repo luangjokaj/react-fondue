@@ -1,38 +1,5 @@
-# ReactFondue De [![CircleCI](https://circleci.com/gh/luangjokaj/react-ssr-boilerplate/tree/master.svg?style=svg)](https://circleci.com/gh/luangjokaj/react-ssr-boilerplate/tree/master) [![Dependencies](https://david-dm.org/luangjokaj/react-ssr-boilerplate/status.svg)](https://david-dm.org/luangjokaj/react-ssr-boilerplate)
+# About De
 
-[ReactFondue](https://www.reactfondue.co/) is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.
+Hey there 👋, my name is [Luan](https://twitter.com/LuanGjokaj) a UX Engineer & Designer. ReactFondue came as a side project, driven by the necessity to have a solid infrastructure using React, ready to go in no time 🚀. The goal is to have a clean and minimal setup out of the box, SEO friendly and optimized. A development environment with all the ingredients. Supporting code splitting, hot module reload and server side rendering.
 
-|👇|Includes|
-|:-:|:---|
-|⚙| Babel 7|
-|📦| Webpack 4|
-|⚛| React 16|
-|🕸| CSS Modules|
-|🎨| PostCSS|
-|🤖| Express Server|
-|🔥| Hot Module Replacement|
-|✂️| Code Splitting|
-|🛎| Server Side Rendering|
-
-### Install dependencies
-```
-$ npm install
-```
-
-### Runs the app in the development mode
-Build and open your browser to http://localhost:8080.
-```
-$ npm run dev
-```
-
-### Linting JS & CSS
-```
-$ npm run lint
-```
-
-### Builds and runs the app in production
-```
-$ npm run prod
-```
-
-Ready to deploy 🚀
+It is an open source project, contributions are welcome!
