@@ -33,7 +33,10 @@ class Nav extends Component {
 				<header>
 					<Link to={`/${lang}`} className={styles.logo}>
 						<Logo />
-						<h1>ReactFondue - Minimal boilerplate with code splitting, hot module reload and server side rendering</h1>
+						<h1>
+							ReactFondue - Minimal boilerplate with code splitting, hot module reload and server
+							side rendering
+						</h1>
 					</Link>
 					<button
 						onClick={this.toggleMenu}
@@ -51,13 +54,16 @@ class Nav extends Component {
 						<NavItem
 							title="Overview"
 							link="/"
-							active={
-								location.pathname == `/${lang}` ? true : false
-							}
+							active={location.pathname == `/${lang}` ? true : false}
 						>
 							<ul className={styles.sub}>
 								<li>
-									<NavLink to={`/${lang}`} activeClassName={styles.active} onClick={this.closeMenu} exact>
+									<NavLink
+										to={`/${lang}`}
+										activeClassName={styles.active}
+										onClick={this.closeMenu}
+										exact
+									>
 										Introduction
 									</NavLink>
 								</li>
@@ -66,12 +72,21 @@ class Nav extends Component {
 						<NavItem
 							title="About"
 							link="/"
-							active={location.pathname == `/${lang}/about` ? true : false}
+							active={
+								location.pathname == `/${lang}/about` || location.pathname == `/${lang}/about/`
+									? true
+									: false
+							}
 							label="New"
 						>
 							<ul className={styles.sub}>
 								<li>
-									<NavLink to={`/${lang}/about`} activeClassName={styles.active} onClick={this.closeMenu} exact>
+									<NavLink
+										to={`/${lang}/about`}
+										activeClassName={styles.active}
+										onClick={this.closeMenu}
+										exact
+									>
 										ReactFondue
 									</NavLink>
 								</li>
