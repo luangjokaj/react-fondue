@@ -7,18 +7,20 @@ module.exports = `<?xml version="1.0" encoding="UTF-8"?>
 	xmlns:xhtml="https://www.w3.org/1999/xhtml/"
 >
 	<url>
-		<loc>https://react-ssr-boilerplate.herokuapp.com/en</loc>
-		<lastmod>2018-09-07T20:22:04+00:00</lastmod>
+		<loc>https://www.reactfondue.co/en</loc>
+
+		<xhtml:link rel="alternate" hreflang="de" href="https://www.reactfondue.co/en/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.reactfondue.co/de/" />
+		<lastmod>2018-07-19T19:50:54+00:00</lastmod>
 		<priority>1.00</priority>
 	</url>
+
 	<url>
-		<loc>https://react-ssr-boilerplate.herokuapp.com/en/about</loc>
-		<lastmod>2018-09-07T20:22:04+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://react-ssr-boilerplate.herokuapp.com/en/article</loc>
-		<lastmod>2018-09-07T20:22:04+00:00</lastmod>
+		<loc>https://www.reactfondue.co/en/about</loc>
+
+		<xhtml:link rel="alternate" hreflang="de" href="https://www.reactfondue.co/en/about/" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://www.reactfondue.co/de/about/" />
+		<lastmod>2018-07-19T19:50:54+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 </urlset>`;
