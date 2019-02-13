@@ -23,7 +23,7 @@ function Head({
 			<link rel="apple-touch-icon-precomposed" href="https://i.postimg.cc/FRsbCkJ1/192.jpg" />
 			<link
 				rel="manifest"
-				href={`${isProd ? 'https://production/' : 'http://localhost:8080/'}manifest.json`}
+				href={`${isProd ? 'https://www.reactfondue.co/' : 'http://localhost:8080/'}manifest.json`}
 			/>
 			{children && children}
 			<title>{title}</title>
