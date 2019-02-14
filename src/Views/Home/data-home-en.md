@@ -1,4 +1,4 @@
-# ReactFondue [![CircleCI](https://circleci.com/gh/luangjokaj/react-fondue/tree/master.svg?style=svg)](https://circleci.com/gh/luangjokaj/react-fondue/tree/master) [![Dependencies](https://david-dm.org/luangjokaj/react-fondue/status.svg)](https://david-dm.org/luangjokaj/react-fondue)
+# ReactFondue [![Dependencies](https://david-dm.org/luangjokaj/react-fondue/status.svg)](https://david-dm.org/luangjokaj/react-fondue)
 
 [ReactFondue](https://www.reactfondue.co/) is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.
 
