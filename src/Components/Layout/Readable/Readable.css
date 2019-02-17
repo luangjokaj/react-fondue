@@ -5,10 +5,10 @@
 	width: 100%;
 	max-width: 992px;
 	margin: 20px auto;
-	min-height: calc(100vh - var(--padding-top-body-mobile));
+	min-height: calc(100vh - 110px);
 
 	@media (--screen-lg) {
-		min-height: 100vh;
+		min-height: calc(100vh - 130px);
 		margin: 64px auto;
 	}
 
