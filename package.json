@@ -1,9 +1,9 @@
 {
-	"name": "react-ssr-boilerplate",
+	"name": "react-fondue",
 	"version": "1.0.0",
 	"main": "main.js",
-	"description": "Webpack React SSR - Boilerplate",
-	"repository": "https://github.com/luangjokaj/react-ssr-boilerplate",
+	"description": "Minimal React boilerplate with support for code splitting, hot module reload and server side rendering.",
+	"repository": "https://github.com/luangjokaj/react-fondue",
 	"license": "MIT",
 	"dependencies": {
 		"@babel/cli": "^7.2.3",
