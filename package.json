@@ -62,7 +62,7 @@
 		"react-hot-loader": "^4.7.1",
 		"react-router": "^4.3.1",
 		"react-router-dom": "^4.3.1",
-		"react-universal-component": "^3.0.3",
+		"react-universal-component": "^4.0.0",
 		"style-loader": "^0.23.1",
 		"stylelint": "^9.10.1",
 		"uglifyjs-webpack-plugin": "^2.1.1",
