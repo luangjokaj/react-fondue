@@ -8,7 +8,7 @@
 	min-height: calc(100vh - 110px);
 
 	@media (--screen-lg) {
-		min-height: calc(100vh - 130px);
+		min-height: calc(100vh - 60px);
 		margin: 64px auto;
 	}
 
