@@ -43,7 +43,13 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: [
-					ExtractCssChunks.loader,
+					{
+						loader: ExtractCssChunks.loader,
+						options: {
+							hot: true,
+							modules: true,
+						},
+					},
 					{
 						loader: 'css-loader',
 						options: {
