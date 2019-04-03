@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 
@@ -103,7 +102,6 @@ module.exports = {
 				WEBPACK: true,
 			},
 		}),
-		new UglifyJSPlugin(),
 		new CompressionPlugin({
 			algorithm: 'gzip',
 		}),
