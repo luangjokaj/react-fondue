@@ -73,9 +73,10 @@ export default ({ clientStats }) => (req, res) => {
 
 	res
 		.status(status)
+		.header('Content-Type', 'text/html')
 		.cookie(LOCALE_COOKIE_NAME, lang, { maxAge: COOKIE_MAX_AGE, httpOnly: false })
 		.send(
-			`<!doctype html><html lang="${lang}"><head><meta name="theme-color" content="#000000"/>${styles}${
+			`<!DOCTYPE html><html lang="${lang}"><head><meta name="theme-color" content="#000000"/>${styles}${
 				helmet.title
 			}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`
 		);
