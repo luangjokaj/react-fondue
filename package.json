@@ -67,7 +67,7 @@
 		"stylelint": "^9.10.1",
 		"url-loader": "1.1.2",
 		"webpack": "^4.29.6",
-		"webpack-bundle-analyzer": "^3.3.0",
+		"webpack-bundle-analyzer": "^3.3.2",
 		"webpack-cli": "^3.3.0",
 		"webpack-dev-middleware": "3.6.2",
 		"webpack-flush-chunks": "^2.0.3",
