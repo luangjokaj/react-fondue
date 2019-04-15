@@ -79,6 +79,7 @@ svg {
 }
 
 img {
+	display: block;
 	max-width: 100%;
 	width: 100%;
 }
@@ -128,45 +129,4 @@ h6 {
 
 p {
 	@mixin paragraph;
-}
-
-table {
-	border-collapse: collapse;
-	border: solid 1px var(--color-gray-light);
-}
-
-table td,
-table th {
-	font-weight: 400;
-	padding: 4px 7px;
-}
-
-table th {
-	font-weight: 700;
-	background: var(--color-tertiary);
-}
-
-table td {
-	color: var(--color-secondary);
-}
-
-table th:first-child,
-table td:first-child {
-	padding-left: 8px;
-}
-
-table tr th {
-	border: 0;
-}
-
-table tr td {
-	border: 0;
-}
-
-table tr:nth-child(even) {
-	background: var(--color-tertiary);
-}
-
-table tr:nth-child(odd) {
-	background: var(--color-light);
 }
