@@ -21,10 +21,6 @@ function Head({
 			<link rel="shortcut icon" href={favicon} type="image/x-icon" />
 			<link rel="icon" sizes="192x192" href="https://i.postimg.cc/FRsbCkJ1/192.jpg" />
 			<link rel="apple-touch-icon-precomposed" href="https://i.postimg.cc/FRsbCkJ1/192.jpg" />
-			<link
-				rel="manifest"
-				href={`${isProd ? 'https://www.reactfondue.co/' : 'http://localhost:8080/'}manifest.json`}
-			/>
 			{children && children}
 			<title>{title}</title>
 		</Helmet>

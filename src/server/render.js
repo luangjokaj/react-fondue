@@ -3,10 +3,6 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import Routes from '../App/Routes';
 import { Helmet } from 'react-helmet';
-import sitemap from './sitemap';
-import robots from './robots';
-import manifest from './manifest';
-
 import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 import extractLocalesFromReq from '../client-locale/extractLocalesFromReq';
@@ -44,27 +40,6 @@ export default ({ clientStats }) => (req, res) => {
 		console.log('Error 404: ', req.originalUrl);
 	}
 
-	if (req.url == '/sitemap.xml') {
-		return res
-			.header('Content-Type', 'application/xml')
-			.status(status)
-			.send(sitemap);
-	}
-
-	if (req.url == '/robots.txt' || req.url == '/Robots.txt') {
-		return res
-			.header('Content-Type', 'text/plain')
-			.status(status)
-			.send(robots);
-	}
-
-	if (req.url == '/manifest.json' || req.url == '/Manifest.json') {
-		return res
-			.header('Content-Type', 'application/manifest+json')
-			.status(status)
-			.send(manifest);
-	}
-
 	if (context.url) {
 		const redirectStatus = context.status || 302;
 		res.redirect(redirectStatus, context.url);
@@ -73,8 +48,8 @@ export default ({ clientStats }) => (req, res) => {
 
 	res
 		.status(status)
-		.header('Content-Type', 'text/html')
 		.cookie(LOCALE_COOKIE_NAME, lang, { maxAge: COOKIE_MAX_AGE, httpOnly: false })
+		.header('Content-Type', 'text/html')
 		.send(
 			`<!DOCTYPE html><html lang="${lang}"><head><meta name="theme-color" content="#000000"/>${styles}${
 				helmet.title
