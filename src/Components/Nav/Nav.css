@@ -54,7 +54,7 @@
 				display: block;
 				width: 100%;
 				padding: 20px;
-				font-size: var(--size-desktop-subtitle);
+				font-size: var(--size-subtitle-desktop);
 				position: relative;
 
 				& .label {
@@ -63,7 +63,7 @@
 					color: var(--color-light);
 					background: var(--color-secondary);
 					border-radius: 3px;
-					font-size: var(--size-mobile-small);
+					font-size: var(--size-small-mobile);
 					line-height: 1;
 					vertical-align: middle;
 					padding: 2px 4px;
@@ -112,7 +112,7 @@
 					border-bottom: none;
 					border-top: none;
 					color: var(--color-secondary);
-					font-size: var(--size-desktop-eyebrow);
+					font-size: var(--size-eyebrow-desktop);
 					padding: 10px;
 
 					&:hover,

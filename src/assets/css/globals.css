@@ -20,13 +20,13 @@ body {
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: antialiased;
 	font-family: var(--font-text);
-	font-size: var(--size-mobile-text);
-	line-height: var(--lineheight-mobile-text);
+	font-size: var(--size-text-mobile);
+	line-height: var(--lineheight-text-mobile);
 	padding-top: var(--padding-top-body-mobile);
 
 	@media (--screen-lg) {
-		font-size: var(--size-desktop-text);
-		line-height: var(--lineheight-desktop-text);
+		font-size: var(--size-text-desktop);
+		line-height: var(--lineheight-text-desktop);
 		padding-top: var(--padding-top-body-desktop);
 	}
 }
