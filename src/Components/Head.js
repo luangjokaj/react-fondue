@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 function Head({
 	title = 'ReactFondue • Minimal boilerplate with code splitting, hot module reload and server side rendering',
 	description = 'ReactFondue is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.',
-	image = 'https://i.postimg.cc/543n5bF6/preview.jpg',
+	image = 'https://i.postimg.cc/bvLpCSjQ/preview.jpg',
 	children,
 }) {
 	return (
