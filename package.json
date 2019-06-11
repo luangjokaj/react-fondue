@@ -69,7 +69,7 @@
 		"url-loader": "2.0.0",
 		"webpack": "^4.33.0",
 		"webpack-bundle-analyzer": "^3.3.2",
-		"webpack-cli": "^3.3.3",
+		"webpack-cli": "^3.3.4",
 		"webpack-dev-middleware": "3.7.0",
 		"webpack-flush-chunks": "^2.0.3",
 		"webpack-hot-middleware": "2.25.0",
