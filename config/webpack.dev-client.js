@@ -40,10 +40,12 @@ module.exports = {
 					{
 						loader: 'css-loader',
 						options: {
-							modules: true,
-							localIdentName: '[name]__[local]--[hash:base64:5]',
-							importLoaders: 1,
 							sourceMap: true,
+							importLoaders: 1,
+							modules: {
+								mode: 'local',
+								localIdentName: '[name]__[local]--[hash:base64:5]',
+							},
 						},
 					},
 					{

@@ -31,7 +31,7 @@
 		"compression-webpack-plugin": "^3.0.0",
 		"cookie-parser": "^1.4.4",
 		"css-hot-loader": "^1.4.4",
-		"css-loader": "^2.1.1",
+		"css-loader": "^3.0.0",
 		"css-modules": "^0.3.0",
 		"cssnano": "^4.1.10",
 		"eslint": "^5.16.0",
