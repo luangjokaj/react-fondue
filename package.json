@@ -23,7 +23,7 @@
 		"@hot-loader/react-dom": "^16.8.6",
 		"@intervolga/optimize-cssnano-plugin": "^1.0.6",
 		"accepts": "^1.3.7",
-		"babel-eslint": "^10.0.1",
+		"babel-eslint": "^10.0.2",
 		"babel-loader": "^8.0.6",
 		"babel-plugin-universal-import": "^4.0.0",
 		"brotli-webpack-plugin": "^1.1.0",
