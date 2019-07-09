@@ -55,7 +55,7 @@
 		"postcss-import": "^12.0.1",
 		"postcss-loader": "^3.0.0",
 		"postcss-mixins": "^6.2.1",
-		"postcss-preset-env": "^6.6.0",
+		"postcss-preset-env": "^6.7.0",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
 		"react-google-tag-manager": "^2.2.1",
