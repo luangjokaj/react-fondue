@@ -1,0 +1,78 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "no-console": {
+        "severity": "warning",
+        "options": [
+            "debug",
+            "info",
+            "log",
+            "time",
+            "timeEnd",
+            "trace"
+        ]
+    },
+    "typedef": [
+        true,
+        "call-signature",
+        "parameter",
+        "property-declaration",
+        "variable-declaration",
+        "member-variable-declaration",
+        "object-destructuring",
+        "array-destructuring"
+    ],
+    "member-ordering": [
+        true,
+        {
+          "order": [
+            "public-static-field",
+            "private-static-field",
+            "public-instance-field",
+            "private-instance-field",
+            "public-constructor",
+            "private-constructor",
+            "public-instance-method",
+            "protected-instance-method",
+            "private-instance-method"
+          ]
+        }
+    ],
+    "quotemark": [true, "single", "jsx-double"],
+    "no-any": true,
+    "no-object": true,
+    "ban-ts-ignore-except-imports": true,
+    "no-require-imports": true,
+    "max-line-length": [false],
+    "no-var-requires": false,
+    "ordered-imports": false,
+    "no-empty-interface": false,
+    "object-literal-sort-keys": false,
+    "no-eval": false,
+    "no-trailing-whitespace": false,
+    "no-empty": false,
+    "jsx-alignment": false,
+    "jsx-ban-props": false,
+    "jsx-curly-spacing": false,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-string-ref": true,
+    "jsx-self-close": true,
+    "jsx-wrap-multiline": true,
+    "jsx-boolean-value": false,
+    "max-classes-per-file": false,
+    "no-shadow": ["error", { "builtinGlobals": false, "hoist": "never", "allow": [] }],
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "prefer-conditional-expression": false,
+    "object-literal-key-quotes": false,
+    "member-access": false,
+    "arrow-parens": false,
+    "no-unused-expression": false,
+    "trailing-comma": false,
+    "interface-name": false,
+    "eofline": false
+  },
+  "jsRules": {},
+  "rulesDirectory": "./tslint/custom-rules/"
+}

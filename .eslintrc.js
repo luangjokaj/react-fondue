@@ -1,6 +1,6 @@
 const eslintcfg = {
 	parser: 'babel-eslint',
-	plugins: ['react'],
+	plugins: ['react', "typescript"],
 	rules: {
 		'global-require': 0,
 		'no-console': 0,
