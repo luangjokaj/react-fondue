@@ -8,7 +8,7 @@
 |⚙| Babel 7|
 |📦| Webpack 4|
 |⚛| React 16|
-|:raimbow:| TypeScript|
+|:rainbow:| TypeScript|
 |🕸| CSS Modules|
 |🎨| PostCSS|
 |:nail_care:| Styled Components|
