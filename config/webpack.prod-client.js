@@ -5,6 +5,9 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+const styledComponentsTransformer = createStyledComponentsTransformer();
+
 module.exports = {
 	name: 'client',
 	entry: {
@@ -27,6 +30,9 @@ module.exports = {
 				},
 			},
 		},
+    },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".scss"],
 	},
 	module: {
 		rules: [
@@ -38,7 +44,14 @@ module.exports = {
 						loader: 'babel-loader',
 					},
 				],
-			},
+            },
+            {
+                test: /\.tsx?$/,
+                loader: 'awesome-typescript-loader',
+                options: {
+                    getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
+                }
+            },
 			{
 				test: /\.css$/,
 				use: [
@@ -65,7 +78,15 @@ module.exports = {
 						},
 					},
 				],
-			},
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader", // compiles Sass to CSS, using Node Sass by default
+                ],
+            },
 			{
 				test: /\.(jpg|svg|png|ico|gif|eot|woff|ttf)$/,
 				use: [

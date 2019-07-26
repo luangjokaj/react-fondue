@@ -2,6 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+const styledComponentsTransformer = createStyledComponentsTransformer();
+
 module.exports = {
 	name: 'client',
 	entry: {
@@ -33,6 +36,13 @@ module.exports = {
 				],
 			},
 			{
+				test: /\.tsx?$/,
+				loader: 'awesome-typescript-loader',
+				options: {
+					getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
+				},
+			},
+			{
 				test: /\.css$/,
 				use: [
 					'css-hot-loader',
@@ -55,6 +65,14 @@ module.exports = {
 							ident: 'postcss',
 						},
 					},
+				],
+			},
+			{
+				test: /\.scss$/,
+				use: [
+					"style-loader", // creates style nodes from JS strings
+					"css-loader", // translates CSS into CommonJS
+					"sass-loader", // compiles Sass to CSS, using Node Sass by default
 				],
 			},
 			{
@@ -82,6 +100,7 @@ module.exports = {
 		alias: {
 			'react-dom': '@hot-loader/react-dom',
 		},
+		extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".scss"],
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
