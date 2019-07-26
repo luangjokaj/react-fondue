@@ -16,9 +16,9 @@ module.exports = {
 		filename: 'prod-server-bundle.js',
 		path: path.resolve(__dirname, '../build'),
 		libraryTarget: 'commonjs2',
-    },
-    resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".scss"],
+	},
+	resolve: {
+		extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".scss"],
 	},
 	module: {
 		rules: [
@@ -30,14 +30,14 @@ module.exports = {
 						loader: 'babel-loader',
 					},
 				],
-            },
-            {
-                test: /\.tsx?$/,
-                loader: 'awesome-typescript-loader',
-                options: {
-                    getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
-                }
-            },
+			},
+			{
+				test: /\.tsx?$/,
+				loader: 'awesome-typescript-loader',
+				options: {
+					getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
+				},
+			},
 			{
 				test: /\.css$/,
 				use: [
@@ -58,15 +58,15 @@ module.exports = {
 						},
 					},
 				],
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    "style-loader", // creates style nodes from JS strings
-                    "css-loader", // translates CSS into CommonJS
-                    "sass-loader", // compiles Sass to CSS, using Node Sass by default
-                ],
-            },
+			},
+			{
+				test: /\.scss$/,
+				use: [
+					"style-loader", // creates style nodes from JS strings
+					"css-loader", // translates CSS into CommonJS
+					"sass-loader", // compiles Sass to CSS, using Node Sass by default
+				],
+			},
 			{
 				test: /\.(jpg|svg|png|ico|gif|eot|woff|ttf)$/,
 				use: [
