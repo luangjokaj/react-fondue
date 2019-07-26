@@ -7,8 +7,10 @@
 |⚙| Babel 7|
 |📦| Webpack 4|
 |⚛| React 16|
+|🌈| TypeScript|
 |🕸| CSS Modules|
 |🎨| PostCSS|
+|💅| Styled Components|
 |🤖| Express Server|
 |🔥| Hot Module Replacement|
 |✂️| Code Splitting|
