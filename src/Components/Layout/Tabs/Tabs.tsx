@@ -1,15 +1,33 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from './Tabs.css';
 import Tab from './Tab';
+// @ts-ignore:
 import hljs from 'highlight.js/lib/highlight';
+// @ts-ignore:
 import javascript from 'highlight.js/lib/languages/javascript';
-import css from 'highlight.js/lib/languages/css';
+const css = require('highlight.js/lib/languages/css');
+const styles = require('./Tabs.css');
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 
+interface TabProps {
+	onClickTabItem: Function;
+	children: any;
+	className?: string;
+	wrap?: boolean;
+	classNameTabList?: string;
+	classNameTabContent?: string;
+}
+
+interface TabState {
+	activeTab: boolean;
+}
+
 class Tabs extends Component {
-	constructor(props) {
+	props: TabProps;
+	state: TabState;
+
+	constructor(props:TabProps) {
 		super(props);
 
 		this.state = {
@@ -42,7 +60,7 @@ class Tabs extends Component {
 		return (
 			<div className={classNames(styles.tabsWrapper, className, { [styles.wrap]: wrap })}>
 				<ol className={classNames(styles.tabList, classNameTabList)}>
-					{children.map(child => {
+					{children.map((child:any) => {
 						const { label } = child.props;
 
 						return (
@@ -56,7 +74,7 @@ class Tabs extends Component {
 					})}
 				</ol>
 				<div className={classNames(styles.tabContent, classNameTabContent)}>
-					{children.map(child => {
+					{children.map((child:any) => {
 						if (child.props.label !== activeTab) {
 							return undefined;
 						}
@@ -68,7 +86,7 @@ class Tabs extends Component {
 		);
 	}
 
-	onClickTabItem = tab => {
+	onClickTabItem = (tab:any) => {
 		this.setState({ activeTab: tab });
 	};
 }

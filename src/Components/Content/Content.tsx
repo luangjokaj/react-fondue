@@ -1,8 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './Content.css';
+const styles = require('./Content.css');
 
-function Content({ className, children }) {
+interface ContentProps {
+	className?: string;
+	children: any;
+}
+
+function Content({ className, children }: ContentProps) {
 	return <div className={classNames(styles.content, className)}>{children}</div>;
 }
 

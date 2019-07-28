@@ -1,8 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './Readable.css';
+const styles = require('./Readable.css');
 
-function Readable({ className, children }) {
+interface ReadableProps {
+	className?: string;
+	children: any;
+}
+
+function Readable({ className, children }:ReadableProps) {
 	return <div className={classNames(styles.readable, className)}>{children}</div>;
 }
 

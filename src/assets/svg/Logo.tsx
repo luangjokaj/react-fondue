@@ -1,6 +1,10 @@
 import React from 'react';
 
-function Svg({ className }) {
+interface SvgProps {
+	className?: string;
+}
+
+function Svg({ className }: SvgProps) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

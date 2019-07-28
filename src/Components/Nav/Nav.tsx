@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import AppearAfter from '../AppearAfter';
@@ -7,7 +8,7 @@ import { Logo, Riangle } from '../../assets/svg';
 const styles = require('./Nav.css');
 
 interface NavProps {
-	location: string;
+	location: any;
 	lang?: string;
 }
 
@@ -28,7 +29,7 @@ class Nav extends Component {
 	}
 
 	toggleMenu = () => {
-		this.setState({ menu: !this.state.menu });
+		this.setState({ menu: !this.state.menu })	;
 	};
 
 	closeMenu = () => {
@@ -117,4 +118,5 @@ class Nav extends Component {
 	}
 }
 
+// @ts-ignore:
 export default withRouter(Nav);

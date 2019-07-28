@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import styles from './Tabs.css';
+const styles = require('./Tabs.css');
+
+interface TabProps {
+	onClick: any;
+	activeTab: boolean;
+	label: string;
+}
 
 class Tab extends Component {
-	constructor(props) {
+	props: TabProps;
+
+	constructor(props:TabProps) {
 		super(props);
 	}
 
 	render() {
 		const { onClick, activeTab, label } = this.props;
 
-		const className = classNames(styles.tabListItem, { [styles.active]: activeTab === label });
+		const className = classNames(styles.tabListItem, { [styles.active]: activeTab });
 
 		return (
 			<li className={className}>

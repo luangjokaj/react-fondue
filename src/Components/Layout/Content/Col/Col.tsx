@@ -1,6 +1,34 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './Col.css';
+const styles = require('./Col.css');
+
+interface ColProps {
+	textAlign?: string;
+	className?: string;
+	id?: string;
+	children: any;
+	xs?: string;
+	sm?: string;
+	md?: string;
+	lg?: string;
+	xl?: string;
+	xxl?: string;
+	xxxl?: string;
+	first?: boolean;
+	firstSm?: boolean;
+	firstMd?: boolean;
+	firstLg?: boolean;
+	firstXl?: boolean;
+	firstXxl?: boolean;
+	firstXxxl?: boolean;
+	last?: boolean;
+	lastSm?: boolean;
+	lastMd?: boolean;
+	lastLg?: boolean;
+	lastXl?: boolean;
+	lastXxl?: boolean;
+	lastXxxl?: boolean;
+}
 
 function Col({
 	textAlign,
@@ -28,7 +56,7 @@ function Col({
 	lastXl,
 	lastXxl,
 	lastXxxl,
-}) {
+}: ColProps) {
 	return (
 		<div
 			id={id}

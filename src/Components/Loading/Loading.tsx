@@ -1,7 +1,6 @@
 import React from 'react';
-import styles from './Loading.css';
-import logo from '../../assets/images/logo.svg';
-import AppearAfter from '../../Components/AppearAfter';
+const styles = require('./Loading.css');
+const logo = require('../../assets/images/logo.svg');
 
 function Loading() {
 	return (

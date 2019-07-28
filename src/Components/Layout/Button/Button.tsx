@@ -1,8 +1,18 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './Button.css';
+import { string } from 'prop-types';
+const styles = require('./Button.css');
 
-function Button({ className, id, children, onClick, href, target }) {
+interface ButtonProps {
+	className?: string;
+	id?: string;
+	children: any;
+	onClick?: () => void;
+	href?: string;
+	target?: string;
+}
+
+function Button({ className, id, children, onClick, href, target }: ButtonProps) {
 	if (href) {
 		return (
 			<a href={href} target={target} className={classNames(styles.button, className)} id={id}>

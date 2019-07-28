@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { GitHub } from '../../assets/svg';
 import { ContentPusher } from '../Layout';
-import styles from './Footer.css';
+const styles = require('./Footer.css');
 
 interface FooterProps {
 	className?: string;

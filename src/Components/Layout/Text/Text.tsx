@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Quote } from '../../../assets/svg';
-import styles from './Text.css';
+const styles = require('./Text.css');
+
+interface TextProps {
+	children: any;
+	className?: string;
+	textAlign?: 'left' | 'center' | 'right';
+	eyebrow?: boolean;
+	subtitle?: boolean;
+	small?: boolean;
+	blockquote?: boolean;
+}
 
 class Text extends Component {
+	props: TextProps;
+
 	render() {
 		const { children, className, textAlign, eyebrow, subtitle, small, blockquote } = this.props;
 		const ownClassName = classNames(

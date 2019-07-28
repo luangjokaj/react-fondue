@@ -44,6 +44,7 @@ class NavItem extends Component {
 					[styles.childless]: !children,
 				})}
 			>
+				// @ts-ignore:
 				<button
 					to={link}
 					onClick={children ? this.toggleAccordion : undefined}

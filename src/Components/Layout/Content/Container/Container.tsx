@@ -1,8 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './Container.css';
+const styles = require('./Container.css');
 
-function Container({ className, children, fluid = false  }) {
+interface ContainerProps {
+	className?: string;
+	children: any;
+	fluid?: boolean;
+}
+
+function Container({ className, children, fluid = false  }: ContainerProps) {
 	return (
 		<div
 			className={classNames(

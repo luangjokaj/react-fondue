@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './ContentPusher.css';
+const styles = require('./ContentPusher.css');
 import AppearAfter from '../../AppearAfter';
 
 interface ContentPusherProps {

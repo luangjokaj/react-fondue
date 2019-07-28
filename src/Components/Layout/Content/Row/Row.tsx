@@ -1,13 +1,20 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './Row.css';
+const styles = require('./Row.css');
+
+interface RowProps {
+	className?: string;
+	children: any;
+	alignItems?: string;
+	justifyContent?: string;
+}
 
 function Row({
 	className,
 	children,
 	alignItems,
 	justifyContent,
-}) {
+}: RowProps) {
 	return (
 		<div
 			className={classNames(
