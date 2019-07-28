@@ -3,7 +3,12 @@ import classNames from 'classnames';
 import styles from './ContentPusher.css';
 import AppearAfter from '../../AppearAfter';
 
-function ContentPusher({ className, children }) {
+interface ContentPusherProps {
+	className?: string;
+	children?: any;
+}
+
+function ContentPusher({ className, children }:ContentPusherProps) {
 	return (
 		<AppearAfter
 			className={classNames(styles.contentPusher, className)}

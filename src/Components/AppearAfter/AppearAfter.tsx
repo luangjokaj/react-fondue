@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
+interface AppearAfterProps {
+	children: any;
+	className?: string;
+	visibleClassName?: string;
+	delay?: number;
+}
+
+interface AppearAfterState {
+	isVisible: boolean;
+}
+
 class AppearAfter extends Component {
+	props: AppearAfterProps;
+	state: AppearAfterState;
 	componentDidMount() {
 		setTimeout(() => this.setState({ isVisible: true }), this.props.delay || 0);
 	}
 
-	constructor(props) {
+	constructor(props: AppearAfterProps) {
 		super(props);
 		this.state = { isVisible: false };
 	}

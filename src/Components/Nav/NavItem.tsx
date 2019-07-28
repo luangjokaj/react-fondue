@@ -2,10 +2,26 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
 import { Arrow } from '../../assets/svg';
-import styles from './Nav.css';
+const styles = require('./Nav.css');
+
+interface NavItemProps {
+	children: any;
+	title: string;
+	className?: string;
+	link?: string;
+	label?: string;
+	active: boolean;
+}
+
+interface NavItemState {
+	opened: boolean;
+}
 
 class NavItem extends Component {
-	constructor(props) {
+	props: NavItemProps;
+	state: NavItemState;
+
+	constructor(props: NavItemProps) {
 		super(props);
 
 		this.state = {

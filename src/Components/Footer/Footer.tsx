@@ -4,7 +4,11 @@ import { GitHub } from '../../assets/svg';
 import { ContentPusher } from '../Layout';
 import styles from './Footer.css';
 
-function Footer({ className }) {
+interface FooterProps {
+	className?: string;
+}
+
+function Footer({ className }: FooterProps) {
 	return (
 		<footer className={classNames(styles.footer, className)}>
 			<ContentPusher>

@@ -2,13 +2,24 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import AppearAfter from '../AppearAfter';
 import { Link, NavLink, withRouter } from 'react-router-dom';
-import styles from './Nav.css';
-
 import NavItem from './NavItem';
 import { Logo, Riangle } from '../../assets/svg';
+const styles = require('./Nav.css');
+
+interface NavProps {
+	location: string;
+	lang?: string;
+}
+
+interface NavState {
+	menu: boolean;
+}
 
 class Nav extends Component {
-	constructor(props) {
+	props: NavProps;
+	state: NavState;
+
+	constructor(props:NavProps) {
 		super(props);
 
 		this.state = {
