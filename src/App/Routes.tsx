@@ -22,6 +22,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const UniversalComponent = universal((props:UniversalComponentProps) => import(`../Views/${props.page}`), {
 	loading: () => <Loading />,
+	ignoreBabelRename: true,
 });
 
 export default ({ staticContext, lang }: RoutesProps) => (
