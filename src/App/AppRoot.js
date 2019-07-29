@@ -5,7 +5,7 @@ import Routes from './Routes';
 import ScrollToTop from '../Components/ScrollToTop';
 
 export default class extends React.Component {
-	constructor(props:any) {
+	constructor(props) {
 		super(props);
 		this.state = {};
 	}

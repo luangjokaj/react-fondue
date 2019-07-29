@@ -1,14 +1,13 @@
-// @ts-ignore
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import AppearAfter from '../AppearAfter';
-import { Link, NavLink, withRouter } from 'react-router-dom';
+import { Link, NavLink, withRouter, RouteComponentProps } from 'react-router-dom';
 import NavItem from './NavItem';
 import { Logo, Riangle } from '../../assets/svg';
 const styles = require('./Nav.css');
 
 interface NavProps {
-	location: any;
+	location?: any;
 	lang?: string;
 }
 
@@ -118,5 +117,4 @@ class Nav extends Component {
 	}
 }
 
-// @ts-ignore:
-export default withRouter(Nav);
+export default withRouter<RouteComponentProps, any>(Nav);

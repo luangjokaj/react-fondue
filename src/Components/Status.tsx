@@ -1,10 +1,14 @@
 import React from 'react';
 import { Route } from 'react-router';
 
-export function Status({ code }) {
+interface StatusProps {
+	code: number;
+}
+
+export function Status({ code }: StatusProps) {
 	return (
 		<Route
-			render={({ staticContext }) => {
+			render={({ staticContext }:any) => {
 				if (staticContext) {
 					staticContext.status = code;
 				}

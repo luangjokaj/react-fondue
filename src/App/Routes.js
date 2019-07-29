@@ -9,23 +9,14 @@ import Footer from '../Components/Footer';
 import { Loading } from '../Components/Layout';
 import '../assets/css/styles.css';
 
-interface UniversalComponentProps {
-	page: 'Home' | 'About' | 'NotFound';
-}
-
-interface RoutesProps {
-	staticContext?: any;
-	lang?: any;
-}
-
 const isProd = process.env.NODE_ENV === 'production';
 
-const UniversalComponent = universal((props:UniversalComponentProps) => import(`../Views/${props.page}`), {
+const UniversalComponent = universal((props) => import(`../Views/${props.page}`), {
 	loading: () => <Loading />,
 	ignoreBabelRename: true,
 });
 
-export default ({ staticContext, lang }: RoutesProps) => (
+export default ({ staticContext, lang }) => (
 	<Fragment>
 		{isProd ? <GoogleTagManager gtmId="GTM-WFTXGC8" /> : ''}
 		<Head />

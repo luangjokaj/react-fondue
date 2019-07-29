@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
@@ -44,9 +45,7 @@ class NavItem extends Component {
 					[styles.childless]: !children,
 				})}
 			>
-				// @ts-ignore:
 				<button
-					to={link}
 					onClick={children ? this.toggleAccordion : undefined}
 					className={styles.link}
 				>
