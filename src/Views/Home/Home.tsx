@@ -1,17 +1,26 @@
 import React, { Component, Fragment } from 'react';
 import Head from '../../Components/Head';
 import { ContentPusher, Container, Readable } from '../../Components/Layout';
-import styles from './Home.css';
+const styles = ('./Home.css');
 const dataEn = require('./data-home-en.md');
 const dataDe = require('./data-home-de.md');
+// @ts-ignore
 import hljs from 'highlight.js/lib/highlight';
+// @ts-ignore
 import javascript from 'highlight.js/lib/languages/javascript';
+// @ts-ignore
 import css from 'highlight.js/lib/languages/css';
 import { t } from '../../Components/Languages';
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 
+interface HomeProps {
+	match?: any;
+}
+
 class Home extends Component {
+	props: HomeProps;
+
 	componentDidMount() {
 		const cdx = document.getElementsByTagName('pre');
 		if (cdx.length) {
@@ -33,13 +42,11 @@ class Home extends Component {
 						<Readable>
 							{lang === 'en' && (
 								<div
-									className={styles.content}
 									dangerouslySetInnerHTML={{ __html: dataEn.__content }}
 								/>
 							)}
 							{lang === 'de' && (
 								<div
-									className={styles.content}
 									dangerouslySetInnerHTML={{ __html: dataDe.__content }}
 								/>
 							)}

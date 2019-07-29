@@ -11,7 +11,13 @@ const translationsEn = {
 	...en,
 };
 
-const t = (lang, key, params) => {
+interface Props {
+	lang: string;
+	key: string;
+	params: string;
+}
+
+const t = ({lang, key, params}: Props) => {
 	const langTranslations = lang === 'de' ? translationsDe : translationsEn;
 	const translation = key
 		.split('.')

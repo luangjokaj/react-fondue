@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Head from '../../Components/Head';
 import { Status } from '../../Components/Status';
 import { ContentPusher, Container, Readable } from '../../Components/Layout';
-import styles from './NotFound.css';
+const styles = require('./NotFound.css');
 
 function NotFound() {
 	return (

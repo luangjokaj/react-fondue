@@ -1,10 +1,17 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from './Heading.css';
+const styles = require('./Heading.css');
 
-export function makeHeading(h) {
+interface makeHeadingProps {
+	size: number;
+	children?: any;
+	className?: string;
+	bold?: boolean;
+}
+
+export function makeHeading(h:any) {
 	const defaultSizeStyle = styles[`like-h${h}`];
-	return ({ size, children, className: propsCN, bold }) => {
+	return ({ size, children, className: propsCN, bold }: makeHeadingProps) => {
 		const sizeStyle = size ? styles[size] : defaultSizeStyle;
 		const className = classNames(styles.heading, propsCN, sizeStyle, {
 			[styles.bold]: bold,

@@ -1,17 +1,26 @@
 import React, { Component, Fragment } from 'react';
 import Head from '../../Components/Head';
 import { ContentPusher, Container, Readable } from '../../Components/Layout';
-import styles from './About.css';
+const styles = require('./About.css');
 const dataEn = require('./data-about-en.md');
 const dataDe = require('./data-about-de.md');
+// @ts-ignore
 import hljs from 'highlight.js/lib/highlight';
+// @ts-ignore
 import javascript from 'highlight.js/lib/languages/javascript';
+// @ts-ignore
 import css from 'highlight.js/lib/languages/css';
 import { t } from '../../Components/Languages';
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 
+interface AboutProps {
+	match?: any;
+}
+
 class About extends Component {
+	props: AboutProps;
+
 	componentDidMount() {
 		const cdx = document.getElementsByTagName('pre');
 		if (cdx.length) {
