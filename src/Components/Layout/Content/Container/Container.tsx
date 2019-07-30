@@ -4,8 +4,8 @@ const styles = require('./Container.css');
 
 interface ContainerProps {
 	className?: string;
-	children: any;
 	fluid?: boolean;
+	children: any;
 }
 
 function Container({ className, children, fluid = false  }: ContainerProps) {

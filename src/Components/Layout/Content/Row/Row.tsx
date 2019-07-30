@@ -5,8 +5,8 @@ const styles = require('./Row.css');
 interface RowProps {
 	className?: string;
 	children: any;
-	alignItems?: string;
-	justifyContent?: string;
+	alignItems?: 'center' | 'flex-end' | 'flex-start';
+	justifyContent?: 'center' | 'space-between' | 'space-around';
 }
 
 function Row({

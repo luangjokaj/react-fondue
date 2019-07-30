@@ -3,13 +3,14 @@ import classNames from 'classnames';
 const styles = require('./Heading.css');
 
 interface makeHeadingProps {
-	size: number;
-	children?: any;
+	size?: '1' | '2' | '3' | '4' | '5' | '6';
+	children: any;
 	className?: string;
+	propsCN?: string;
 	bold?: boolean;
 }
 
-export function makeHeading(h:any) {
+export function makeHeading(h:number) {
 	const defaultSizeStyle = styles[`like-h${h}`];
 	return ({ size, children, className: propsCN, bold }: makeHeadingProps) => {
 		const sizeStyle = size ? styles[size] : defaultSizeStyle;
