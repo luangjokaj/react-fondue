@@ -15,7 +15,7 @@ hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 
 interface AboutProps {
-	match?: any;
+	match: any;
 }
 
 class About extends Component<AboutProps, any> {

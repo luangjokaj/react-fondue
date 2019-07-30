@@ -15,7 +15,7 @@ hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 
 interface HomeProps {
-	match?: any;
+	match: any;
 }
 
 class Home extends Component<HomeProps, any> {
