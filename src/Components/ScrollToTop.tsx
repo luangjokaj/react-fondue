@@ -7,7 +7,7 @@ interface ScrollToTopProps {
 }
 
 class ScrollToTop extends Component<ScrollToTopProps, any> {
-	componentDidUpdate(prevProps:any) {
+	componentDidUpdate(prevProps: any) {
 		if (location !== prevProps.location) {
 			window.scrollTo(0, 0);
 		}

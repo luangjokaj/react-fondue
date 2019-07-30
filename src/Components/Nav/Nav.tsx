@@ -16,7 +16,7 @@ interface NavState {
 }
 
 class Nav extends Component<NavProps, NavState> {
-	constructor(props:NavProps) {
+	constructor(props: NavProps) {
 		super(props);
 
 		this.state = {

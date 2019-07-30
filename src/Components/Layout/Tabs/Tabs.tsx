@@ -24,7 +24,7 @@ interface TabState {
 }
 
 class Tabs extends Component<TabProps, TabState> {
-	constructor(props:TabProps) {
+	constructor(props: TabProps) {
 		super(props);
 
 		this.state = {

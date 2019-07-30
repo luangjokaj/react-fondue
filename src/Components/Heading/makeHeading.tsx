@@ -10,7 +10,7 @@ interface makeHeadingProps {
 	bold?: boolean;
 }
 
-export function makeHeading(h:number) {
+export function makeHeading(h: number) {
 	const defaultSizeStyle = styles[`like-h${h}`];
 	return ({ size, children, className: propsCN, bold }: makeHeadingProps) => {
 		const sizeStyle = size ? styles[size] : defaultSizeStyle;
