@@ -17,7 +17,7 @@
 		"typeRoots": ["type-declarations", "node_modules/@types"],
 	},
 	"include": [
-		"./src/**/*"
+		"./src/**/*.tsx"
 	],
 	"exclude": [
 		"node_modules/**"
