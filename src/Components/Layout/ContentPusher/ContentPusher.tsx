@@ -4,11 +4,11 @@ const styles = require('./ContentPusher.css');
 import AppearAfter from '../../AppearAfter';
 
 interface ContentPusherProps {
+	children: any;
 	className?: string;
-	children?: any;
 }
 
-function ContentPusher({ className, children }:ContentPusherProps) {
+function ContentPusher({ children, className }:ContentPusherProps) {
 	return (
 		<AppearAfter
 			className={classNames(styles.contentPusher, className)}

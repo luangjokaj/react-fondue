@@ -3,15 +3,15 @@ import classNames from 'classnames';
 const styles = require('./Row.css');
 
 interface RowProps {
-	className?: string;
 	children: any;
+	className?: string;
 	alignItems?: 'center' | 'flex-end' | 'flex-start';
 	justifyContent?: 'center' | 'space-between' | 'space-around';
 }
 
 function Row({
-	className,
 	children,
+	className,
 	alignItems,
 	justifyContent,
 }: RowProps) {

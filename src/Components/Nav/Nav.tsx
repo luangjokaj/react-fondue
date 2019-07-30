@@ -7,8 +7,8 @@ import { Logo, Riangle } from '../../assets/svg';
 const styles = require('./Nav.css');
 
 interface NavProps {
-	location?: any;
-	lang?: string;
+	location: any;
+	lang: string;
 }
 
 interface NavState {
@@ -61,7 +61,6 @@ class Nav extends Component<NavProps, NavState> {
 					>
 						<NavItem
 							title="Overview"
-							link="/"
 							active={location.pathname == `/${lang}` ? true : false}
 						>
 							<ul className={styles.sub}>
@@ -79,7 +78,6 @@ class Nav extends Component<NavProps, NavState> {
 						</NavItem>
 						<NavItem
 							title="About"
-							link="/"
 							active={
 								location.pathname == `/${lang}/about` || location.pathname == `/${lang}/about/`
 									? true

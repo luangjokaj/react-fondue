@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { withRouter, RouteComponentProps } from 'react-router';
 
 interface ScrollToTopProps {
+	children: any;
 	location?: string;
-	children?: any;
 }
 
 class ScrollToTop extends Component<ScrollToTopProps, any> {

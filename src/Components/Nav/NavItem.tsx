@@ -8,10 +8,9 @@ const styles = require('./Nav.css');
 interface NavItemProps {
 	children: any;
 	title: string;
-	className?: string;
-	link?: string;
-	label?: string;
 	active: boolean;
+	className?: string;
+	label?: string;
 }
 
 interface NavItemState {
@@ -33,7 +32,7 @@ class NavItem extends Component<NavItemProps, NavItemState> {
 
 	render() {
 		const { opened } = this.state;
-		const { children, title, className, link, label } = this.props;
+		const { children, title, className, label } = this.props;
 
 		return (
 			<li

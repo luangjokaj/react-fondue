@@ -3,11 +3,11 @@ import classNames from 'classnames';
 const styles = require('./Content.css');
 
 interface ContentProps {
-	className?: string;
 	children: any;
+	className?: string;
 }
 
-function Content({ className, children }: ContentProps) {
+function Content({ children, className }: ContentProps) {
 	return <div className={classNames(styles.content, className)}>{children}</div>;
 }
 

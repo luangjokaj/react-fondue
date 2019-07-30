@@ -5,6 +5,7 @@ const styles = require('./Col.css');
 type gridNumbers = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
 
 interface ColProps {
+	children: any;
 	textAlign?: 'left' | 'center' | 'right';
 	className?: string;
 	id?: string;
@@ -29,10 +30,10 @@ interface ColProps {
 	lastXl?: boolean;
 	lastXxl?: boolean;
 	lastXxxl?: boolean;
-	children: any;
 }
 
 function Col({
+	children,
 	textAlign,
 	className,
 	id,
@@ -57,7 +58,6 @@ function Col({
 	lastXl,
 	lastXxl,
 	lastXxxl,
-	children,
 }: ColProps) {
 	return (
 		<div
