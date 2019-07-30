@@ -11,15 +11,14 @@ interface GoogleTagManagerProps {
 	scheme?: string,
 }
 
-class GoogleTagManager extends React.Component {
-	props: GoogleTagManagerProps;
+class GoogleTagManager extends React.Component<GoogleTagManagerProps, any> {
 
 	componentDidMount() {
 		const dataLayerName = this.props.dataLayerName || 'dataLayer';
 		const scriptId = this.props.scriptId || 'react-google-tag-manager-gtm';
 
 		if (!window[dataLayerName]) {
-			const gtmScriptNode = document.getElementById(scriptId);
+			const gtmScriptNode:any = document.getElementById(scriptId);
 
 			eval(gtmScriptNode.textContent);
 		}

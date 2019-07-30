@@ -12,9 +12,7 @@ interface AppearAfterState {
 	isVisible: boolean;
 }
 
-class AppearAfter extends Component {
-	props: AppearAfterProps;
-	state: AppearAfterState;
+class AppearAfter extends Component<AppearAfterProps, AppearAfterState> {
 	componentDidMount() {
 		setTimeout(() => this.setState({ isVisible: true }), this.props.delay || 0);
 	}
@@ -25,7 +23,7 @@ class AppearAfter extends Component {
 	}
 	render() {
 		const { isVisible } = this.state;
-		const { children, className, visibleClassName } = this.props;
+		const { children, className, visibleClassName = 'visible' } = this.props;
 		return React.cloneElement(children, {
 			className: classNames(className, {
 				[visibleClassName] : isVisible,

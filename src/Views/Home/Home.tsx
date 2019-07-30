@@ -18,9 +18,7 @@ interface HomeProps {
 	match?: any;
 }
 
-class Home extends Component {
-	props: HomeProps;
-
+class Home extends Component<HomeProps, any> {
 	componentDidMount() {
 		const cdx = document.getElementsByTagName('pre');
 		if (cdx.length) {

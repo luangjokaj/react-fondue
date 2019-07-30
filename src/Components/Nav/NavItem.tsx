@@ -18,10 +18,7 @@ interface NavItemState {
 	opened: boolean;
 }
 
-class NavItem extends Component {
-	props: NavItemProps;
-	state: NavItemState;
-
+class NavItem extends Component<NavItemProps, NavItemState> {
 	constructor(props: NavItemProps) {
 		super(props);
 

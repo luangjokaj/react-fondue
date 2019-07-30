@@ -23,10 +23,7 @@ interface TabState {
 	activeTab: boolean;
 }
 
-class Tabs extends Component {
-	props: TabProps;
-	state: TabState;
-
+class Tabs extends Component<TabProps, TabState> {
 	constructor(props:TabProps) {
 		super(props);
 

@@ -99,6 +99,7 @@
 		"lint:css": "stylelint src/**/*.css",
 		"lint:js": "eslint src src/**/*.js",
 		"lint:fix": "eslint src src/**/*.js --fix",
-		"lint": "npm run lint:css && npm run lint:js"
+		"lint": "npm run lint:css && npm run lint:js",
+		"type-check": "tsc"
 	}
 }

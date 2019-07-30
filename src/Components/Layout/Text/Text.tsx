@@ -13,9 +13,7 @@ interface TextProps {
 	blockquote?: boolean;
 }
 
-class Text extends Component {
-	props: TextProps;
-
+class Text extends Component<TextProps> {
 	render() {
 		const { children, className, textAlign, eyebrow, subtitle, small, blockquote } = this.props;
 		const ownClassName = classNames(

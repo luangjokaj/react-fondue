@@ -18,9 +18,7 @@ interface AboutProps {
 	match?: any;
 }
 
-class About extends Component {
-	props: AboutProps;
-
+class About extends Component<AboutProps, any> {
 	componentDidMount() {
 		const cdx = document.getElementsByTagName('pre');
 		if (cdx.length) {

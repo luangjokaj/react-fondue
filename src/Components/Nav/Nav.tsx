@@ -15,10 +15,7 @@ interface NavState {
 	menu: boolean;
 }
 
-class Nav extends Component {
-	props: NavProps;
-	state: NavState;
-
+class Nav extends Component<NavProps, NavState> {
 	constructor(props:NavProps) {
 		super(props);
 

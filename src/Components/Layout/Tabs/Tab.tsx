@@ -8,10 +8,8 @@ interface TabProps {
 	label: string;
 }
 
-class Tab extends Component {
-	props: TabProps;
-
-	constructor(props:TabProps) {
+class Tab extends Component<TabProps, any> {
+	constructor(props: TabProps) {
 		super(props);
 	}
 
