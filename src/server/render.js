@@ -7,7 +7,7 @@ import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 import extractLocalesFromReq from './client-locale/extractLocalesFromReq';
 import guessLocale from './client-locale/guessLocale';
-import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from '../client-locale/constants';
+import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from './client-locale/constants';
 
 export default ({ clientStats }) => (req, res) => {
 	const userLocales = extractLocalesFromReq(req);
