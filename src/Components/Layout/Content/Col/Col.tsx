@@ -2,18 +2,19 @@ import React from 'react';
 import classNames from 'classnames';
 const styles = require('./Col.css');
 
+type gridNumbers = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
+
 interface ColProps {
-	textAlign?: string;
+	textAlign?: 'left' | 'center' | 'right';
 	className?: string;
 	id?: string;
-	children: any;
-	xs?: string;
-	sm?: string;
-	md?: string;
-	lg?: string;
-	xl?: string;
-	xxl?: string;
-	xxxl?: string;
+	xs?: gridNumbers;
+	sm?: gridNumbers;
+	md?: gridNumbers;
+	lg?: gridNumbers;
+	xl?: gridNumbers;
+	xxl?: gridNumbers;
+	xxxl?: gridNumbers;
 	first?: boolean;
 	firstSm?: boolean;
 	firstMd?: boolean;
@@ -28,13 +29,13 @@ interface ColProps {
 	lastXl?: boolean;
 	lastXxl?: boolean;
 	lastXxxl?: boolean;
+	children: any;
 }
 
 function Col({
 	textAlign,
 	className,
 	id,
-	children,
 	xs,
 	sm,
 	md,
@@ -56,6 +57,7 @@ function Col({
 	lastXl,
 	lastXxl,
 	lastXxxl,
+	children,
 }: ColProps) {
 	return (
 		<div
