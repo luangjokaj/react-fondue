@@ -1,17 +1,17 @@
 import React, { Fragment } from 'react';
 import universal from 'react-universal-component';
+import { Route, Switch, Redirect } from 'react-router';
+import { RedirectWithStatus } from '../Components/RedirectStatus';
 import GoogleTagManager from '../Components/GoogleTagManager';
 import Head from '../Components/Head';
 import Nav from '../Components/Nav';
 import Footer from '../Components/Footer';
-import { Route, Switch, Redirect } from 'react-router';
-import { RedirectWithStatus } from '../Components/RedirectStatus';
 import { Loading } from '../Components/Layout';
 import '../assets/css/styles.css';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const UniversalComponent = universal(props => import(`../Views/${props.page}`), {
+const UniversalComponent = universal((props) => import(`../Views/${props.page}`), {
 	loading: () => <Loading />,
 	ignoreBabelRename: true,
 });
