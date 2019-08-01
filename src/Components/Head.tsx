@@ -21,6 +21,17 @@ function Head({
 		<Helmet>
 			<meta http-equiv="" content="IE=edge" />
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<link rel="manifest" href="/manifest.json" />
+			<link 
+				rel="apple-touch-icon" 
+				sizes="192x192" 
+				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1564693542/cherry/reactfondue/icon192.png"
+			/>
+			<link 
+				rel="apple-touch-icon" 
+				sizes="512x512" 
+				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1564693640/cherry/reactfondue/512.png"
+			/>
 			{description && <meta name="description" content={description} />}
 			{title && <meta property="og:title" content={title} />}
 			{description && <meta property="og:description" content={description} />}
