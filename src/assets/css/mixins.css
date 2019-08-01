@@ -17,17 +17,6 @@
 	}
 }
 
-@define-mixin paragraph {
-	color: var(--color-secondary);
-	font-size: var(--size-text-mobile);
-	line-height: var(--lineheight-text-mobile);
-
-	@media (--screen-lg) {
-		font-size: var(--size-text-desktop);
-		line-height: var(--lineheight-text-desktop);
-	}
-}
-
 @define-mixin heading {
 	font-family: var(--font-head);
 	font-weight: 300;
@@ -145,7 +134,6 @@
 	}
 }
 
-
 @define-mixin subtitle {
 	font-size: var(--size-subtitle-mobile);
 	line-height: var(--lineheight-subtitle-mobile);
@@ -163,6 +151,21 @@
 	@media (--screen-lg) {
 		font-size: var(--size-lead-desktop);
 		line-height: var(--lineheight-lead-desktop);
+	}
+}
+
+@define-mixin strong {
+	font-weight: 700;
+}
+
+@define-mixin text {
+	color: var(--color-secondary);
+	font-size: var(--size-text-mobile);
+	line-height: var(--lineheight-text-mobile);
+
+	@media (--screen-lg) {
+		font-size: var(--size-text-desktop);
+		line-height: var(--lineheight-text-desktop);
 	}
 }
 
@@ -200,6 +203,12 @@
 		width: 100%;
 		position: relative;
 		padding: 0 0 0 15px;
+		color: var(--color-secondary);
+
+		& p {
+			margin: 0;
+			padding: 0;
+		}
 
 		&:before {
 			content: '';
@@ -224,6 +233,12 @@
 		width: 100%;
 		position: relative;
 		padding: 0 0 0 20px;
+		color: var(--color-secondary);
+
+		& p {
+			margin: 0;
+			padding: 0;
+		}
 
 		&:first-child {
 			counter-reset: section;
@@ -253,6 +268,12 @@
 		width: 100%;
 		position: relative;
 		padding: 0 0 0 25px;
+		color: var(--color-secondary);
+
+		& p {
+			margin: 0;
+			padding: 0;
+		}
 
 		&:before {
 			content: '🍒';
@@ -265,5 +286,46 @@
 			top: 3px;
 			left: 0;
 		}
+	}
+}
+
+@define-mixin container {
+	margin: auto;
+	max-width: var(--max-width);
+	padding-right: var(--margin-container-mobile);
+	padding-left: var(--margin-container-mobile);
+
+	@media (--screen-lg) {
+		padding-right: var(--margin-container-desktop);
+		padding-left: var(--margin-container-desktop);
+	}
+
+	@media (--screen-xxxl) {
+		max-width: 1704px;
+	}
+}
+
+@define-mixin containerFluid {
+	width: 100%;
+	max-width: initial;
+	padding-right: var(--margin-container-mobile);
+	padding-left: var(--margin-container-mobile);
+	margin-right: auto;
+	margin-left: auto;
+
+	@media (--screen-lg) {
+		padding-right: var(--margin-container-desktop);
+		padding-left: var(--margin-container-desktop);
+	}
+}
+
+
+@define-mixin containerChild {
+	padding-right: var(--margin-container-child-mobile);
+	padding-left: var(--margin-container-child-mobile);
+
+	@media (--screen-lg) {
+		padding-right: var(--margin-container-child-desktop);
+		padding-left: var(--margin-container-child-desktop);
 	}
 }
