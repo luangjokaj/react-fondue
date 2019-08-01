@@ -3,16 +3,18 @@
 
 [ReactFondue](https://www.reactfondue.co/) is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.
 
+[![Technologies](src/assets/img/tech-stack.svg)](https://www.reactfondue.co/)
+
 |👇|Includes|
 |:-:|:---|
 |⚙| Babel 7|
 |📦| Webpack 4|
+|🤖| Express Server|
 |⚛| React 16|
 |🌈| TypeScript|
 |🕸| CSS Modules|
 |🎨| PostCSS|
 |💅| Styled Components|
-|🤖| Express Server|
 |🔥| Hot Module Replacement|
 |✂️| Code Splitting|
 |🛎| Server Side Rendering|

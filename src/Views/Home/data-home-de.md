@@ -6,12 +6,12 @@
 |:-:|:---|
 |⚙| Babel 7|
 |📦| Webpack 4|
+|🤖| Express Server|
 |⚛| React 16|
 |🌈| TypeScript|
 |🕸| CSS Modules|
 |🎨| PostCSS|
 |💅| Styled Components|
-|🤖| Express Server|
 |🔥| Hot Module Replacement|
 |✂️| Code Splitting|
 |🛎| Server Side Rendering|
