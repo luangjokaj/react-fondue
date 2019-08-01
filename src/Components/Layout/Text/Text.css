@@ -1,7 +1,7 @@
 @import '../../../assets/css/variables.css';
 
 .text {
-	@mixin paragraph;
+	@mixin text;
 
 	&.eyebrow {
 		@mixin eyebrow;

@@ -62,7 +62,7 @@
 		border-bottom-right-radius: 5px;
 		
 		& p {
-			@mixin paragraph;
+			@mixin text;
 		}
 	}
 }
