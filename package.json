@@ -97,8 +97,8 @@
 		"prod": "NODE_ENV=production node src/server/main.js",
 		"dev": "NODE_ENV=development nodemon --watch src/server --watch config --inspect src/server/main.js",
 		"lint:css": "stylelint src/**/*.css",
-		"lint:js": "eslint src src/**/*.js",
-		"lint:fix": "eslint src src/**/*.js --fix",
+		"lint:js": "eslint src/**/*.js",
+		"lint:fix": "eslint src/**/*.js --fix",
 		"lint": "npm run lint:css && npm run lint:js",
 		"type-check": "tsc"
 	}
