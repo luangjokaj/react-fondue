@@ -5,6 +5,7 @@ build/
 # IDE & Editors
 .idea
 .vscode
+*.iml
 
 # OSX
 *.DS_Store
@@ -18,12 +19,10 @@ ehthumbs.db
 Desktop.ini
 *.lnk
 
-*.iml
-
-node_modules
-
 # Debug log from npm
 npm-debug.log
+
+node_modules
 
 *.map
 *.log
