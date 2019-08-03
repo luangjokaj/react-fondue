@@ -1,14 +1,20 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import Routes from '../App/Routes';
 import { Helmet } from 'react-helmet';
 import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 import extractLocalesFromReq from './client-locale/extractLocalesFromReq';
 import guessLocale from './client-locale/guessLocale';
+import reducer from '../store/reducer';
 import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from './client-locale/constants';
 import manifest from './manifest';
+
+const store = createStore(reducer);
+const reduxState = store.getState();
 
 export default ({ clientStats }) => (req, res) => {
 	const userLocales = extractLocalesFromReq(req);
@@ -24,9 +30,11 @@ export default ({ clientStats }) => (req, res) => {
 
 	const context = {};
 	const app = renderToString(
-		<StaticRouter location={req.originalUrl} context={context}>
-			<Routes lang={lang} />
-		</StaticRouter>
+		<Provider store={store}>
+			<StaticRouter location={req.originalUrl} context={context}>
+				<Routes lang={lang} />
+			</StaticRouter>
+		</Provider>
 	);
 
 	const helmet = Helmet.renderStatic();
@@ -61,6 +69,6 @@ export default ({ clientStats }) => (req, res) => {
 		.send(
 			`<!DOCTYPE html><html lang="${lang}"><head><meta name="theme-color" content="#000000"/>${styles}${
 				helmet.title
-			}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}</body></html>`
+			}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}<script>window.REDUX_DATA = ${JSON.stringify(reduxState)}</script></body></html>`
 		);
 };

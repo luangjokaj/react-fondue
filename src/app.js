@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppRoot from './App/AppRoot';
 import { AppContainer } from 'react-hot-loader';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import AppRoot from './App/AppRoot';
+import reducer from './store/reducer';
+
+const store = createStore(reducer);
 
 function render(Component) {
 	ReactDOM.hydrate(
 		<AppContainer>
-			<Component />
+			<Provider store={store}>
+				<Component />
+			</Provider>
 		</AppContainer>,
 		document.getElementById('react-root')
 	);

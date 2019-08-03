@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
 import Head from '../../Components/Head';
 import { ContentPusher, Container, Readable } from '../../Components/Layout';
 const styles = ('./Home.css');
@@ -16,6 +17,8 @@ hljs.registerLanguage('css', css);
 
 interface HomeProps {
 	match: any;
+	counter?: any;
+	onIncrement?: any;
 }
 
 class Home extends Component<HomeProps, any> {
@@ -38,6 +41,7 @@ class Home extends Component<HomeProps, any> {
 				<ContentPusher>
 					<Container>
 						<Readable>
+							{this.props.counter} <button onClick={this.props.onIncrement}>Rrite</button>
 							{lang === 'en' && (
 								<div
 									dangerouslySetInnerHTML={{ __html: dataEn.__content }}
@@ -56,4 +60,16 @@ class Home extends Component<HomeProps, any> {
 	}
 }
 
-export default Home;
+const mapStateToProps = (state: any) => {
+	return {
+		counter: state.counter,
+	}
+}
+
+const mapDispatchToProps = (dispatch: any) => {
+	return {
+		onIncrement: () => dispatch({ type: 'INCREMENT' })
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
