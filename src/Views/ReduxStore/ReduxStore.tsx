@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Head from '../../Components/Head';
-import { ContentPusher, Container, Readable } from '../../Components/Layout';
+import { ContentPusher, Container, Readable, Button } from '../../Components/Layout';
 import * as actionCreators from '../../store/actions';
 const styles = './ReduxStore.css';
 const data = require('./data-redux.md');
@@ -53,12 +53,14 @@ class ReduxStore extends Component<ReduxStore, any> {
 				<ContentPusher>
 					<Container>
 						<Readable>
+							<div dangerouslySetInnerHTML={{ __html: data.__content }} />
+							<hr />
 							<div>
 								{this.renderSample()}
 							</div>
-							{this.props.counter} <button onClick={this.props.onIncrement}>Rrite</button>
 							<hr />
-							<div dangerouslySetInnerHTML={{ __html: data.__content }} />
+							<h3>{this.props.counter}</h3>
+							<Button onClick={this.props.onIncrement}>Increment</Button>
 						</Readable>
 					</Container>
 				</ContentPusher>
