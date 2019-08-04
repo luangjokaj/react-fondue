@@ -20,7 +20,7 @@ const logger = store => {
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk, logger)));
+const store = createStore(reducer, window.REDUX_DATA ,composeEnhancers(applyMiddleware(thunk, logger)));
 
 function render(Component) {
 	ReactDOM.hydrate(
