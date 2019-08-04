@@ -55,6 +55,7 @@ class ReduxStore extends Component<ReduxStore, any> {
 						<Readable>
 							<div dangerouslySetInnerHTML={{ __html: data.__content }} />
 							<hr />
+							<h3>Asynchronous Data</h3>
 							<div>
 								{this.renderSample()}
 							</div>
