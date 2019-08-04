@@ -8,7 +8,7 @@ import Nav from '../Components/Nav';
 import Footer from '../Components/Footer';
 import { Loading } from '../Components/Layout';
 import '../assets/css/styles.css';
-import { loadData } from '../Views/Home/Home';
+import { loadData } from '../Views/ReduxStore/ReduxStore';
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -19,7 +19,6 @@ const UniversalComponent = universal((props) => import(`../Views/${props.page}`)
 
 export const routes = [
 	{
-		loadData,
 		exact: true,
 		path: '/:lang',
 		page: 'Home',
@@ -28,6 +27,12 @@ export const routes = [
 		exact: true,
 		path: '/:lang/about',
 		page: 'About',
+	},
+	{
+		loadData,
+		exact: true,
+		path: '/:lang/redux-store',
+		page: 'ReduxStore',
 	},
 ];
 

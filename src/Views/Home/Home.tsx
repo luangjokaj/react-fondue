@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
 import Head from '../../Components/Head';
 import { ContentPusher, Container, Readable } from '../../Components/Layout';
-import * as actionCreators from '../../store/actions';
 const styles = './Home.css';
 const dataEn = require('./data-home-en.md');
 const dataDe = require('./data-home-de.md');
@@ -18,17 +16,9 @@ hljs.registerLanguage('css', css);
 
 interface HomeProps {
 	match: any;
-	counter?: any;
-	onIncrement?: any;
-	onDataLoad?: any;
-	data?: any;
 }
 
 class Home extends Component<HomeProps, any> {
-	componentWillMount() {
-		this.props.onDataLoad();
-	}
-
 	componentDidMount() {
 		const cdx = document.getElementsByTagName('pre');
 		if (cdx.length) {
@@ -37,12 +27,6 @@ class Home extends Component<HomeProps, any> {
 				hljs.highlightBlock(cdx[i]);
 			}
 		}
-	}
-
-	renderSample() {
-		return this.props.data.map((dataItem: any) => {
-			return <div key={dataItem.id}>{dataItem.name}</div>;
-		})
 	}
 
 	render() {
@@ -54,11 +38,6 @@ class Home extends Component<HomeProps, any> {
 				<ContentPusher>
 					<Container>
 						<Readable>
-							<div>
-								{this.renderSample()}
-							</div>
-							{this.props.counter} <button onClick={this.props.onIncrement}>Rrite</button>
-							{this.props.counter} <button onClick={this.props.onDataLoad}>onDataLoad</button>
 							{lang === 'en' && <div dangerouslySetInnerHTML={{ __html: dataEn.__content }} />}
 							{lang === 'de' && <div dangerouslySetInnerHTML={{ __html: dataDe.__content }} />}
 						</Readable>
@@ -69,26 +48,4 @@ class Home extends Component<HomeProps, any> {
 	}
 }
 
-const mapStateToProps = (state: any) => {
-	return {
-		counter: state.counter,
-		data: state.data,
-	};
-};
-
-const mapDispatchToProps = (dispatch: any) => {
-	return {
-		onIncrement: () => dispatch(actionCreators.increment()),
-		onDataLoad: () => dispatch(actionCreators.fetchData()),
-	};
-};
-
-function loadData(store:any) {
-	store.dispatch(actionCreators.fetchData());
-}
-
-export { loadData };
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps,
-)(Home);
+export default Home;
