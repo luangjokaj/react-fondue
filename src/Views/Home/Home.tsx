@@ -83,6 +83,11 @@ const mapDispatchToProps = (dispatch: any) => {
 	};
 };
 
+function loadData(store:any) {
+	store.dispatch(actionCreators.fetchData());
+}
+
+export { loadData };
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps,

@@ -8,6 +8,7 @@ import Nav from '../Components/Nav';
 import Footer from '../Components/Footer';
 import { Loading } from '../Components/Layout';
 import '../assets/css/styles.css';
+import { loadData } from '../Views/Home/Home';
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -18,6 +19,7 @@ const UniversalComponent = universal((props) => import(`../Views/${props.page}`)
 
 export const routes = [
 	{
+		loadData,
 		exact: true,
 		path: '/:lang',
 		page: 'Home',
