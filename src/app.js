@@ -7,13 +7,17 @@ import thunk from 'redux-thunk';
 import AppRoot from './App/AppRoot';
 import reducer from './store/reducer';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const logger = store => {
 	return next => {
 		return action => {
-			console.log('[Middleware] Dispatching: ', action);
-			const result = next(action);
-			console.log('[Middleware] Next state: ', store.getState());
-			return result;
+			if (!isProd) {
+				console.log('[Middleware] Dispatching: ', action);
+				const result = next(action);
+				console.log('[Middleware] Next state: ', store.getState());
+				return result;
+			}
 		}
 	}
 }
