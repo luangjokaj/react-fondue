@@ -12,12 +12,10 @@ const isProd = process.env.NODE_ENV === 'production';
 const logger = store => {
 	return next => {
 		return action => {
-			if (!isProd) {
-				console.log('[Middleware] Dispatching: ', action);
-				const result = next(action);
-				console.log('[Middleware] Next state: ', store.getState());
-				return result;
-			}
+			console.log('[Middleware] Dispatching: ', action);
+			const result = next(action);
+			console.log('[Middleware] Next state: ', store.getState());
+			return result;
 		}
 	}
 }
