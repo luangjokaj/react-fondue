@@ -16,22 +16,32 @@ const UniversalComponent = universal((props) => import(`../Views/${props.page}`)
 	ignoreBabelRename: true,
 });
 
+export const routes = [
+	{
+		exact: true,
+		path: '/:lang',
+		page: 'Home',
+	},
+	{
+		exact: true,
+		path: '/:lang/about',
+		page: 'About',
+	},
+];
+
 export default ({ staticContext, lang }) => (
 	<Fragment>
 		{isProd ? <GoogleTagManager gtmId="GTM-WFTXGC8" /> : ''}
 		<Head />
 		<Nav lang={lang} />
 		<Switch>
-			<Route
-				exact
-				path="/:lang"
-				render={routeProps => <UniversalComponent page="Home" {...routeProps} />}
-			/>
-			<Route
-				exact
-				path="/:lang/about"
-				render={routeProps => <UniversalComponent page="About" {...routeProps} />}
-			/>
+			{routes.map(route => (
+				<Route
+					key={route.path}
+					render={routeProps => <UniversalComponent page={route.page} {...routeProps} />}
+					{...route}
+				/>
+			))}
 			<RedirectWithStatus status={301} exact from="/" to={`/${lang}`} />
 			<Route render={routeProps => <UniversalComponent page="NotFound" {...routeProps} />} />
 		</Switch>

@@ -28,7 +28,7 @@ class Home extends Component<HomeProps, any> {
 	componentWillMount() {
 		this.props.onDataLoad();
 	}
-	
+
 	componentDidMount() {
 		const cdx = document.getElementsByTagName('pre');
 		if (cdx.length) {
@@ -37,6 +37,12 @@ class Home extends Component<HomeProps, any> {
 				hljs.highlightBlock(cdx[i]);
 			}
 		}
+	}
+
+	renderSample() {
+		return this.props.data.map((dataItem: any) => {
+			return <div key={dataItem.id}>{dataItem.name}</div>;
+		})
 	}
 
 	render() {
@@ -49,9 +55,7 @@ class Home extends Component<HomeProps, any> {
 					<Container>
 						<Readable>
 							<div>
-								{this.props.data && this.props.data.map((dataItem: any) => {
-									return <div key={dataItem.id}>{dataItem.name}</div>;
-								})}
+								{this.renderSample()}
 							</div>
 							{this.props.counter} <button onClick={this.props.onIncrement}>Rrite</button>
 							{this.props.counter} <button onClick={this.props.onDataLoad}>onDataLoad</button>
