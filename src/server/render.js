@@ -12,6 +12,7 @@ import extractLocalesFromReq from './client-locale/extractLocalesFromReq';
 import guessLocale from './client-locale/guessLocale';
 import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from './client-locale/constants';
 import manifest from './manifest';
+import serialize from 'serialize-javascript';
 const store = createStore();
 
 export default ({ clientStats }) => (req, res) => {
@@ -72,7 +73,7 @@ export default ({ clientStats }) => (req, res) => {
 			.send(
 				`<!DOCTYPE html><html lang="${lang}"><head><meta name="theme-color" content="#000000"/>${styles}${
 					helmet.title
-				}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}<script>window.REDUX_DATA = ${JSON.stringify(store.getState())}</script></body></html>`
+				}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}<script>window.REDUX_DATA = ${serialize(store.getState())}</script></body></html>`
 			);
 	});
 };
