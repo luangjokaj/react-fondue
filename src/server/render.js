@@ -1,7 +1,7 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
-import { createStore } from 'redux';
+import createStore from './createStore';
 import { Provider } from 'react-redux';
 import Routes from '../App/Routes';
 import { Helmet } from 'react-helmet';
@@ -9,11 +9,10 @@ import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 import extractLocalesFromReq from './client-locale/extractLocalesFromReq';
 import guessLocale from './client-locale/guessLocale';
-import reducer from '../store/reducer';
 import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from './client-locale/constants';
 import manifest from './manifest';
 
-const store = createStore(reducer);
+const store = createStore();
 const reduxState = store.getState();
 
 export default ({ clientStats }) => (req, res) => {
