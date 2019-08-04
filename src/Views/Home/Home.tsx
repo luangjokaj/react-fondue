@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Head from '../../Components/Head';
 import { ContentPusher, Container, Readable } from '../../Components/Layout';
-const styles = './Home.css';
+const styles = require('./Home.css');
 const dataEn = require('./data-home-en.md');
 const dataDe = require('./data-home-de.md');
 import { t } from '../../Components/Languages';

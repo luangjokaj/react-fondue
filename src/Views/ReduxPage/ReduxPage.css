@@ -1,0 +1,6 @@
+@import '../../assets/css/variables.css';
+
+.list {
+	clear: both;
+	@mixin unorderedList;
+}

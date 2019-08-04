@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Head from '../../Components/Head';
 import { ContentPusher, Container, Readable, Button } from '../../Components/Layout';
 import * as actionCreators from '../../store/actions';
-const styles = './ReduxStore.css';
+const styles = require('./ReduxPage.css');
 const data = require('./data-redux.md');
 import { t } from '../../Components/Languages';
 // @ts-ignore
@@ -15,7 +15,7 @@ import css from 'highlight.js/lib/languages/css';
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 
-interface ReduxStore {
+interface ReduxPageProps {
 	match: any;
 	counter?: any;
 	onIncrement?: any;
@@ -23,7 +23,7 @@ interface ReduxStore {
 	data?: any;
 }
 
-class ReduxStore extends Component<ReduxStore, any> {
+class ReduxPage extends Component<ReduxPageProps, any> {
 	componentWillMount() {
 		this.props.onDataLoad();
 	}
@@ -40,8 +40,8 @@ class ReduxStore extends Component<ReduxStore, any> {
 
 	renderSample() {
 		return this.props.data.map((dataItem: any) => {
-			return <div key={dataItem.id}>{dataItem.name}</div>;
-		})
+			return <li key={dataItem.id}>{dataItem.name}</li>;
+		});
 	}
 
 	render() {
@@ -55,10 +55,7 @@ class ReduxStore extends Component<ReduxStore, any> {
 						<Readable>
 							<div dangerouslySetInnerHTML={{ __html: data.__content }} />
 							<hr />
-							<h3>Asynchronous Data</h3>
-							<div>
-								{this.renderSample()}
-							</div>
+							<ul className={styles.list}>{this.renderSample()}</ul>
 							<hr />
 							<h3>{this.props.counter}</h3>
 							<Button onClick={this.props.onIncrement}>Increment</Button>
@@ -92,4 +89,4 @@ export { loadData };
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps,
-)(ReduxStore);
+)(ReduxPage);

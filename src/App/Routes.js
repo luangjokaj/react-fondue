@@ -8,7 +8,7 @@ import Nav from '../Components/Nav';
 import Footer from '../Components/Footer';
 import { Loading } from '../Components/Layout';
 import '../assets/css/styles.css';
-import { loadData } from '../Views/ReduxStore/ReduxStore';
+import { loadData } from '../Views/ReduxPage/ReduxPage';
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -32,7 +32,7 @@ export const routes = [
 		loadData,
 		exact: true,
 		path: '/:lang/redux-store',
-		page: 'ReduxStore',
+		page: 'ReduxPage',
 	},
 ];
 
