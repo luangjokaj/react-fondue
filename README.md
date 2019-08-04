@@ -11,6 +11,7 @@
 |📦| Webpack 4|
 |🤖| Express Server|
 |⚛| React 16|
+|🎒| Redux|
 |🌈| TypeScript|
 |🕸| CSS Modules|
 |🎨| PostCSS|

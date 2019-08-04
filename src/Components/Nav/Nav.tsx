@@ -25,7 +25,7 @@ class Nav extends Component<NavProps, NavState> {
 	}
 
 	toggleMenu = () => {
-		this.setState({ menu: !this.state.menu })	;
+		this.setState({ menu: !this.state.menu });
 	};
 
 	closeMenu = () => {
@@ -61,7 +61,11 @@ class Nav extends Component<NavProps, NavState> {
 					>
 						<NavItem
 							title="Overview"
-							active={location.pathname == `/${lang}` ? true : false}
+							active={
+								location.pathname == `/${lang}` || location.pathname == `/${lang}/redux-store`
+									? true
+									: false
+							}
 						>
 							<ul className={styles.sub}>
 								<li>
@@ -72,6 +76,16 @@ class Nav extends Component<NavProps, NavState> {
 										exact
 									>
 										Introduction
+									</NavLink>
+								</li>
+								<li>
+									<NavLink
+										to={`/${lang}/redux-store`}
+										activeClassName={styles.active}
+										onClick={this.closeMenu}
+										exact
+									>
+										Redux Store
 									</NavLink>
 								</li>
 							</ul>
