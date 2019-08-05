@@ -36,6 +36,6 @@ const promises = matchRoutes(routes, req.path).map(({ route }) => {
 });
 ```
 
-We call the function and pass the store as a parameter only if the function exists in the route. 
+We call the function and pass the store as a parameter only if the function exists in the route. Once the Promise is resolved, only then `renderToString()` is being executed.
 
 # Demo 👇
