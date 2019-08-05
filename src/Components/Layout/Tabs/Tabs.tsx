@@ -19,7 +19,7 @@ interface TabProps {
 }
 
 interface TabState {
-	activeTab: boolean;
+	activeTab?: string;
 }
 
 class Tabs extends Component<TabProps, TabState> {

@@ -4,7 +4,7 @@ const styles = require('./Tabs.css');
 
 interface TabProps {
 	onClick?: any;
-	activeTab?: boolean;
+	activeTab?: string;
 	label: string;
 }
 
@@ -16,7 +16,7 @@ class Tab extends Component<TabProps, any> {
 	render() {
 		const { activeTab, label } = this.props;
 
-		const className = classNames(styles.tabListItem, { [styles.active]: activeTab });
+		const className = classNames(styles.tabListItem, { [styles.active]: activeTab === label });
 
 		return (
 			<li className={className}>
