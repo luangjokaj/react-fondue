@@ -6,12 +6,11 @@ import hljs from 'highlight.js/lib/highlight';
 // @ts-ignore 
 import javascript from 'highlight.js/lib/languages/javascript';
 const css = require('highlight.js/lib/languages/css');
-const styles = require('./Tabs.css');
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
+const styles = require('./Tabs.css');
 
 interface TabProps {
-	onClickTabItem: Function;
 	children: any;
 	className?: string;
 	wrap?: boolean;
@@ -44,7 +43,6 @@ class Tabs extends Component<TabProps, TabState> {
 
 	render() {
 		const {
-			onClickTabItem,
 			children,
 			className,
 			wrap,
@@ -83,7 +81,7 @@ class Tabs extends Component<TabProps, TabState> {
 		);
 	}
 
-	onClickTabItem = (tab:any) => {
+	onClickTabItem = (tab: any) => {
 		this.setState({ activeTab: tab });
 	};
 }

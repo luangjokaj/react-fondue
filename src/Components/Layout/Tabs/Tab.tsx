@@ -3,8 +3,8 @@ import classNames from 'classnames';
 const styles = require('./Tabs.css');
 
 interface TabProps {
-	onClick: any;
-	activeTab: boolean;
+	onClick?: any;
+	activeTab?: boolean;
 	label: string;
 }
 
@@ -14,7 +14,7 @@ class Tab extends Component<TabProps, any> {
 	}
 
 	render() {
-		const { onClick, activeTab, label } = this.props;
+		const { activeTab, label } = this.props;
 
 		const className = classNames(styles.tabListItem, { [styles.active]: activeTab });
 
