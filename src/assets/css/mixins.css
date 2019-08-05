@@ -218,8 +218,12 @@
 			height: 8px;
 			border-radius: 50%;
 			background: var(--color-primary);
-			top: 10px;
+			top: 8px;
 			left: 0;
+
+			@media (--screen-lg) {
+				top: 11px;
+			}
 		}
 	}
 }
