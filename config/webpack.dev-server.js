@@ -30,10 +30,13 @@ module.exports = {
 			},
 			{
 				test: /\.tsx?$/,
-				loader: 'awesome-typescript-loader',
-				options: {
-					getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
-				},
+				loader: ['babel-loader', {
+					loader: 'awesome-typescript-loader',
+					options: {
+						useCache: true,
+						getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
+					},
+				}],
 			},
 			{
 				test: /\.css$/,
