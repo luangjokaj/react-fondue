@@ -5,7 +5,7 @@ import createStore from './createStore';
 import { Provider } from 'react-redux';
 import { matchRoutes } from 'react-router-config';
 import Routes, { routes } from '../App/Routes';
-import { Helmet } from 'react-helmet';
+import { HelmetProvider } from 'react-helmet-async';
 import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 import extractLocalesFromReq from './client-locale/extractLocalesFromReq';
@@ -34,15 +34,19 @@ export default ({ clientStats }) => (req, res) => {
 		}
 
 		const context = {};
+		const helmetContext = {};
+
 		const app = renderToString(
-			<Provider store={store}>
-				<StaticRouter location={req.originalUrl} context={context}>
-					<Routes lang={lang} />
-				</StaticRouter>
-			</Provider>
+			<HelmetProvider context={helmetContext}>
+				<Provider store={store}>
+					<StaticRouter location={req.originalUrl} context={context}>
+						<Routes lang={lang} />
+					</StaticRouter>
+				</Provider>
+			</HelmetProvider>
 		);
 
-		const helmet = Helmet.renderStatic();
+		const { helmet } = helmetContext;
 
 		const { js, styles, cssHash } = flushChunks(clientStats, {
 			chunkNames: flushChunkNames(),

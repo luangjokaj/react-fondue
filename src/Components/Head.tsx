@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 const favicon = require( '../assets/img/favicon.ico');
 
 const isProd = process.env.NODE_ENV === 'production';

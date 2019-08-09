@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { AppContainer } from 'react-hot-loader';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
@@ -25,11 +26,13 @@ const store = createStore(reducer, window.REDUX_DATA, composeEnhancers(applyMidd
 
 function render(Component) {
 	ReactDOM.hydrate(
-		<AppContainer>
-			<Provider store={store}>
-				<Component />
-			</Provider>
-		</AppContainer>,
+		<HelmetProvider>
+			<AppContainer>
+				<Provider store={store}>
+					<Component />
+				</Provider>
+			</AppContainer>
+		</HelmetProvider>,
 		document.getElementById('react-root')
 	);
 }

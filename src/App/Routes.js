@@ -3,7 +3,6 @@ import universal from 'react-universal-component';
 import { Route, Switch, Redirect } from 'react-router';
 import { RedirectWithStatus } from '../Components/RedirectStatus';
 import GoogleTagManager from '../Components/GoogleTagManager';
-import Head from '../Components/Head';
 import Nav from '../Components/Nav';
 import Footer from '../Components/Footer';
 import { Loading } from '../Components/Layout';
@@ -39,7 +38,6 @@ export const routes = [
 export default ({ staticContext, lang }) => (
 	<Fragment>
 		{isProd ? <GoogleTagManager gtmId="GTM-WFTXGC8" /> : ''}
-		<Head />
 		<Nav lang={lang} />
 		<Switch>
 			{routes.map(route => (

@@ -24,11 +24,8 @@ interface ReduxPageProps {
 }
 
 class ReduxPage extends Component<ReduxPageProps, any> {
-	componentWillMount() {
-		this.props.onDataLoad();
-	}
-
 	componentDidMount() {
+		this.props.onDataLoad();
 		const cdx = document.getElementsByTagName('pre');
 		if (cdx.length) {
 			let i;
