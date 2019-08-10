@@ -6,14 +6,15 @@ import AppearAfter from '../../AppearAfter';
 interface ContentPusherProps {
 	children: any;
 	className?: string;
+	delay?: number;
 }
 
-function ContentPusher({ children, className }:ContentPusherProps) {
+function ContentPusher({ children, className, delay = 600 }:ContentPusherProps) {
 	return (
 		<AppearAfter
 			className={classNames(styles.contentPusher, className)}
 			visibleClassName={styles.visible}
-			delay={600}
+			delay={delay}
 		>
 			<div>{children}</div>
 		</AppearAfter>
