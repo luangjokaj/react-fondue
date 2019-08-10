@@ -1,9 +1,9 @@
 # [![ReactFondue](https://svgshare.com/i/BAq.svg)](https://www.reactfondue.co/)
- [![CircleCI](https://circleci.com/gh/luangjokaj/react-fondue/tree/master.svg?style=svg)](https://circleci.com/gh/luangjokaj/react-fondue/tree/master) [![Dependencies](https://david-dm.org/luangjokaj/react-fondue/status.svg)](https://david-dm.org/luangjokaj/react-fondue)
+ [![CircleCI](https://circleci.com/gh/luangjokaj/react-fondue/tree/master.svg?style=svg)](https://circleci.com/gh/luangjokaj/react-fondue/tree/master) [![Dependencies](https://david-dm.org/luangjokaj/react-fondue/status.svg)](https://david-dm.org/luangjokaj/react-fondue) [![Greenkeeper badge](https://badges.greenkeeper.io/luangjokaj/react-fondue.svg)](https://greenkeeper.io/)
 
 [ReactFondue](https://www.reactfondue.co/) is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.
 
-[![Technologies](src/assets/img/tech-stack.svg)](https://www.reactfondue.co/) [![Greenkeeper badge](https://badges.greenkeeper.io/luangjokaj/react-fondue.svg)](https://greenkeeper.io/)
+[![Technologies](src/assets/img/tech-stack.svg)](https://www.reactfondue.co/)
 
 |👇|Includes|
 |:-:|:---|
