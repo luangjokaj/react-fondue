@@ -4,7 +4,7 @@ module.exports = {
 	"description": "ReactFondue is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.",
 	"icons": [
 		{
-			"src": "https://res.cloudinary.com/deep-impact-ag/image/upload/v1565467526/cherry/reactfondue/icon192.png",
+			"src": "https://res.cloudinary.com/deep-impact-ag/image/upload/v1565468890/cherry/reactfondue/icon192.png",
 			"sizes": "192x192",
 			"type": "image/png",
 		},

@@ -40,11 +40,11 @@ function Head({
 			<link
 				rel="icon"
 				sizes="192x192"
-				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1565467526/cherry/reactfondue/icon192.png"
+				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1565468890/cherry/reactfondue/icon192.png"
 			/>
 			<link
 				rel="apple-touch-icon-precomposed"
-				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1565467526/cherry/reactfondue/icon192.png"
+				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1565468890/cherry/reactfondue/icon192.png"
 			/>
 			{children && children}
 			{title && <title>{title}</title>}
