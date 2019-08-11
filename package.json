@@ -71,6 +71,7 @@
 		"postcss-loader": "^3.0.0",
 		"postcss-mixins": "^6.2.2",
 		"postcss-preset-env": "^6.7.0",
+		"prettier": "^1.18.2",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
 		"react-google-tag-manager": "^2.2.1",
@@ -107,6 +108,7 @@
 		"lint:js": "eslint src/**/*.js",
 		"lint:fix": "eslint src/**/*.js --fix",
 		"lint": "npm run lint:css && npm run lint:js",
-		"type-check": "tsc"
+		"type-check": "tsc",
+		"format": "prettier --write \"./src/**/*.{js,json,ts,tsx}\" \"!.node_modules/**\""
 	}
 }

@@ -5,4 +5,4 @@ import reducer from '../store/reducer';
 export default () => {
 	const store = createStore(reducer, applyMiddleware(thunk));
 	return store;
-}
+};

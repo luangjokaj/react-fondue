@@ -17,11 +17,14 @@ interface Props {
 	params: string;
 }
 
-const t = ({lang, key, params}: Props) => {
+const t = ({ lang, key, params }: Props) => {
 	const langTranslations = lang === 'de' ? translationsDe : translationsEn;
 	const translation = key
 		.split('.')
-		.reduce((acc, currKey) => (acc ? acc[currKey] : undefined), langTranslations);
+		.reduce(
+			(acc, currKey) => (acc ? acc[currKey] : undefined),
+			langTranslations,
+		);
 
 	if (typeof translation !== 'string') {
 		console.warn('No translation found for', key);
@@ -29,7 +32,7 @@ const t = ({lang, key, params}: Props) => {
 	}
 
 	if (params) {
-		return translation.replace(/\$\{\w+\}/g, match => {
+		return translation.replace(/\$\{\w+\}/g, (match) => {
 			const param = match.substring(2, match.length - 1);
 			return params[param] || match;
 		});

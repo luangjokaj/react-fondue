@@ -8,7 +8,9 @@ interface ContentProps {
 }
 
 function Content({ children, className }: ContentProps) {
-	return <div className={classNames(styles.content, className)}>{children}</div>;
+	return (
+		<div className={classNames(styles.content, className)}>{children}</div>
+	);
 }
 
 export default Content;

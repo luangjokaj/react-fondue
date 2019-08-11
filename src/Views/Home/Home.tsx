@@ -38,8 +38,20 @@ class Home extends Component<HomeProps, any> {
 				<ContentPusher>
 					<Container>
 						<Readable>
-							{lang === 'en' && <div dangerouslySetInnerHTML={{ __html: dataEn.__content }} />}
-							{lang === 'de' && <div dangerouslySetInnerHTML={{ __html: dataDe.__content }} />}
+							{lang === 'en' && (
+								<div
+									dangerouslySetInnerHTML={{
+										__html: dataEn.__content,
+									}}
+								/>
+							)}
+							{lang === 'de' && (
+								<div
+									dangerouslySetInnerHTML={{
+										__html: dataDe.__content,
+									}}
+								/>
+							)}
 						</Readable>
 					</Container>
 				</ContentPusher>

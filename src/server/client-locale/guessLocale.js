@@ -4,8 +4,9 @@
  */
 function guessLocale(availableLocales, clientLocales, defaultLocale) {
 	return (
-		clientLocales.filter(clientLocale => availableLocales.includes(clientLocale))[0] ||
-		defaultLocale
+		clientLocales.filter((clientLocale) =>
+			availableLocales.includes(clientLocale),
+		)[0] || defaultLocale
 	);
 }
 

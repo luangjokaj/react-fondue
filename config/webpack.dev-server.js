@@ -2,7 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const externals = require('./node-externals');
 
-const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
+	.default;
 const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = {
@@ -30,13 +31,18 @@ module.exports = {
 			},
 			{
 				test: /\.tsx?$/,
-				loader: ['babel-loader', {
-					loader: 'awesome-typescript-loader',
-					options: {
-						useCache: true,
-						getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
+				loader: [
+					'babel-loader',
+					{
+						loader: 'awesome-typescript-loader',
+						options: {
+							useCache: true,
+							getCustomTransformers: () => ({
+								before: [styledComponentsTransformer],
+							}),
+						},
 					},
-				}],
+				],
 			},
 			{
 				test: /\.css$/,
@@ -47,7 +53,8 @@ module.exports = {
 							onlyLocals: true,
 							modules: {
 								mode: 'local',
-								localIdentName: '[name]__[local]--[hash:base64:5]',
+								localIdentName:
+									'[name]__[local]--[hash:base64:5]',
 							},
 						},
 					},
@@ -61,11 +68,7 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use: [
-					"style-loader",
-					"css-loader",
-					"sass-loader",
-				],
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 			{
 				test: /\.(jpg|svg|png|ico|gif|eot|woff|ttf)$/,
@@ -93,7 +96,7 @@ module.exports = {
 		alias: {
 			'react-dom': '@hot-loader/react-dom',
 		},
-		extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".scss"],
+		extensions: ['.ts', '.tsx', '.js', '.json', '.jsx', '.scss'],
 	},
 	plugins: [
 		new webpack.optimize.LimitChunkCountPlugin({

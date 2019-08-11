@@ -2,7 +2,19 @@ import React from 'react';
 import classNames from 'classnames';
 const styles = require('./Col.css');
 
-type gridNumbers = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
+type gridNumbers =
+	| '1'
+	| '2'
+	| '3'
+	| '4'
+	| '5'
+	| '6'
+	| '7'
+	| '8'
+	| '9'
+	| '10'
+	| '11'
+	| '12';
 
 interface ColProps {
 	children: any;
@@ -88,7 +100,7 @@ function Col({
 					[styles.orderXxlLast]: lastXxl,
 					[styles.orderXxxlLast]: lastXxxl,
 				},
-				className
+				className,
 			)}
 		>
 			{children}

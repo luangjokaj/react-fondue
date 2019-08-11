@@ -3,7 +3,8 @@ const webpack = require('webpack');
 const externals = require('./node-externals');
 const OptimizeCssnanoPlugin = require('@intervolga/optimize-cssnano-plugin');
 
-const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
+	.default;
 const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = {
@@ -18,7 +19,7 @@ module.exports = {
 		libraryTarget: 'commonjs2',
 	},
 	resolve: {
-		extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".scss"],
+		extensions: ['.ts', '.tsx', '.js', '.json', '.jsx', '.scss'],
 	},
 	module: {
 		rules: [
@@ -36,7 +37,9 @@ module.exports = {
 				loader: 'awesome-typescript-loader',
 				options: {
 					useCache: true,
-					getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
+					getCustomTransformers: () => ({
+						before: [styledComponentsTransformer],
+					}),
 				},
 			},
 			{
@@ -62,11 +65,7 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use: [
-					"style-loader",
-					"css-loader",
-					"sass-loader",
-				],
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 			{
 				test: /\.(jpg|svg|png|ico|gif|eot|woff|ttf)$/,

@@ -9,7 +9,11 @@ interface ContentPusherProps {
 	delay?: number;
 }
 
-function ContentPusher({ children, className, delay = 600 }:ContentPusherProps) {
+function ContentPusher({
+	children,
+	className,
+	delay = 600,
+}: ContentPusherProps) {
 	return (
 		<AppearAfter
 			className={classNames(styles.contentPusher, className)}

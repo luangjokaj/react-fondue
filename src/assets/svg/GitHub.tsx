@@ -4,7 +4,7 @@ interface SvgProps {
 	className?: string;
 }
 
-function Svg({ className }:SvgProps) {
+function Svg({ className }: SvgProps) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

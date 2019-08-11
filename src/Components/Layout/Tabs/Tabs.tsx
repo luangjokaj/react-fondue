@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Tab from './Tab';
 // @ts-ignore
 import hljs from 'highlight.js/lib/highlight';
-// @ts-ignore 
+// @ts-ignore
 import javascript from 'highlight.js/lib/languages/javascript';
 const css = require('highlight.js/lib/languages/css');
 hljs.registerLanguage('javascript', javascript);
@@ -53,9 +53,13 @@ class Tabs extends Component<TabProps, TabState> {
 		const { activeTab } = this.state;
 
 		return (
-			<div className={classNames(styles.tabsWrapper, className, { [styles.wrap]: wrap })}>
+			<div
+				className={classNames(styles.tabsWrapper, className, {
+					[styles.wrap]: wrap,
+				})}
+			>
 				<ol className={classNames(styles.tabList, classNameTabList)}>
-					{children.map((child:any) => {
+					{children.map((child: any) => {
 						const { label } = child.props;
 
 						return (
@@ -68,8 +72,13 @@ class Tabs extends Component<TabProps, TabState> {
 						);
 					})}
 				</ol>
-				<div className={classNames(styles.tabContent, classNameTabContent)}>
-					{children.map((child:any) => {
+				<div
+					className={classNames(
+						styles.tabContent,
+						classNameTabContent,
+					)}
+				>
+					{children.map((child: any) => {
 						if (child.props.label !== activeTab) {
 							return undefined;
 						}

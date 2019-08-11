@@ -9,21 +9,18 @@ interface RowProps {
 	justifyContent?: 'center' | 'space-between' | 'space-around';
 }
 
-function Row({
-	children,
-	className,
-	alignItems,
-	justifyContent,
-}: RowProps) {
+function Row({ children, className, alignItems, justifyContent }: RowProps) {
 	return (
 		<div
 			className={classNames(
 				styles.row,
 				{
 					[styles[`alignItems-${alignItems}`]]: alignItems,
-					[styles[`justifyContent-${justifyContent}`]]: justifyContent,
+					[styles[
+						`justifyContent-${justifyContent}`
+					]]: justifyContent,
 				},
-				className
+				className,
 			)}
 		>
 			{children}

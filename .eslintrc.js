@@ -1,6 +1,6 @@
 const eslintcfg = {
 	parser: 'babel-eslint',
-	plugins: ['react', "typescript"],
+	plugins: ['react', 'typescript'],
 	rules: {
 		'global-require': 0,
 		'no-console': 0,
@@ -20,7 +20,7 @@ const eslintcfg = {
 				objects: 'always-multiline',
 				imports: 'always-multiline',
 				exports: 'always-multiline',
-				functions: 'never',
+				functions: 'always-multiline',
 			},
 		],
 	},

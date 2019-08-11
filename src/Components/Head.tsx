@@ -20,7 +20,10 @@ function Head({
 	return (
 		<Helmet>
 			<meta http-equiv="" content="IE=edge" />
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1"
+			/>
 			<link rel="manifest" href="/manifest.json" />
 			<link
 				rel="apple-touch-icon"
@@ -34,7 +37,9 @@ function Head({
 			/>
 			{description && <meta name="description" content={description} />}
 			{title && <meta property="og:title" content={title} />}
-			{description && <meta property="og:description" content={description} />}
+			{description && (
+				<meta property="og:description" content={description} />
+			)}
 			{image && <meta property="og:image" content={image} />}
 			<link rel="shortcut icon" href={favicon} type="image/x-icon" />
 			<link

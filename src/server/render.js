@@ -43,7 +43,7 @@ export default ({ clientStats }) => (req, res) => {
 						<Routes lang={lang} />
 					</StaticRouter>
 				</Provider>
-			</HelmetProvider>
+			</HelmetProvider>,
 		);
 
 		const { helmet } = helmetContext;
@@ -78,14 +78,18 @@ export default ({ clientStats }) => (req, res) => {
 				.send(robots);
 		}
 
-		res
-			.status(status)
-			.cookie(LOCALE_COOKIE_NAME, lang, { maxAge: COOKIE_MAX_AGE, httpOnly: false })
+		res.status(status)
+			.cookie(LOCALE_COOKIE_NAME, lang, {
+				maxAge: COOKIE_MAX_AGE,
+				httpOnly: false,
+			})
 			.header('Content-Type', 'text/html')
 			.send(
 				`<!DOCTYPE html><html lang="${lang}"><head><meta name="theme-color" content="#000000"/>${styles}${
 					helmet.title
-				}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}<script>window.REDUX_DATA = ${serialize(store.getState())}</script></body></html>`
+				}${helmet.meta.toString()}${helmet.link.toString()}</head><body><div id="react-root">${app}</div>${js}${cssHash}<script>window.REDUX_DATA = ${serialize(
+					store.getState(),
+				)}</script></body></html>`,
 			);
 	});
 };

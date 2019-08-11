@@ -11,10 +11,13 @@ import { loadData } from '../Views/ReduxPage/ReduxPage';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const UniversalComponent = universal((props) => import(`../Views/${props.page}`), {
-	loading: () => <Loading />,
-	ignoreBabelRename: true,
-});
+const UniversalComponent = universal(
+	(props) => import(`../Views/${props.page}`),
+	{
+		loading: () => <Loading />,
+		ignoreBabelRename: true,
+	},
+);
 
 export const routes = [
 	{
@@ -40,15 +43,21 @@ export default ({ staticContext, lang }) => (
 		{isProd ? <GoogleTagManager gtmId="GTM-WFTXGC8" /> : ''}
 		<Nav lang={lang} />
 		<Switch>
-			{routes.map(route => (
+			{routes.map((route) => (
 				<Route
 					key={route.path}
-					render={routeProps => <UniversalComponent page={route.page} {...routeProps} />}
+					render={(routeProps) => (
+						<UniversalComponent page={route.page} {...routeProps} />
+					)}
 					{...route}
 				/>
 			))}
 			<RedirectWithStatus status={301} exact from="/" to={`/${lang}`} />
-			<Route render={routeProps => <UniversalComponent page="NotFound" {...routeProps} />} />
+			<Route
+				render={(routeProps) => (
+					<UniversalComponent page="NotFound" {...routeProps} />
+				)}
+			/>
 		</Switch>
 		<Footer />
 	</Fragment>

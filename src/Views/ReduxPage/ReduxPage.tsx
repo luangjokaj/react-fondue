@@ -1,7 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import Head from '../../Components/Head';
-import { ContentPusher, Container, Readable, Button } from '../../Components/Layout';
+import {
+	ContentPusher,
+	Container,
+	Readable,
+	Button,
+} from '../../Components/Layout';
 import * as actionCreators from '../../store/actions';
 const styles = require('./ReduxPage.css');
 const data = require('./data-redux.md');
@@ -50,12 +55,20 @@ class ReduxPage extends Component<ReduxPageProps, any> {
 				<ContentPusher>
 					<Container>
 						<Readable>
-							<div dangerouslySetInnerHTML={{ __html: data.__content }} />
+							<div
+								dangerouslySetInnerHTML={{
+									__html: data.__content,
+								}}
+							/>
 							<hr />
-							<ul className={styles.list}>{this.renderSample()}</ul>
+							<ul className={styles.list}>
+								{this.renderSample()}
+							</ul>
 							<hr />
 							<h3>{this.props.counter}</h3>
-							<Button onClick={this.props.onIncrement}>Increment</Button>
+							<Button onClick={this.props.onIncrement}>
+								Increment
+							</Button>
 						</Readable>
 					</Container>
 				</ContentPusher>

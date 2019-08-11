@@ -8,7 +8,7 @@ interface StatusProps {
 export function Status({ code }: StatusProps) {
 	return (
 		<Route
-			render={({ staticContext }:any) => {
+			render={({ staticContext }: any) => {
 				if (staticContext) {
 					staticContext.status = code;
 				}

@@ -8,10 +8,15 @@ interface RedirectWithStatusProps {
 	exact?: boolean;
 }
 
-export function RedirectWithStatus({ from, to, status, exact }:RedirectWithStatusProps) {
+export function RedirectWithStatus({
+	from,
+	to,
+	status,
+	exact,
+}: RedirectWithStatusProps) {
 	return (
 		<Route
-			render={({ staticContext }:any) => {
+			render={({ staticContext }: any) => {
 				if (staticContext) {
 					staticContext.status = status;
 				}

@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import AppearAfter from '../AppearAfter';
-import { Link, NavLink, withRouter, RouteComponentProps } from 'react-router-dom';
+import {
+	Link,
+	NavLink,
+	withRouter,
+	RouteComponentProps,
+} from 'react-router-dom';
 import NavItem from './NavItem';
 import { Logo, Riangle } from '../../assets/svg';
 const styles = require('./Nav.css');
@@ -37,13 +42,17 @@ class Nav extends Component<NavProps, NavState> {
 		const { location, lang } = this.props;
 
 		return (
-			<AppearAfter className={styles.navigation} visibleClassName={styles.visible}>
+			<AppearAfter
+				className={styles.navigation}
+				visibleClassName={styles.visible}
+			>
 				<header>
 					<Link to={`/${lang}`} className={styles.logo}>
 						<Logo />
 						<h1>
-							ReactFondue - Minimal boilerplate with code splitting, hot module reload and server
-							side rendering
+							ReactFondue - Minimal boilerplate with code
+							splitting, hot module reload and server side
+							rendering
 						</h1>
 					</Link>
 					<button
@@ -62,7 +71,8 @@ class Nav extends Component<NavProps, NavState> {
 						<NavItem
 							title="Overview"
 							active={
-								location.pathname == `/${lang}` || location.pathname == `/${lang}/redux-store`
+								location.pathname == `/${lang}` ||
+								location.pathname == `/${lang}/redux-store`
 									? true
 									: false
 							}
@@ -93,7 +103,8 @@ class Nav extends Component<NavProps, NavState> {
 						<NavItem
 							title="About"
 							active={
-								location.pathname == `/${lang}/about` || location.pathname == `/${lang}/about/`
+								location.pathname == `/${lang}/about` ||
+								location.pathname == `/${lang}/about/`
 									? true
 									: false
 							}

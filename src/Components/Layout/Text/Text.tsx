@@ -15,7 +15,15 @@ interface TextProps {
 
 class Text extends Component<TextProps> {
 	render() {
-		const { children, className, textAlign, eyebrow, subtitle, small, blockquote } = this.props;
+		const {
+			children,
+			className,
+			textAlign,
+			eyebrow,
+			subtitle,
+			small,
+			blockquote,
+		} = this.props;
 		const ownClassName = classNames(
 			{
 				[styles.eyebrow]: eyebrow,
@@ -26,7 +34,7 @@ class Text extends Component<TextProps> {
 				[styles.small]: small,
 				[styles.blockquote]: blockquote,
 			},
-			styles.text
+			styles.text,
 		);
 
 		if (small) {
@@ -36,7 +44,9 @@ class Text extends Component<TextProps> {
 		if (blockquote) {
 			return (
 				<blockquote className={ownClassName}>
-					<span className={classNames(styles.quoteIcon, styles.first)}>
+					<span
+						className={classNames(styles.quoteIcon, styles.first)}
+					>
 						<Quote />
 						<Quote />
 					</span>

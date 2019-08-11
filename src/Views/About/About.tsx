@@ -41,13 +41,17 @@ class About extends Component<AboutProps, any> {
 							{lang === 'en' && (
 								<div
 									className={styles.content}
-									dangerouslySetInnerHTML={{ __html: dataEn.__content }}
+									dangerouslySetInnerHTML={{
+										__html: dataEn.__content,
+									}}
 								/>
 							)}
 							{lang === 'de' && (
 								<div
 									className={styles.content}
-									dangerouslySetInnerHTML={{ __html: dataDe.__content }}
+									dangerouslySetInnerHTML={{
+										__html: dataDe.__content,
+									}}
 								/>
 							)}
 						</Readable>

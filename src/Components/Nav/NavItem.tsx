@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Link, NavLink } from 'react-router-dom';
@@ -45,7 +44,8 @@ class NavItem extends Component<NavItemProps, NavItemState> {
 					onClick={children ? this.toggleAccordion : undefined}
 					className={styles.link}
 				>
-					{title} {label && <span className={styles.label}>{label}</span>}
+					{title}{' '}
+					{label && <span className={styles.label}>{label}</span>}
 					<Arrow className={styles.arrow} />
 				</button>
 				{children && children}

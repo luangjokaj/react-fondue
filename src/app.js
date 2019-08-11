@@ -10,19 +10,23 @@ import reducer from './store/reducer';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const logger = store => {
-	return next => {
-		return action => {
+const logger = (store) => {
+	return (next) => {
+		return (action) => {
 			console.log('[Middleware] Dispatching: ', action);
 			const result = next(action);
 			console.log('[Middleware] Next state: ', store.getState());
 			return result;
-		}
-	}
-}
+		};
+	};
+};
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, window.REDUX_DATA, composeEnhancers(applyMiddleware(thunk, logger)));
+const store = createStore(
+	reducer,
+	window.REDUX_DATA,
+	composeEnhancers(applyMiddleware(thunk, logger)),
+);
 
 function render(Component) {
 	ReactDOM.hydrate(
@@ -33,7 +37,7 @@ function render(Component) {
 				</Provider>
 			</AppContainer>
 		</HelmetProvider>,
-		document.getElementById('react-root')
+		document.getElementById('react-root'),
 	);
 }
 render(AppRoot);

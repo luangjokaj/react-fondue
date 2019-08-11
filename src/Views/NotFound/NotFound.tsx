@@ -1,9 +1,14 @@
 import React, { Fragment } from 'react';
 import Head from '../../Components/Head';
 import { Status } from '../../Components/Status';
-import { ContentPusher, Container, Readable, Col } from '../../Components/Layout';
+import {
+	ContentPusher,
+	Container,
+	Readable,
+	Col,
+} from '../../Components/Layout';
 const styles = require('./NotFound.css');
-import { H1 } from '../../Components/Heading'
+import { H1 } from '../../Components/Heading';
 
 function NotFound() {
 	return (

@@ -20,9 +20,7 @@ let isBuilt = false;
 server.listen(PORT, () => {
 	isBuilt = true;
 	console.log(
-		`Server listening on \x1b[42m\x1b[1mhttp://localhost:${PORT}\x1b[0m in \x1b[41m${
-			process.env.NODE_ENV
-		}\x1b[0m 🌎...`
+		`Server listening on \x1b[42m\x1b[1mhttp://localhost:${PORT}\x1b[0m in \x1b[41m${process.env.NODE_ENV}\x1b[0m 🌎...`,
 	);
 });
 
@@ -38,12 +36,12 @@ if (isDev) {
 
 	const webpackDevMiddleware = require('webpack-dev-middleware')(
 		compiler,
-		configDevClient.devServer
+		configDevClient.devServer,
 	);
 
 	const webpackHotMiddlware = require('webpack-hot-middleware')(
 		clientCompiler,
-		configDevClient.devServer
+		configDevClient.devServer,
 	);
 
 	server.use(webpackDevMiddleware);
@@ -58,12 +56,12 @@ if (isDev) {
 		console.log(
 			stats.toString({
 				colors: true,
-			})
+			}),
 		);
 		server.use(
 			expressStaticGzip('dist', {
 				enableBrotli: true,
-			})
+			}),
 		);
 		server.use(render({ clientStats }));
 		done();

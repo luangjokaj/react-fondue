@@ -8,7 +8,7 @@ interface ContainerProps {
 	fluid?: boolean;
 }
 
-function Container({ children, className, fluid = false  }: ContainerProps) {
+function Container({ children, className, fluid = false }: ContainerProps) {
 	return (
 		<div
 			className={classNames(
@@ -16,7 +16,7 @@ function Container({ children, className, fluid = false  }: ContainerProps) {
 				{
 					[styles.containerFluid]: fluid,
 				},
-				className
+				className,
 			)}
 		>
 			{children}

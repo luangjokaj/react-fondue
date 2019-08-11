@@ -12,17 +12,33 @@ interface ButtonProps {
 	target?: string;
 }
 
-function Button({ children, className, id, onClick, href, target }: ButtonProps) {
+function Button({
+	children,
+	className,
+	id,
+	onClick,
+	href,
+	target,
+}: ButtonProps) {
 	if (href) {
 		return (
-			<a href={href} target={target} className={classNames(styles.button, className)} id={id}>
+			<a
+				href={href}
+				target={target}
+				className={classNames(styles.button, className)}
+				id={id}
+			>
 				{children}
 			</a>
 		);
 	}
 
 	return (
-		<button onClick={onClick} className={classNames(styles.button, className)} id={id}>
+		<button
+			onClick={onClick}
+			className={classNames(styles.button, className)}
+			id={id}
+		>
 			{children}
 		</button>
 	);

@@ -7,8 +7,10 @@ interface ReadableProps {
 	className?: string;
 }
 
-function Readable({ children, className }:ReadableProps) {
-	return <div className={classNames(styles.readable, className)}>{children}</div>;
+function Readable({ children, className }: ReadableProps) {
+	return (
+		<div className={classNames(styles.readable, className)}>{children}</div>
+	);
 }
 
 export default Readable;
