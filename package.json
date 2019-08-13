@@ -4,6 +4,7 @@
 	"main": "main.js",
 	"description": "Minimal React boilerplate with support for code splitting, hot module reload and server side rendering.",
 	"repository": "https://github.com/luangjokaj/react-fondue",
+	"author": "Luan Gjokaj <luan@riangle.com>",
 	"license": "MIT",
 	"dependencies": {
 		"@babel/cli": "^7.5.5",
