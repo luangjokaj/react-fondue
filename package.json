@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"main": "main.js",
 	"description": "Minimal React boilerplate with support for code splitting, hot module reload and server side rendering.",
+	"homepage": "https://www.reactfondue.co",
 	"repository": "https://github.com/luangjokaj/react-fondue",
 	"author": "Luan Gjokaj <luan@riangle.com>",
 	"license": "MIT",
