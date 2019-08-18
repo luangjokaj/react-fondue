@@ -24,9 +24,9 @@ function OtherProjects() {
 					<a href="https://www.gopablo.co" target="_blank" className={styles.linkLogo}>
 					<Projects type='gopablo' />
 					</a>
-					<span>SEO optimized React applications with SSR.</span>
+					<span>GoPablo is a static site generator with a modern workflow.</span>
 					<div className={styles.linkWrapper}>
-						<a href="https://github.com/luangjokaj/react-fondue">
+						<a href="https://github.com/luangjokaj/gopablo">
 							<GitHub />
 						</a>
 						<em>or</em>
