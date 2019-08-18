@@ -31,6 +31,7 @@
 		& li {
 			color: var(--color-secondary);
 			margin: 0 0 30px;
+			padding: 0;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -41,6 +42,7 @@
 				max-width: 33.333%;
 				flex: 33.333%;
 				margin: 0;
+				padding: 0 20px;
 			}
 
 			& .linkLogo {

@@ -60,11 +60,11 @@ function Svg({ type, className }: SvgProps) {
 						y1="0%"
 						y2="100%"
 					>
-						<stop offset="0%" stop-color="#5BDAD5" />
+						<stop offset="0%" stopColor="#5BDAD5" />
 						<stop
 							offset="100%"
-							stop-color="#0947A0"
-							stop-opacity=".597"
+							stopColor="#0947A0"
+							stopOpacity=".597"
 						/>
 					</linearGradient>
 				</defs>
