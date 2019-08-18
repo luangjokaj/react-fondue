@@ -11,6 +11,7 @@ import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
 // @ts-ignore
 import css from 'highlight.js/lib/languages/css';
+import OtherProjects from '../../Components/OtherProjects';
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 
@@ -52,6 +53,7 @@ class Home extends Component<HomeProps, any> {
 									}}
 								/>
 							)}
+							<OtherProjects />
 						</Readable>
 					</Container>
 				</ContentPusher>
