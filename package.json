@@ -1,6 +1,6 @@
 {
 	"name": "react-fondue",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"main": "main.js",
 	"description": "Minimal React boilerplate with support for code splitting, hot module reload and server side rendering.",
 	"homepage": "https://www.reactfondue.co",
