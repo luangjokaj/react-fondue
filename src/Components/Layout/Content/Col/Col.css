@@ -9,6 +9,7 @@
 	flex-basis: 0;
 	flex-grow: 1;
 	max-width: 100%;
+	box-sizing: border-box;
 
 	@media (--screen-lg) {
 		padding-right: var(--gutter-col-desktop);

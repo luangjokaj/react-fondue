@@ -1,31 +1,13 @@
 @import '../../../../assets/css/variables.css';
 
 .container {
-	max-width: 1440px;
-	margin: auto;
-	padding-right: var(--margin-container-mobile);
-	padding-left: var(--margin-container-mobile);
-
-	@media (--screen-lg) {
-		padding-right: var(--margin-container-desktop);
-		padding-left: var(--margin-container-desktop);
-	}
-
-	@media (--screen-xxxl) {
-		max-width: 1704px;
-	}
+	@mixin container;
 }
 
 .containerFluid {
-	width: 100%;
-	max-width: initial;
-	padding-right: var(--margin-container-mobile);
-	padding-left: var(--margin-container-mobile);
-	margin-right: auto;
-	margin-left: auto;
+	@mixin containerFluid;
+}
 
-	@media (--screen-lg) {
-		padding-right: var(--margin-container-desktop);
-		padding-left: var(--margin-container-desktop);
-	}
+.containerChild {
+	@mixin containerChild;
 }

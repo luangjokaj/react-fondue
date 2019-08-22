@@ -1,27 +1,26 @@
 @import '../../../../assets/css/variables.css';
 
-.row {
+@define-mixin row {
 	display: flex;
 	flex-wrap: wrap;
-	margin-right: calc(var(--gutter-col-mobile) - var(--gutter-col-mobile) * 2);
-	margin-left: calc(var(--gutter-col-mobile) - var(--gutter-col-mobile) * 2);
+	justify-content: space-between;
+	margin: 0 var(--margin-row-mobile);
 
 	@media (--screen-lg) {
-		margin-right: calc(var(--gutter-col-desktop) - var(--gutter-col-desktop) * 2);
-		margin-left: calc(var(--gutter-col-desktop) - var(--gutter-col-desktop) * 2);
+		margin: 0 var(--margin-row-desktop);
 	}
 }
 
-.alignItems-center {
-	align-items: center;
+.row {
+	@mixin row;
 }
 
-.alignItems-flex-end {
-	align-items: flex-end;
+.justifyContent-flex-start {
+	justify-content: flex-start;
 }
 
-.alignItems-flex-start {
-	align-items: flex-start;
+.justifyContent-flex-end {
+	justify-content: flex-end;
 }
 
 .justifyContent-center {
@@ -34,4 +33,32 @@
 
 .justifyContent-space-around {
 	justify-content: space-around;
+}
+
+.justifyContent-initial {
+	justify-content: initial;
+}
+
+.alignItems-stretch {
+	align-items: stretch;
+}
+
+.alignItems-center {
+	align-items: center;
+}
+
+.alignItems-flex-start {
+	align-items: flex-start;
+}
+
+.alignItems-flex-end {
+	align-items: flex-end;
+}
+
+.alignItems-baseline {
+	align-items: baseline;
+}
+
+.alignItems-initial {
+	align-items: initial;
 }

@@ -11,14 +11,6 @@ import * as actionCreators from '../../store/actions';
 const styles = require('./ReduxPage.css');
 const data = require('./data-redux.md');
 import { t } from '../../Components/Languages';
-// @ts-ignore
-import hljs from 'highlight.js/lib/highlight';
-// @ts-ignore
-import javascript from 'highlight.js/lib/languages/javascript';
-// @ts-ignore
-import css from 'highlight.js/lib/languages/css';
-hljs.registerLanguage('javascript', javascript);
-hljs.registerLanguage('css', css);
 
 interface ReduxPageProps {
 	match: any;
@@ -29,17 +21,6 @@ interface ReduxPageProps {
 }
 
 class ReduxPage extends Component<ReduxPageProps, any> {
-	componentDidMount() {
-		this.props.onDataLoad();
-		const cdx = document.getElementsByTagName('pre');
-		if (cdx.length) {
-			let i;
-			for (i = 0; i < cdx.length; i++) {
-				hljs.highlightBlock(cdx[i]);
-			}
-		}
-	}
-
 	renderSample() {
 		return this.props.data.map((dataItem: any) => {
 			return <li key={dataItem.id}>{dataItem.name}</li>;
