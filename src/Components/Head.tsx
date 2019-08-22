@@ -19,7 +19,10 @@ function Head({
 }: HeadProps) {
 	return (
 		<Helmet>
-			<meta http-equiv="" content="IE=edge" />
+			<meta
+				name="author"
+				content="Luan Gjokaj, and ReactFondue contributors"
+			/>
 			<meta
 				name="viewport"
 				content="width=device-width, initial-scale=1"
