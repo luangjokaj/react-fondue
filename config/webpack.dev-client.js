@@ -79,7 +79,29 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use: ['style-loader', 'css-loader', 'sass-loader'],
+				use: [
+					'css-hot-loader',
+					MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true,
+							importLoaders: 1,
+							modules: {
+								mode: 'local',
+								localIdentName:
+									'[name]__[local]--[hash:base64:5]',
+							},
+						},
+					},
+					{
+						loader: 'sass-loader',
+						options: {
+							// Prefer `dart-sass`
+							implementation: require('sass'),
+						},
+					},
+				],
 			},
 			{
 				test: /\.(jpg|svg|png|ico|gif|eot|woff|ttf)$/,
