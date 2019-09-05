@@ -115,7 +115,7 @@
 		"url-loader": "2.1.0",
 		"webpack": "^4.39.3",
 		"webpack-bundle-analyzer": "^3.4.1",
-		"webpack-cli": "^3.3.7",
+		"webpack-cli": "^3.3.8",
 		"webpack-dev-middleware": "3.7.1",
 		"webpack-flush-chunks": "^2.0.3",
 		"webpack-hot-middleware": "2.25.0",
