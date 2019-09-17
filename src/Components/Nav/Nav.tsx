@@ -5,7 +5,6 @@ import {
 	Link,
 	NavLink,
 	withRouter,
-	RouteComponentProps,
 } from 'react-router-dom';
 import NavItem from './NavItem';
 import { Logo, Riangle } from '../../assets/svg';
@@ -137,4 +136,4 @@ class Nav extends Component<NavProps, NavState> {
 	}
 }
 
-export default withRouter<RouteComponentProps, any>(Nav);
+export default withRouter<any>(Nav);

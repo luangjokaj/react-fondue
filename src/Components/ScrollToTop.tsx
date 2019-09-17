@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter, RouteComponentProps } from 'react-router';
+import { withRouter } from 'react-router';
 
 interface ScrollToTopProps {
 	children: any;
@@ -18,4 +18,4 @@ class ScrollToTop extends Component<ScrollToTopProps, any> {
 	}
 }
 
-export default withRouter<RouteComponentProps, any>(ScrollToTop);
+export default withRouter<any>(ScrollToTop);
