@@ -136,4 +136,4 @@ class Nav extends Component<NavProps, NavState> {
 	}
 }
 
-export default withRouter<any>(Nav);
+export default withRouter<any, any>(Nav);
