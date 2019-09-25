@@ -49,7 +49,7 @@
 		"@types/react-dom": "^16.9.0",
 		"@types/react-helmet": "^5.0.10",
 		"@types/react-redux": "^7.1.2",
-		"@types/react-responsive": "^3.0.3",
+		"@types/react-responsive": "^8.0.0",
 		"@types/react-router": "^5.0.5",
 		"@types/react-router-dom": "^4.3.5",
 		"@types/styled-components": "^4.1.19",
