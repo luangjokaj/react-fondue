@@ -109,7 +109,7 @@
 		"style-loader": "^1.0.0",
 		"styled-components": "^4.4.0",
 		"stylelint": "^11.0.0",
-		"typescript": "^3.6.3",
+		"typescript": "^3.6.4",
 		"typescript-plugin-styled-components": "^1.4.3",
 		"url-loader": "2.2.0",
 		"webpack": "^4.41.0",
