@@ -8,8 +8,7 @@ import Routes, { routes } from '../App/Routes';
 import { HelmetProvider } from 'react-helmet-async';
 import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
-import extractLocalesFromReq from './client-locale/extractLocalesFromReq';
-import guessLocale from './client-locale/guessLocale';
+import { guessLocale } from './client-locale/guessLocale';
 import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from './client-locale/constants';
 import manifest from './manifest';
 import robots from './robots';
@@ -22,17 +21,7 @@ export default ({ clientStats }) => (req, res) => {
 	});
 
 	Promise.all(promises).then(() => {
-		const userLocales = extractLocalesFromReq(req);
-		let lang = guessLocale(['de', 'en'], userLocales, 'en');
-
-		if (req.originalUrl.substr(1, 2) == 'de') {
-			lang = 'de';
-		}
-
-		if (req.originalUrl.substr(1, 2) == 'en') {
-			lang = 'en';
-		}
-
+		const lang = guessLocale(req);
 		const context = {};
 		const helmetContext = {};
 

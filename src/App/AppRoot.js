@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './Routes';
 import ScrollToTop from '../Components/ScrollToTop';
+import { getLanguage } from '../server/client-locale/guessLocale';
 
 export default class extends React.Component {
 	constructor(props) {
@@ -11,13 +12,11 @@ export default class extends React.Component {
 	}
 
 	render() {
-		const isEn = location.pathname.substr(1, 2) == 'en' && 'en';
-		const isDe = location.pathname.substr(1, 2) == 'de' && 'de';
-		const currentLang = isEn || isDe || 'en';
+		const lang = getLanguage(location.pathname);
 		return (
 			<Router>
 				<ScrollToTop>
-					<Routes lang={navigator && currentLang} />
+					<Routes lang={navigator && lang} />
 				</ScrollToTop>
 			</Router>
 		);
