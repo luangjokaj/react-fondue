@@ -28,7 +28,7 @@ function Head({
 				content="width=device-width, initial-scale=1"
 			/>
 			<link rel="shortcut icon" href={favicon} type="image/x-icon" />
-			<link rel="manifest" href="/manifest.json" />
+			{isProd && <link rel="manifest" href="/manifest.json" />}
 			<link
 				rel="apple-touch-icon"
 				sizes="512x512"
