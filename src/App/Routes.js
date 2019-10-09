@@ -8,6 +8,7 @@ import Footer from '../Components/Footer';
 import { Loading } from '../Components/Layout';
 import '../assets/css/styles.css';
 import { loadData } from '../Views/ReduxPage/ReduxPage';
+import { AVAILABLE_LOCALES } from '../server/client-locale/constants';
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -19,21 +20,23 @@ const UniversalComponent = universal(
 	},
 );
 
+const availableLangs = AVAILABLE_LOCALES.join('|');
+
 export const routes = [
 	{
 		exact: true,
-		path: '/:lang',
+		path: `/:lang(${availableLangs})`,
 		page: 'Home',
 	},
 	{
 		exact: true,
-		path: '/:lang/about',
+		path: `/:lang(${availableLangs})/about`,
 		page: 'About',
 	},
 	{
 		loadData,
 		exact: true,
-		path: '/:lang/redux-store',
+		path: `/:lang(${availableLangs})/redux-store`,
 		page: 'ReduxPage',
 	},
 ];

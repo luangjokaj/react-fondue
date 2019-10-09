@@ -1,8 +1,6 @@
 import de from './de';
 import en from './en';
 
-const language = 'de';
-
 const translationsDe = {
 	...de,
 };
