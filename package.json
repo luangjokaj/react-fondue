@@ -47,7 +47,7 @@
 		"@types/classnames": "^2.2.9",
 		"@types/react": "^16.9.9",
 		"@types/react-dom": "^16.9.2",
-		"@types/react-redux": "^7.1.4",
+		"@types/react-redux": "^7.1.5",
 		"@types/react-responsive": "^8.0.1",
 		"@types/react-router": "^5.1.2",
 		"@types/react-router-dom": "^5.1.0",
