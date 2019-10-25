@@ -128,5 +128,8 @@
 		"lint": "npm run lint:css && npm run lint:js",
 		"type-check": "tsc",
 		"format": "prettier --write \"./src/**/*.{js,json,ts,tsx}\" \"!.node_modules/**\""
+	},
+	"engines": {
+		"node": "12.13.0"
 	}
 }
