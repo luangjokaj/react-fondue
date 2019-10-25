@@ -130,6 +130,6 @@
 		"format": "prettier --write \"./src/**/*.{js,json,ts,tsx}\" \"!.node_modules/**\""
 	},
 	"engines": {
-		"node": "12.13.0"
+		"node": "10.16.3"
 	}
 }
