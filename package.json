@@ -78,7 +78,7 @@
 		"import": "0.0.6",
 		"markdown-with-front-matter-loader": "^0.1.0",
 		"mini-css-extract-plugin": "^0.8.0",
-		"nodemon": "^1.19.4",
+		"nodemon": "^2.0.0",
 		"normalize.css": "^8.0.1",
 		"optimize-css-assets-webpack-plugin": "^5.0.3",
 		"postcss-calc": "^7.0.1",
