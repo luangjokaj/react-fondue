@@ -44,7 +44,7 @@
 		"@hot-loader/react-dom": "^16.11.0",
 		"@intervolga/optimize-cssnano-plugin": "^1.0.6",
 		"@types/classnames": "^2.2.9",
-		"@types/react": "^16.9.18",
+		"@types/react": "^16.9.19",
 		"@types/react-dom": "^16.9.5",
 		"@types/react-redux": "^7.1.6",
 		"@types/react-responsive": "^8.0.2",
