@@ -77,7 +77,4 @@ function loadData(store: any) {
 }
 
 export { loadData };
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps,
-)(ReduxPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ReduxPage);
