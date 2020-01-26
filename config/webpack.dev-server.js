@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const externals = require('./node-externals');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
 	.default;
@@ -127,5 +128,10 @@ module.exports = {
 				NODE_ENV: JSON.stringify('development'),
 			},
 		}),
+		new CopyWebpackPlugin([
+			{
+				from: 'public',
+			},
+		]),
 	],
 };

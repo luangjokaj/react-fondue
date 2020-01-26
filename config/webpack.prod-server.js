@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const externals = require('./node-externals');
 const OptimizeCssnanoPlugin = require('@intervolga/optimize-cssnano-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
 	.default;
@@ -129,5 +130,10 @@ module.exports = {
 				],
 			},
 		}),
+		new CopyWebpackPlugin([
+			{
+				from: 'public',
+			},
+		]),
 	],
 };

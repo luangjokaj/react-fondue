@@ -10,8 +10,6 @@ import { flushChunkNames } from 'react-universal-component/server';
 import flushChunks from 'webpack-flush-chunks';
 import { guessLocale } from './client-locale/guessLocale';
 import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from './client-locale/constants';
-import manifest from './manifest';
-import robots from './robots';
 import serialize from 'serialize-javascript';
 const store = createStore();
 
@@ -51,20 +49,6 @@ export default ({ clientStats }) => (req, res) => {
 			const redirectStatus = context.status || 302;
 			res.redirect(redirectStatus, context.url);
 			return;
-		}
-
-		if (req.url == '/manifest.json' || req.url == '/Manifest.json') {
-			return res
-				.header('Content-Type', 'application/manifest+json')
-				.status(status)
-				.send(manifest);
-		}
-
-		if (req.url == '/robots.txt' || req.url == '/Robots.txt') {
-			return res
-				.header('Content-Type', 'text/plain')
-				.status(status)
-				.send(robots);
 		}
 
 		res.status(status)
