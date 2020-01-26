@@ -28,7 +28,6 @@ function Head({
 				content="width=device-width, initial-scale=1"
 			/>
 			<link rel="shortcut icon" href={favicon} type="image/x-icon" />
-			<link rel="manifest" href="/manifest.json" />
 			<link
 				rel="apple-touch-icon"
 				sizes="512x512"
@@ -54,6 +53,7 @@ function Head({
 				<meta property="og:description" content={description} />
 			)}
 			{image && <meta property="og:image" content={image} />}
+			<link rel="manifest" href="/manifest.json" />
 			{children && children}
 			{title && <title>{title}</title>}
 		</Helmet>
