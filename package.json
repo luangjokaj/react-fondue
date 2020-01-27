@@ -74,7 +74,7 @@
 		"express": "^4.17.1",
 		"express-static-gzip": "^2.0.6",
 		"extract-css-chunks-webpack-plugin": "^4.7.4",
-		"extract-loader": "^3.1.0",
+		"extract-loader": "^4.0.0",
 		"file-loader": "^5.0.2",
 		"import": "0.0.6",
 		"markdown-with-front-matter-loader": "^0.1.0",
