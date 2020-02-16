@@ -18,12 +18,17 @@ Variables & Mixins
 :root {
 
 	/* Spacing ----------------------------------------------- */
+	--max-width: 1440px;
 	--padding-top-body-mobile: 70px;
 	--padding-top-body-desktop: 0;
-	--gutter-col-mobile: 10px;
-	--gutter-col-desktop: 10px;
 	--margin-container-mobile: 20px;
 	--margin-container-desktop: 20px;
+	--margin-container-child-mobile: 10px;
+	--margin-container-child-desktop: 10px;
+	--margin-row-mobile: -10px;
+	--margin-row-desktop: -10px;
+	--gutter-col-mobile: 10px;
+	--gutter-col-desktop: 10px;
 
 	/* Colors ----------------------------------------------------- */
 	--color-primary: #1F2D3D;
