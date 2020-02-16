@@ -1,5 +1,5 @@
-import accepts from 'accepts';
-import { LOCALE_COOKIE_NAME } from './constants';
+import accepts from "accepts";
+import { LOCALE_COOKIE_NAME } from "./constants";
 
 function getLanguagesFromHeaders(req) {
 	return accepts(req).languages();

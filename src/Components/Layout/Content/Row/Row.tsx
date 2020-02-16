@@ -1,12 +1,12 @@
-import React from 'react';
-import classNames from 'classnames';
-const styles = require('./Row.css');
+import React from "react";
+import classNames from "classnames";
+const styles = require("./Row.css");
 
 interface RowProps {
 	children: any;
 	className?: string;
-	alignItems?: 'center' | 'flex-end' | 'flex-start';
-	justifyContent?: 'center' | 'space-between' | 'space-around';
+	alignItems?: "center" | "flex-end" | "flex-start";
+	justifyContent?: "center" | "space-between" | "space-around";
 }
 
 function Row({ children, className, alignItems, justifyContent }: RowProps) {

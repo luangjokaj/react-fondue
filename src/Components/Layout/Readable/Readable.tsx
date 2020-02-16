@@ -1,6 +1,6 @@
-import React from 'react';
-import classNames from 'classnames';
-const styles = require('./Readable.css');
+import React from "react";
+import classNames from "classnames";
+const styles = require("./Readable.css");
 
 interface ReadableProps {
 	children: any;

@@ -1,3 +1,3 @@
-import AppearAfter from './AppearAfter';
+import AppearAfter from "./AppearAfter";
 
 export default AppearAfter;

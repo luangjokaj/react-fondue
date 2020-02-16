@@ -1,7 +1,7 @@
-import React from 'react';
-import classNames from 'classnames';
-import { string } from 'prop-types';
-const styles = require('./Button.css');
+import React from "react";
+import classNames from "classnames";
+import { string } from "prop-types";
+const styles = require("./Button.css");
 
 interface ButtonProps {
 	children: any;

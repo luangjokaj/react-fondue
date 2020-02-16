@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
-import Head from '../../Components/Head';
-import { ContentPusher, Container, Readable } from '../../Components/Layout';
-const styles = require('./About.css');
-const dataEn = require('./data-about-en.md');
-const dataDe = require('./data-about-de.md');
-import { t } from '../../Components/Languages';
+import React, { Component, Fragment } from "react";
+import Head from "../../Components/Head";
+import { ContentPusher, Container, Readable } from "../../Components/Layout";
+const styles = require("./About.css");
+const dataEn = require("./data-about-en.md");
+const dataDe = require("./data-about-de.md");
+import { t } from "../../Components/Languages";
 
 interface AboutProps {
 	match: any;
@@ -20,7 +20,7 @@ class About extends Component<AboutProps, any> {
 				<ContentPusher>
 					<Container>
 						<Readable>
-							{lang === 'en' && (
+							{lang === "en" && (
 								<div
 									className={styles.content}
 									dangerouslySetInnerHTML={{
@@ -28,7 +28,7 @@ class About extends Component<AboutProps, any> {
 									}}
 								/>
 							)}
-							{lang === 'de' && (
+							{lang === "de" && (
 								<div
 									className={styles.content}
 									dangerouslySetInnerHTML={{

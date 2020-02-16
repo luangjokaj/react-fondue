@@ -1,16 +1,16 @@
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router';
-import createStore from './createStore';
-import { Provider } from 'react-redux';
-import { matchRoutes } from 'react-router-config';
-import Routes, { routes } from '../App/Routes';
-import { HelmetProvider } from 'react-helmet-async';
-import { flushChunkNames } from 'react-universal-component/server';
-import flushChunks from 'webpack-flush-chunks';
-import { guessLocale } from './client-locale/guessLocale';
-import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from './client-locale/constants';
-import serialize from 'serialize-javascript';
+import React from "react";
+import { renderToString } from "react-dom/server";
+import { StaticRouter } from "react-router";
+import createStore from "./createStore";
+import { Provider } from "react-redux";
+import { matchRoutes } from "react-router-config";
+import Routes, { routes } from "../App/Routes";
+import { HelmetProvider } from "react-helmet-async";
+import { flushChunkNames } from "react-universal-component/server";
+import flushChunks from "webpack-flush-chunks";
+import { guessLocale } from "./client-locale/guessLocale";
+import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from "./client-locale/constants";
+import serialize from "serialize-javascript";
 const store = createStore();
 
 export default ({ clientStats }) => (req, res) => {
@@ -42,7 +42,7 @@ export default ({ clientStats }) => (req, res) => {
 		const status = context.status || 200;
 
 		if (context.status == 404) {
-			console.log('Error 404: ', req.originalUrl);
+			console.log("Error 404: ", req.originalUrl);
 		}
 
 		if (context.url) {
@@ -56,7 +56,7 @@ export default ({ clientStats }) => (req, res) => {
 				maxAge: COOKIE_MAX_AGE,
 				httpOnly: false,
 			})
-			.header('Content-Type', 'text/html')
+			.header("Content-Type", "text/html")
 			.send(
 				`<!DOCTYPE html><html lang="${lang}"><head><meta name="theme-color" content="#000000"/>${styles}${
 					helmet.title

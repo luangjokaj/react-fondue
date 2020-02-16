@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 // @ts-ignore
-import gtmParts from 'react-google-tag-manager';
+import gtmParts from "react-google-tag-manager";
 
 interface GoogleTagManagerProps {
 	gtmId: string;
@@ -13,8 +13,8 @@ interface GoogleTagManagerProps {
 
 class GoogleTagManager extends React.Component<GoogleTagManagerProps, any> {
 	componentDidMount() {
-		const dataLayerName = this.props.dataLayerName || 'dataLayer';
-		const scriptId = this.props.scriptId || 'react-google-tag-manager-gtm';
+		const dataLayerName = this.props.dataLayerName || "dataLayer";
+		const scriptId = this.props.scriptId || "react-google-tag-manager-gtm";
 
 		if (!window[dataLayerName]) {
 			const gtmScriptNode: any = document.getElementById(scriptId);
@@ -34,16 +34,16 @@ class GoogleTagManager extends React.Component<GoogleTagManagerProps, any> {
 		} = this.props;
 		const gtm = gtmParts({
 			id: gtmId,
-			dataLayerName: dataLayerName || 'dataLayer',
+			dataLayerName: dataLayerName || "dataLayer",
 			additionalEvents: additionalEvents || {},
 			previewVariables: previewVariables || false,
-			scheme: scheme || 'https:',
+			scheme: scheme || "https:",
 		});
 
 		return (
 			<div>
 				<div>{gtm.noScriptAsReact()}</div>
-				<div id={scriptId || 'react-google-tag-manager-gtm'}>
+				<div id={scriptId || "react-google-tag-manager-gtm"}>
 					{gtm.scriptAsReact()}
 				</div>
 			</div>

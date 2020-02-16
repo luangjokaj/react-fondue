@@ -1,3 +1,3 @@
-import ReduxPage from './ReduxPage';
+import ReduxPage from "./ReduxPage";
 
 export default ReduxPage;

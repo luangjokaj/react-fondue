@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-const styles = require('./Tabs.css');
+import React, { Component } from "react";
+import classNames from "classnames";
+const styles = require("./Tabs.css");
 
 interface TabProps {
 	onClick?: any;

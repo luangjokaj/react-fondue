@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import { Link, NavLink } from 'react-router-dom';
-import { Arrow } from '../../assets/svg';
-const styles = require('./Nav.css');
+import React, { Component } from "react";
+import classNames from "classnames";
+import { Link, NavLink } from "react-router-dom";
+import { Arrow } from "../../assets/svg";
+const styles = require("./Nav.css");
 
 interface NavItemProps {
 	children: any;
@@ -44,7 +44,7 @@ class NavItem extends Component<NavItemProps, NavItemState> {
 					onClick={children ? this.toggleAccordion : undefined}
 					className={styles.link}
 				>
-					{title}{' '}
+					{title}{" "}
 					{label && <span className={styles.label}>{label}</span>}
 					<Arrow className={styles.arrow} />
 				</button>

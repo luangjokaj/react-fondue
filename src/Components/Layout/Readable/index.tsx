@@ -1,3 +1,3 @@
-import Readable from './Readable';
+import Readable from "./Readable";
 
 export default Readable;

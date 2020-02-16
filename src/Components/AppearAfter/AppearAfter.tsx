@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
+import React, { Component } from "react";
+import classNames from "classnames";
 
 interface AppearAfterProps {
 	children: any;
@@ -29,7 +29,7 @@ class AppearAfter extends Component<AppearAfterProps, AppearAfterState> {
 		const {
 			children,
 			className,
-			visibleClassName = 'visible',
+			visibleClassName = "visible",
 		} = this.props;
 		return React.cloneElement(children, {
 			className: classNames(className, {

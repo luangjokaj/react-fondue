@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import { Quote } from '../../../assets/svg';
-const styles = require('./Text.css');
+import React, { Component } from "react";
+import classNames from "classnames";
+import { Quote } from "../../../assets/svg";
+const styles = require("./Text.css");
 
 interface TextProps {
 	children: any;
 	className?: string;
-	textAlign?: 'left' | 'center' | 'right';
+	textAlign?: "left" | "center" | "right";
 	eyebrow?: boolean;
 	subtitle?: boolean;
 	small?: boolean;
@@ -28,9 +28,9 @@ class Text extends Component<TextProps> {
 			{
 				[styles.eyebrow]: eyebrow,
 				[styles.subtitle]: subtitle,
-				[styles.textLeft]: textAlign === 'left',
-				[styles.textCenter]: textAlign === 'center',
-				[styles.textRight]: textAlign === 'right',
+				[styles.textLeft]: textAlign === "left",
+				[styles.textCenter]: textAlign === "center",
+				[styles.textRight]: textAlign === "right",
 				[styles.small]: small,
 				[styles.blockquote]: blockquote,
 			},

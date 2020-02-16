@@ -1,10 +1,10 @@
-import React from 'react';
-import classNames from 'classnames';
-const styles = require('./Heading.css');
+import React from "react";
+import classNames from "classnames";
+const styles = require("./Heading.css");
 
 interface makeHeadingProps {
 	children: any;
-	size?: '1' | '2' | '3' | '4' | '5' | '6';
+	size?: "1" | "2" | "3" | "4" | "5" | "6";
 	className?: string;
 	propsCN?: string;
 	bold?: boolean;

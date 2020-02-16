@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import AppearAfter from '../AppearAfter';
-import { Link, NavLink, withRouter } from 'react-router-dom';
-import NavItem from './NavItem';
-import { Logo, Riangle } from '../../assets/svg';
-const styles = require('./Nav.css');
+import React, { Component } from "react";
+import classNames from "classnames";
+import AppearAfter from "../AppearAfter";
+import { Link, NavLink, withRouter } from "react-router-dom";
+import NavItem from "./NavItem";
+import { Logo, Riangle } from "../../assets/svg";
+const styles = require("./Nav.css");
 
 interface NavProps {
 	location: any;

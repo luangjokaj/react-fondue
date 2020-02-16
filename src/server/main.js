@@ -1,2 +1,2 @@
-require('@babel/register');
-require('./express');
+require("@babel/register");
+require("./express");

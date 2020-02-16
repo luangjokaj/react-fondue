@@ -1,5 +1,5 @@
-import extractLocalesFromReq from './extractLocalesFromReq';
-import { AVAILABLE_LOCALES, DEFAULT_LOCALE } from './constants';
+import extractLocalesFromReq from "./extractLocalesFromReq";
+import { AVAILABLE_LOCALES, DEFAULT_LOCALE } from "./constants";
 
 /**
  * Will try to choose the best possible locale that the clients accepts.

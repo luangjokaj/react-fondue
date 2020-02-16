@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
 interface SvgProps {
-	type: 'wordpressify' | 'gopablo' | 'fuzzymail';
+	type: "wordpressify" | "gopablo" | "fuzzymail";
 	className?: string;
 }
 
 function Svg({ type, className }: SvgProps) {
-	if (type === 'wordpressify') {
+	if (type === "wordpressify") {
 		return (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ function Svg({ type, className }: SvgProps) {
 		);
 	}
 
-	if (type === 'gopablo') {
+	if (type === "gopablo") {
 		return (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ function Svg({ type, className }: SvgProps) {
 		);
 	}
 
-	if (type === 'fuzzymail') {
+	if (type === "fuzzymail") {
 		return (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

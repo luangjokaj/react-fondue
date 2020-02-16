@@ -1,8 +1,8 @@
-import React from 'react';
-import ContentPusher from '../ContentPusher';
-import Readable from '../Readable';
-import { Container } from '../Content';
-const styles = require('./Loading.css');
+import React from "react";
+import ContentPusher from "../ContentPusher";
+import Readable from "../Readable";
+import { Container } from "../Content";
+const styles = require("./Loading.css");
 
 function Loading() {
 	return (

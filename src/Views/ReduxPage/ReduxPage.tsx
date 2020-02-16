@@ -1,16 +1,16 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
-import Head from '../../Components/Head';
+import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import Head from "../../Components/Head";
 import {
 	ContentPusher,
 	Container,
 	Readable,
 	Button,
-} from '../../Components/Layout';
-import * as actionCreators from '../../store/actions';
-const styles = require('./ReduxPage.css');
-const data = require('./data-redux.md');
-import { t } from '../../Components/Languages';
+} from "../../Components/Layout";
+import * as actionCreators from "../../store/actions";
+const styles = require("./ReduxPage.css");
+const data = require("./data-redux.md");
+import { t } from "../../Components/Languages";
 
 interface ReduxPageProps {
 	match: any;

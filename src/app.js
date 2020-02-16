@@ -1,21 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { AppContainer } from 'react-hot-loader';
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import AppRoot from './App/AppRoot';
-import reducer from './store/reducer';
+import React from "react";
+import ReactDOM from "react-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { AppContainer } from "react-hot-loader";
+import { createStore, applyMiddleware, compose } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import AppRoot from "./App/AppRoot";
+import reducer from "./store/reducer";
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === "production";
 
 const logger = (store) => {
 	return (next) => {
 		return (action) => {
-			console.log('[Middleware] Dispatching: ', action);
+			console.log("[Middleware] Dispatching: ", action);
 			const result = next(action);
-			console.log('[Middleware] Next state: ', store.getState());
+			console.log("[Middleware] Next state: ", store.getState());
 			return result;
 		};
 	};
@@ -37,14 +37,14 @@ function render(Component) {
 				</Provider>
 			</AppContainer>
 		</HelmetProvider>,
-		document.getElementById('react-root'),
+		document.getElementById("react-root"),
 	);
 }
 render(AppRoot);
 
 if (module.hot) {
-	module.hot.accept('./App/AppRoot.js', () => {
-		const NewAppRoot = require('./App/AppRoot.js').default;
+	module.hot.accept("./App/AppRoot.js", () => {
+		const NewAppRoot = require("./App/AppRoot.js").default;
 		render(NewAppRoot);
 	});
 }

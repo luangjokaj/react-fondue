@@ -1,24 +1,24 @@
-import React from 'react';
-import classNames from 'classnames';
-const styles = require('./Col.css');
+import React from "react";
+import classNames from "classnames";
+const styles = require("./Col.css");
 
 type gridNumbers =
-	| '1'
-	| '2'
-	| '3'
-	| '4'
-	| '5'
-	| '6'
-	| '7'
-	| '8'
-	| '9'
-	| '10'
-	| '11'
-	| '12';
+	| "1"
+	| "2"
+	| "3"
+	| "4"
+	| "5"
+	| "6"
+	| "7"
+	| "8"
+	| "9"
+	| "10"
+	| "11"
+	| "12";
 
 interface ColProps {
 	children: any;
-	textAlign?: 'left' | 'center' | 'right';
+	textAlign?: "left" | "center" | "right";
 	className?: string;
 	id?: string;
 	xs?: gridNumbers;
@@ -77,14 +77,14 @@ function Col({
 			className={classNames(
 				styles.col,
 				{
-					[styles[`textAlign-${textAlign || ''}`]]: textAlign,
-					[styles[`col${xs || ''}`]]: xs,
-					[styles[`colSm${sm || ''}`]]: sm,
-					[styles[`colMd${md || ''}`]]: md,
-					[styles[`colLg${lg || ''}`]]: lg,
-					[styles[`colXl${xl || ''}`]]: xl,
-					[styles[`colXxl${xxl || ''}`]]: xxl,
-					[styles[`colXxxl${xxxl || ''}`]]: xxxl,
+					[styles[`textAlign-${textAlign || ""}`]]: textAlign,
+					[styles[`col${xs || ""}`]]: xs,
+					[styles[`colSm${sm || ""}`]]: sm,
+					[styles[`colMd${md || ""}`]]: md,
+					[styles[`colLg${lg || ""}`]]: lg,
+					[styles[`colXl${xl || ""}`]]: xl,
+					[styles[`colXxl${xxl || ""}`]]: xxl,
+					[styles[`colXxxl${xxxl || ""}`]]: xxxl,
 					[styles.orderFirst]: first,
 					[styles.orderSmFirst]: firstSm,
 					[styles.orderMdFirst]: firstMd,

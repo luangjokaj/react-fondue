@@ -1,6 +1,6 @@
-import React from 'react';
-import { Projects, GitHub } from '../../assets/svg';
-const styles = require('./OtherProjects.css');
+import React from "react";
+import { Projects, GitHub } from "../../assets/svg";
+const styles = require("./OtherProjects.css");
 
 function OtherProjects() {
 	return (

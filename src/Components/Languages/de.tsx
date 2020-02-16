@@ -1,5 +1,5 @@
 export default () => {
 	return {
-		title: 'Titel Englisch',
+		title: "Titel Englisch",
 	};
 };

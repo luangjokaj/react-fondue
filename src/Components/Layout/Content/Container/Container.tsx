@@ -1,6 +1,6 @@
-import React from 'react';
-import classNames from 'classnames';
-const styles = require('./Container.css');
+import React from "react";
+import classNames from "classnames";
+const styles = require("./Container.css");
 
 interface ContainerProps {
 	children: any;

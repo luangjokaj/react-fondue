@@ -1,9 +1,9 @@
-import '@babel/polyfill';
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from './Routes';
-import ScrollToTop from '../Components/ScrollToTop';
-import { getLanguage } from '../server/client-locale/guessLocale';
+import "@babel/polyfill";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "./Routes";
+import ScrollToTop from "../Components/ScrollToTop";
+import { getLanguage } from "../server/client-locale/guessLocale";
 
 export default class extends React.Component {
 	constructor(props) {

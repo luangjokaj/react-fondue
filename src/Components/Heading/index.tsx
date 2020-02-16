@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeHeading } from './makeHeading';
+import React from "react";
+import { makeHeading } from "./makeHeading";
 
 export const H1 = makeHeading(1);
 export const H2 = makeHeading(2);

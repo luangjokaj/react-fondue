@@ -1,3 +1,3 @@
-import OtherProjects from './OtherProjects';
+import OtherProjects from "./OtherProjects";
 
 export default OtherProjects;

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import Tab from './Tab';
-const styles = require('./Tabs.css');
+import React, { Component } from "react";
+import classNames from "classnames";
+import Tab from "./Tab";
+const styles = require("./Tabs.css");
 
 interface TabProps {
 	children: any;

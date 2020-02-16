@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const favicon = require('../assets/img/favicon.ico');
+import React from "react";
+import { Helmet } from "react-helmet-async";
+const favicon = require("../assets/img/favicon.ico");
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === "production";
 
 interface HeadProps {
 	description?: string;
@@ -12,9 +12,9 @@ interface HeadProps {
 }
 
 function Head({
-	title = 'ReactFondue • Minimal boilerplate with code splitting, hot module reload and server side rendering',
-	description = 'ReactFondue is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.',
-	image = 'https://res.cloudinary.com/deep-impact-ag/image/upload/v1565467400/cherry/reactfondue/preview.jpg',
+	title = "ReactFondue • Minimal boilerplate with code splitting, hot module reload and server side rendering",
+	description = "ReactFondue is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.",
+	image = "https://res.cloudinary.com/deep-impact-ag/image/upload/v1565467400/cherry/reactfondue/preview.jpg",
 	children,
 }: HeadProps) {
 	return (

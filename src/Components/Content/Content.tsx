@@ -1,6 +1,6 @@
-import React from 'react';
-import classNames from 'classnames';
-const styles = require('./Content.css');
+import React from "react";
+import classNames from "classnames";
+const styles = require("./Content.css");
 
 interface ContentProps {
 	children: any;
