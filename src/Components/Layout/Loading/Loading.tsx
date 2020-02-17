@@ -1,7 +1,5 @@
 import React from "react";
-import ContentPusher from "../ContentPusher";
-import Readable from "../Readable";
-import { Container } from "../Content";
+import { ContentPusher, Container, Readable } from "../../Layout"
 const styles = require("./Loading.css");
 
 function Loading() {
