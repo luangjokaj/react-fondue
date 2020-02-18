@@ -324,12 +324,12 @@
 }
 
 @define-mixin containerChild {
-	padding-right: var(--margin-container-child-mobile);
-	padding-left: var(--margin-container-child-mobile);
+	padding-right: 0;
+	padding-left: 0;
 
 	@media (--screen-lg) {
-		padding-right: var(--margin-container-child-desktop);
-		padding-left: var(--margin-container-child-desktop);
+		padding-right: 0;
+		padding-left: 0;
 	}
 }
 
