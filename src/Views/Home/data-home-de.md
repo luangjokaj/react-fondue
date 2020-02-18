@@ -7,13 +7,13 @@
 
 |👇|Includes|
 |:-:|:---|
-|⚙| Babel 7|
+|🧙‍♂️| Babel 7|
 |📦| Webpack 4|
 |🤖| Express Server|
-|⚛| React 16|
+|🚀| React 16|
 |🎒| Redux|
 |🌈| TypeScript|
-|🕸| CSS Modules|
+|🕷| CSS Modules|
 |🎨| PostCSS|
 |💅| Styled Components|
 |🔥| Hot Module Replacement|
