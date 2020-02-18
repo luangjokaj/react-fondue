@@ -349,9 +349,6 @@
 	min-height: 1px;
 	padding-right: var(--gutter-col-mobile, 10px);
 	padding-left: var(--gutter-col-mobile, 10px);
-	flex-basis: 0;
-	flex-grow: 1;
-	max-width: 100%;
 	box-sizing: border-box;
 
 	@media (--screen-lg) {
