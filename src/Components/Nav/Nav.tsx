@@ -121,7 +121,11 @@ class Nav extends Component<NavProps, NavState> {
 					</ul>
 					<ul className={styles.poweredBy}>
 						<li>
-							<a href="https://www.riangle.com/" target="_blank">
+							<a
+								href="https://www.riangle.com/"
+								target="_blank"
+								aria-label="Riangle Homepage"
+							>
 								<Riangle />
 							</a>
 						</li>
