@@ -12,12 +12,16 @@ function OtherProjects() {
 						href="https://www.wordpressify.co"
 						target="_blank"
 						className={styles.linkLogo}
+						aria-label="WordPressify Homepage"
 					>
 						<Projects type="wordpressify" />
 					</a>
 					<span>Development workflow for WordPress themes.</span>
 					<div className={styles.linkWrapper}>
-						<a href="https://github.com/luangjokaj/wordpressify">
+						<a
+							href="https://github.com/luangjokaj/wordpressify"
+							aria-label="WordPressify Repository"
+						>
 							<GitHub />
 						</a>
 						<em>or</em>
@@ -25,6 +29,7 @@ function OtherProjects() {
 							href="https://www.wordpressify.co"
 							className={styles.websiteUrl}
 							target="_blank"
+							aria-label="WordPressify Homepage"
 						>
 							Visit Website
 						</a>
@@ -35,6 +40,7 @@ function OtherProjects() {
 						href="https://www.gopablo.co"
 						target="_blank"
 						className={styles.linkLogo}
+						aria-label="GoPablo Homepage"
 					>
 						<Projects type="gopablo" />
 					</a>
@@ -43,7 +49,10 @@ function OtherProjects() {
 						workflow.
 					</span>
 					<div className={styles.linkWrapper}>
-						<a href="https://github.com/luangjokaj/gopablo">
+						<a
+							href="https://github.com/luangjokaj/gopablo"
+							aria-label="GoPablo Repository"
+						>
 							<GitHub />
 						</a>
 						<em>or</em>
@@ -51,6 +60,7 @@ function OtherProjects() {
 							href="https://www.gopablo.co"
 							target="_blank"
 							className={styles.websiteUrl}
+							aria-label="GoPablo Homepage"
 						>
 							Visit Website
 						</a>
@@ -61,6 +71,7 @@ function OtherProjects() {
 						href="https://www.fuzzymail.co"
 						target="_blank"
 						className={styles.linkLogo}
+						aria-label="FuzzyMail Homepage"
 					>
 						<Projects type="fuzzymail" />
 					</a>
@@ -68,7 +79,10 @@ function OtherProjects() {
 						Email template generator. Making emails fun again.
 					</span>
 					<div className={styles.linkWrapper}>
-						<a href="https://github.com/luangjokaj/fuzzymail">
+						<a
+							href="https://github.com/luangjokaj/fuzzymail"
+							aria-label="FuzzyMail Repository"
+						>
 							<GitHub />
 						</a>
 						<em>or</em>
@@ -76,6 +90,7 @@ function OtherProjects() {
 							href="https://www.fuzzymail.co"
 							target="_blank"
 							className={styles.websiteUrl}
+							aria-label="FuzzyMail Homepage"
 						>
 							Visit Website
 						</a>
