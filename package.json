@@ -24,7 +24,7 @@
 	],
 	"homepage": "https://www.reactfondue.co",
 	"repository": "https://github.com/luangjokaj/react-fondue",
-	"author": "Luan Gjokaj <luan@riangle.com>",
+	"author": "Luan Gjokaj (https://www.riangle.com)",
 	"license": "MIT",
 	"dependencies": {
 		"@babel/cli": "^7.8.4",
@@ -118,8 +118,7 @@
 		"webpack-dev-middleware": "3.7.2",
 		"webpack-flush-chunks": "^2.0.3",
 		"webpack-hot-middleware": "2.25.0",
-		"webpack-hot-server-middleware": "^0.6.0",
-		"webpack-node-externals": "^1.7.2"
+		"webpack-hot-server-middleware": "^0.6.0"
 	},
 	"scripts": {
 		"prod": "NODE_ENV=production node src/server/main.js",
@@ -132,6 +131,6 @@
 		"format": "prettier --write \"./src/**/*.{js,json,ts,tsx}\" \"!.node_modules/**\""
 	},
 	"engines": {
-		"node": "10"
+		"node": "12"
 	}
 }
