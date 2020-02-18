@@ -347,13 +347,13 @@
 @define-mixin col {
 	position: relative;
 	min-height: 1px;
-	padding-right: var(--gutter-col-mobile, 10px);
-	padding-left: var(--gutter-col-mobile, 10px);
+	padding-right: var(--gutter-col-mobile);
+	padding-left: var(--gutter-col-mobile);
 	box-sizing: border-box;
 
 	@media (--screen-lg) {
-		padding-right: var(--gutter-col-desktop, 10px);
-		padding-left: var(--gutter-col-desktop, 10px);
+		padding-right: var(--gutter-col-desktop);
+		padding-left: var(--gutter-col-desktop);
 	}
 }
 
