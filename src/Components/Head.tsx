@@ -1,6 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-const favicon = require("../assets/img/favicon.ico");
+const favicon =
+	"https://react-fondue.s3-eu-west-1.amazonaws.com/meta/favicon.ico";
+const icon512 = "https://react-fondue.s3-eu-west-1.amazonaws.com/meta/512.png";
+const icon192 = "https://react-fondue.s3-eu-west-1.amazonaws.com/meta/192.png";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -28,25 +31,10 @@ function Head({
 				content="width=device-width, initial-scale=1"
 			/>
 			<link rel="shortcut icon" href={favicon} type="image/x-icon" />
-			<link
-				rel="apple-touch-icon"
-				sizes="512x512"
-				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1564693640/cherry/reactfondue/512.png"
-			/>
-			<link
-				rel="apple-touch-icon"
-				sizes="192x192"
-				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1564693542/cherry/reactfondue/icon192.png"
-			/>
-			<link
-				rel="apple-touch-icon-precomposed"
-				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1565468890/cherry/reactfondue/icon192.png"
-			/>
-			<link
-				rel="icon"
-				sizes="192x192"
-				href="https://res.cloudinary.com/deep-impact-ag/image/upload/v1565468890/cherry/reactfondue/icon192.png"
-			/>
+			<link rel="apple-touch-icon" sizes="512x512" href={icon512} />
+			<link rel="apple-touch-icon" sizes="192x192" href={icon192} />
+			<link rel="apple-touch-icon-precomposed" href={icon192} />
+			<link rel="icon" sizes="192x192" href={icon192} />
 			{description && <meta name="description" content={description} />}
 			{title && <meta property="og:title" content={title} />}
 			{description && (
