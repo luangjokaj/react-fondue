@@ -1,10 +1,3 @@
-/*********************************************************************
-**********************************************************************
-Cherry 0.0.1 - Design System
-Variables & Mixins
-**********************************************************************
-*********************************************************************/
-
 @import './mixins.css';
 
 @custom-media --screen-xs (min-width: 0);
@@ -49,7 +42,7 @@ Variables & Mixins
 
 	/* Fonts ------------------------------------------------------ */
 	--font-text: 'Roboto', sans-serif;
-	--font-head: 'Roboto', sans-serif;
+	--font-head: var(--font-text);
 	--font-special: var(--font-text);
 	--font-mono: 'Roboto Mono', monospace;
 
