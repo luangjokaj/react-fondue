@@ -50,7 +50,6 @@ class ReduxPage extends Component<ReduxPageProps, any> {
 							<ul className={styles.list}>
 								{this.renderSample()}
 							</ul>
-							<hr />
 							<h3>{this.props.counter}</h3>
 							<Button onClick={this.props.onIncrement}>
 								Increment
