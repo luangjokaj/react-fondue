@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
+import Prism from "prismjs";
 import Head from "../../Components/Head";
 import {
 	ContentPusher,
@@ -21,6 +22,10 @@ interface ReduxPageProps {
 }
 
 class ReduxPage extends Component<ReduxPageProps, any> {
+	componentDidMount() {
+		Prism.highlightAll();
+	}
+
 	renderSample() {
 		return this.props.data.map((dataItem: any) => {
 			return <li key={dataItem.id}>{dataItem.name}</li>;
