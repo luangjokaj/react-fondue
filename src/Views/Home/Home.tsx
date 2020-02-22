@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Prism from "prismjs";
 import Head from "../../Components/Head";
 import { ContentPusher, Container, Readable } from "../../Components/Layout";
 const styles = require("./Home.css");
@@ -12,6 +13,10 @@ interface HomeProps {
 }
 
 class Home extends Component<HomeProps, any> {
+	componentDidMount() {
+		Prism.highlightAll();
+	}
+
 	render() {
 		const { lang } = this.props.match.params;
 
