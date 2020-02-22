@@ -71,7 +71,7 @@
 	& table td,
 	& table th {
 		font-weight: 400;
-		padding: 5px 15px;
+		padding: 5px;
 		font-size: var(--size-small-desktop);
 		white-space: nowrap;
 		text-overflow: ellipsis;
@@ -87,9 +87,14 @@
 		color: var(--color-secondary);
 	}
 
-	& table th:first-child,
-	& table td:first-child {
+	& table th:first-of-type,
+	& table td:first-of-type {
 		padding-left: 15px;
+	}
+
+	& table th:last-of-type,
+	& table td:last-of-type {
+		padding-right: 15px;
 	}
 
 	& table tr th {
