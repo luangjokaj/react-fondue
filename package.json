@@ -105,7 +105,7 @@
 		"react-universal-component": "^4.0.1",
 		"redux": "^4.0.5",
 		"redux-thunk": "^2.3.0",
-		"sass": "^1.25.0",
+		"sass": "^1.26.0",
 		"sass-loader": "^8.0.2",
 		"serialize-javascript": "^3.0.0",
 		"style-loader": "^1.1.3",
