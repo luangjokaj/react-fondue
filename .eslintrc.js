@@ -10,7 +10,6 @@ const eslintcfg = {
 		'react/jsx-filename-extension': 0,
 		'react/jsx-indent': [2, 'tab'],
 		'react/jsx-indent-props': [2, 'tab'],
-		indent: [2, 'tab', { SwitchCase: 1 }],
 		'import/no-extraneous-dependencies': 0,
 		'import/newline-after-import': 0,
 		'comma-dangle': [
