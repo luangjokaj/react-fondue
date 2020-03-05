@@ -36,9 +36,25 @@
 		}
 	}
 
-	&.noLists {
-		& ul,
+	&.noOrderedLists {
 		& ol {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			& li {
+				padding-left: 0;
+				margin-left: 0;
+
+				&:before {
+					content: none;
+				}
+			}
+		}
+	}
+
+	&.noUnorderedLists {
+		& ul {
 			list-style: none;
 			margin: 0;
 			padding: 0;
