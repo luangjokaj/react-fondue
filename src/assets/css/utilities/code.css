@@ -72,7 +72,6 @@
 	& table th {
 		font-weight: 400;
 		padding: 5px;
-		font-size: var(--size-small-desktop);
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
