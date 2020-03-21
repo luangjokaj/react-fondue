@@ -40,7 +40,7 @@
 		"@babel/preset-env": "^7.9.0",
 		"@babel/preset-react": "^7.9.1",
 		"@babel/register": "^7.9.0",
-		"@babel/runtime": "^7.9.0",
+		"@babel/runtime": "^7.9.2",
 		"@hot-loader/react-dom": "^16.13.0",
 		"@intervolga/optimize-cssnano-plugin": "^1.0.6",
 		"@types/classnames": "^2.2.10",
