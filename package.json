@@ -44,7 +44,7 @@
 		"@hot-loader/react-dom": "^16.13.0",
 		"@intervolga/optimize-cssnano-plugin": "^1.0.6",
 		"@types/classnames": "^2.2.10",
-		"@types/node": "^13.13.0",
+		"@types/node": "^13.13.1",
 		"@types/prismjs": "^1.16.0",
 		"@types/react": "^16.9.34",
 		"@types/react-dom": "^16.9.6",
