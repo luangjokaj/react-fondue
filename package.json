@@ -109,7 +109,7 @@
 		"sass": "^1.26.5",
 		"sass-loader": "^8.0.2",
 		"serialize-javascript": "^3.0.0",
-		"style-loader": "^1.2.0",
+		"style-loader": "^1.2.1",
 		"styled-components": "^5.1.0",
 		"stylelint": "^13.3.3",
 		"typescript": "^3.8.3",
