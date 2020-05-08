@@ -18,10 +18,15 @@
 	--margin-container-desktop: 20px;
 	--margin-container-child-mobile: 10px;
 	--margin-container-child-desktop: 10px;
-	--margin-row-mobile: -10px;
-	--margin-row-desktop: -10px;
-	--gutter-col-mobile: 10px;
-	--gutter-col-desktop: 10px;
+
+	--margin-row-none: 0;
+	--margin-row-default: -10px;
+	--margin-row-medium: -30px;
+	--margin-row-big: -50px;
+	--gutter-col-none: 0;
+	--gutter-col-default: 10px;
+	--gutter-col-medium: 30px;
+	--gutter-col-big: 50px;
 
 	/* Colors ----------------------------------------------------- */
 	--color-primary: #1F2D3D;
