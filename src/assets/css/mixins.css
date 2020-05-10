@@ -386,6 +386,18 @@
 		}
 	}
 
+	& div[xs-gaps="medium"] {
+		@media (--screen-xs) {
+			margin-right: var(--margin-row-medium);
+			margin-left: var(--margin-row-medium);
+
+			& [data-col] {
+				padding-right: var(--gutter-col-medium);
+				padding-left: var(--gutter-col-medium);
+			}
+		}
+	}
+
 	& div[xs-gaps="big"] {
 		@media (--screen-xs) {
 			margin-right: var(--margin-row-big);
@@ -418,6 +430,18 @@
 			& [data-col] {
 				padding-right: var(--gutter-col-default);
 				padding-left: var(--gutter-col-default);
+			}
+		}
+	}
+
+	& div[sm-gaps="medium"] {
+		@media (--screen-sm) {
+			margin-right: var(--margin-row-medium);
+			margin-left: var(--margin-row-medium);
+
+			& [data-col] {
+				padding-right: var(--gutter-col-medium);
+				padding-left: var(--gutter-col-medium);
 			}
 		}
 	}
@@ -458,6 +482,18 @@
 		}
 	}
 
+	& div[md-gaps="medium"] {
+		@media (--screen-md) {
+			margin-right: var(--margin-row-medium);
+			margin-left: var(--margin-row-medium);
+
+			& [data-col] {
+				padding-right: var(--gutter-col-medium);
+				padding-left: var(--gutter-col-medium);
+			}
+		}
+	}
+
 	& div[md-gaps="big"] {
 		@media (--screen-md) {
 			margin-right: var(--margin-row-big);
@@ -490,6 +526,18 @@
 			& [data-col] {
 				padding-right: var(--gutter-col-default);
 				padding-left: var(--gutter-col-default);
+			}
+		}
+	}
+
+	& div[lg-gaps="medium"] {
+		@media (--screen-lg) {
+			margin-right: var(--margin-row-medium);
+			margin-left: var(--margin-row-medium);
+
+			& [data-col] {
+				padding-right: var(--gutter-col-medium);
+				padding-left: var(--gutter-col-medium);
 			}
 		}
 	}
@@ -530,6 +578,18 @@
 		}
 	}
 
+	& div[xl-gaps="medium"] {
+		@media (--screen-xl) {
+			margin-right: var(--margin-row-medium);
+			margin-left: var(--margin-row-medium);
+
+			& [data-col] {
+				padding-right: var(--gutter-col-medium);
+				padding-left: var(--gutter-col-medium);
+			}
+		}
+	}
+
 	& div[xl-gaps="big"] {
 		@media (--screen-xl) {
 			margin-right: var(--margin-row-big);
@@ -566,6 +626,18 @@
 		}
 	}
 
+	& div[xxl-gaps="medium"] {
+		@media (--screen-xxl) {
+			margin-right: var(--margin-row-medium);
+			margin-left: var(--margin-row-medium);
+
+			& [data-col] {
+				padding-right: var(--gutter-col-medium);
+				padding-left: var(--gutter-col-medium);
+			}
+		}
+	}
+
 	& div[xxl-gaps="big"] {
 		@media (--screen-xxl) {
 			margin-right: var(--margin-row-big);
@@ -598,6 +670,18 @@
 			& [data-col] {
 				padding-right: var(--gutter-col-default);
 				padding-left: var(--gutter-col-default);
+			}
+		}
+	}
+
+	& div[xxxl-gaps="medium"] {
+		@media (--screen-xxxl) {
+			margin-right: var(--margin-row-medium);
+			margin-left: var(--margin-row-medium);
+
+			& [data-col] {
+				padding-right: var(--gutter-col-medium);
+				padding-left: var(--gutter-col-medium);
 			}
 		}
 	}
