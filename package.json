@@ -65,7 +65,7 @@
 		"classnames": "^2.2.6",
 		"compression-webpack-plugin": "^4.0.0",
 		"cookie-parser": "^1.4.5",
-		"copy-webpack-plugin": "^5.1.1",
+		"copy-webpack-plugin": "^6.0.1",
 		"css-hot-loader": "^1.4.4",
 		"css-loader": "^3.5.3",
 		"css-modules": "^0.3.0",
@@ -121,7 +121,7 @@
 		"webpack-dev-middleware": "3.7.2",
 		"webpack-flush-chunks": "^2.0.3",
 		"webpack-hot-middleware": "2.25.0",
-		"webpack-hot-server-middleware": "^0.6.0"
+		"webpack-hot-server-middleware": "^0.6.1"
 	},
 	"scripts": {
 		"prod": "NODE_ENV=production node src/server/main.js",

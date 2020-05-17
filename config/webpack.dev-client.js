@@ -1,31 +1,31 @@
-const path = require('path');
-const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const createStyledComponentsTransformer = require('typescript-plugin-styled-components')
+const createStyledComponentsTransformer = require("typescript-plugin-styled-components")
 	.default;
 const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = {
-	name: 'client',
+	name: "client",
 	entry: {
-		vendor: ['react', 'react-dom'],
+		vendor: ["react", "react-dom"],
 		main: [
-			'react-hot-loader/patch',
-			'@babel/runtime/regenerator',
-			'webpack-hot-middleware/client?reload=true',
-			'./src/main.js',
+			"react-hot-loader/patch",
+			"@babel/runtime/regenerator",
+			"webpack-hot-middleware/client?reload=true",
+			"./src/main.js",
 		],
 	},
-	mode: 'development',
+	mode: "development",
 	output: {
-		filename: '[name]-bundle.[hash].js',
-		chunkFilename: '[name].[hash].js',
-		path: path.resolve(__dirname, '../dist'),
-		publicPath: '/',
+		filename: "[name]-bundle.[hash].js",
+		chunkFilename: "[name].[hash].js",
+		path: path.resolve(__dirname, "../dist"),
+		publicPath: "/",
 	},
-	devtool: 'source-map',
+	devtool: "source-map",
 	module: {
 		rules: [
 			{
@@ -33,16 +33,16 @@ module.exports = {
 				exclude: /node_modules/,
 				use: [
 					{
-						loader: 'babel-loader',
+						loader: "babel-loader",
 					},
 				],
 			},
 			{
 				test: /\.tsx?$/,
 				loader: [
-					'babel-loader',
+					"babel-loader",
 					{
-						loader: 'awesome-typescript-loader',
+						loader: "awesome-typescript-loader",
 						options: {
 							useCache: true,
 							getCustomTransformers: () => ({
@@ -55,25 +55,25 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: [
-					'css-hot-loader',
+					"css-hot-loader",
 					MiniCssExtractPlugin.loader,
 					{
-						loader: 'css-loader',
+						loader: "css-loader",
 						options: {
 							sourceMap: true,
 							importLoaders: 1,
 							modules: {
-								mode: 'local',
+								mode: "local",
 								localIdentName:
-									'[name]__[local]--[hash:base64:5]',
+									"[name]__[local]--[hash:base64:5]",
 							},
 						},
 					},
 					{
-						loader: 'postcss-loader',
+						loader: "postcss-loader",
 						options: {
 							sourceMap: true,
-							ident: 'postcss',
+							ident: "postcss",
 						},
 					},
 				],
@@ -81,25 +81,25 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				use: [
-					'css-hot-loader',
+					"css-hot-loader",
 					MiniCssExtractPlugin.loader,
 					{
-						loader: 'css-loader',
+						loader: "css-loader",
 						options: {
 							sourceMap: true,
 							importLoaders: 1,
 							modules: {
-								mode: 'local',
+								mode: "local",
 								localIdentName:
-									'[name]__[local]--[hash:base64:5]',
+									"[name]__[local]--[hash:base64:5]",
 							},
 						},
 					},
 					{
-						loader: 'sass-loader',
+						loader: "sass-loader",
 						options: {
 							// Prefer `dart-sass`
-							implementation: require('sass'),
+							implementation: require("sass"),
 						},
 					},
 				],
@@ -108,10 +108,10 @@ module.exports = {
 				test: /\.(jpg|svg|png|ico|gif|eot|otf|woff|woff2|ttf)$/,
 				use: [
 					{
-						loader: 'file-loader',
+						loader: "file-loader",
 						options: {
 							esModule: false,
-							name: 'images/[name].[ext]',
+							name: "images/[name].[ext]",
 						},
 					},
 				],
@@ -120,7 +120,7 @@ module.exports = {
 				test: /\.md$/,
 				use: [
 					{
-						loader: 'markdown-with-front-matter-loader',
+						loader: "markdown-with-front-matter-loader",
 					},
 				],
 			},
@@ -128,26 +128,26 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			'react-dom': '@hot-loader/react-dom',
+			"react-dom": "@hot-loader/react-dom",
 		},
-		extensions: ['.ts', '.tsx', '.js', '.json', '.jsx', '.scss'],
+		extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".scss"],
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: '[name].css',
-			chunkFilename: '[name].css',
+			filename: "[name].css",
+			chunkFilename: "[name].css",
 		}),
 		new webpack.DefinePlugin({
-			'process.env': {
-				NODE_ENV: JSON.stringify('development'),
+			"process.env": {
+				NODE_ENV: JSON.stringify("development"),
 				WEBPACK: true,
 			},
 		}),
-		new CopyWebpackPlugin([
-			{
-				from: 'public',
-			},
-		]),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: "public", to: "public" },
+			],
+		}),
 		new webpack.HotModuleReplacementPlugin(),
 	],
 };
