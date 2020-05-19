@@ -111,7 +111,7 @@
 		"serialize-javascript": "^3.0.0",
 		"style-loader": "^1.2.1",
 		"styled-components": "^5.1.0",
-		"stylelint": "^13.4.0",
+		"stylelint": "^13.4.1",
 		"typescript": "^3.9.2",
 		"typescript-plugin-styled-components": "^1.4.4",
 		"url-loader": "4.1.0",
