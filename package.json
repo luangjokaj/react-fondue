@@ -76,7 +76,7 @@
 		"eslint-plugin-typescript": "^0.14.0",
 		"express": "^4.17.1",
 		"express-static-gzip": "^2.0.6",
-		"extract-css-chunks-webpack-plugin": "^4.7.4",
+		"extract-css-chunks-webpack-plugin": "^4.7.5",
 		"extract-loader": "^5.0.1",
 		"file-loader": "^6.0.0",
 		"import": "0.0.6",
