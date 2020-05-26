@@ -145,7 +145,7 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
-				{ from: "public", to: "public" },
+				{ from: "./**", to: "./", context: "./public" },
 			],
 		}),
 		new webpack.HotModuleReplacementPlugin(),
