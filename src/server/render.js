@@ -1,16 +1,16 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router";
-import createStore from "./createStore";
 import { Provider } from "react-redux";
 import { matchRoutes } from "react-router-config";
-import Routes, { routes } from "../App/Routes";
 import { HelmetProvider } from "react-helmet-async";
 import { flushChunkNames } from "react-universal-component/server";
 import flushChunks from "webpack-flush-chunks";
+import serialize from "serialize-javascript";
+import Routes, { routes } from "../App/Routes";
+import createStore from "./createStore";
 import { guessLocale } from "./client-locale/guessLocale";
 import { LOCALE_COOKIE_NAME, COOKIE_MAX_AGE } from "./client-locale/constants";
-import serialize from "serialize-javascript";
 const store = createStore();
 
 export default ({ clientStats }) => (req, res) => {
