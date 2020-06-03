@@ -7,20 +7,25 @@ interface ContentPusherProps {
 	children: any;
 	className?: string;
 	delay?: number;
+	id?: string;
+	noMinHeight?: boolean;
 }
 
 function ContentPusher({
 	children,
 	className,
 	delay = 600,
+	id,
+	noMinHeight,
 }: ContentPusherProps) {
 	return (
 		<AppearAfter
-			className={classNames(styles.contentPusher, className)}
-			visibleClassName={styles.visible}
+			className={classNames(styles.contentPusher, className, {
+				[styles.noMinHeight]: noMinHeight,
+			})}
 			delay={delay}
 		>
-			<div>{children}</div>
+			<div id={id}>{children}</div>
 		</AppearAfter>
 	);
 }

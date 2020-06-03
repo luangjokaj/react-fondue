@@ -38,25 +38,21 @@ class ReduxPage extends Component<ReduxPageProps, any> {
 		return (
 			<Fragment>
 				<Head />
-				<ContentPusher>
-					<Container>
-						<Readable>
-							<div
-								dangerouslySetInnerHTML={{
-									__html: data.__content,
-								}}
-							/>
-							<hr />
-							<ul className={styles.list}>
-								{this.renderSample()}
-							</ul>
-							<h3>{this.props.counter}</h3>
-							<Button onClick={this.props.onIncrement}>
-								Increment
-							</Button>
-						</Readable>
-					</Container>
-				</ContentPusher>
+				<Container>
+					<Readable>
+						<div
+							dangerouslySetInnerHTML={{
+								__html: data.__content,
+							}}
+						/>
+						<hr />
+						<ul className={styles.list}>{this.renderSample()}</ul>
+						<h3>{this.props.counter}</h3>
+						<Button onClick={this.props.onIncrement}>
+							Increment
+						</Button>
+					</Readable>
+				</Container>
 			</Fragment>
 		);
 	}

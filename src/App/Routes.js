@@ -8,6 +8,7 @@ import Footer from "../Components/Footer";
 import { Loading } from "../Components/Layout";
 import "../assets/css/styles.css";
 import { loadData } from "../Views/ReduxPage/ReduxPage";
+import { ContentPusher } from "../Components/Layout";
 import { AVAILABLE_LOCALES } from "../server/client-locale/constants";
 
 const isProd = process.env.NODE_ENV === "production";
@@ -45,23 +46,33 @@ export default ({ staticContext, lang }) => (
 	<Fragment>
 		{isProd ? <GoogleTagManager gtmId="GTM-WFTXGC8" /> : ""}
 		<Nav lang={lang} />
-		<Switch>
-			{routes.map((route) => (
-				<Route
-					key={route.path}
-					render={(routeProps) => (
-						<UniversalComponent page={route.page} {...routeProps} />
-					)}
-					{...route}
+		<ContentPusher id="content-pusher">
+			<Switch>
+				{routes.map((route) => (
+					<Route
+						key={route.path}
+						render={(routeProps) => (
+							<UniversalComponent
+								page={route.page}
+								{...routeProps}
+							/>
+						)}
+						{...route}
+					/>
+				))}
+				<RedirectWithStatus
+					status={301}
+					exact
+					from="/"
+					to={`/${lang}`}
 				/>
-			))}
-			<RedirectWithStatus status={301} exact from="/" to={`/${lang}`} />
-			<Route
-				render={(routeProps) => (
-					<UniversalComponent page="NotFound" {...routeProps} />
-				)}
-			/>
-		</Switch>
+				<Route
+					render={(routeProps) => (
+						<UniversalComponent page="NotFound" {...routeProps} />
+					)}
+				/>
+			</Switch>
+		</ContentPusher>
 		<Footer />
 	</Fragment>
 );

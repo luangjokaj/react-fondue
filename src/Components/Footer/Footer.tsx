@@ -11,7 +11,7 @@ interface FooterProps {
 function Footer({ className }: FooterProps) {
 	return (
 		<footer className={classNames(styles.footer, className)}>
-			<ContentPusher>
+			<ContentPusher noMinHeight>
 				<a
 					href="https://github.com/luangjokaj/react-fondue"
 					target="_blank"

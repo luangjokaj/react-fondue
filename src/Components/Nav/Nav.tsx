@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import AppearAfter from "../AppearAfter";
 import { Link, NavLink, withRouter } from "react-router-dom";
+import AppearAfter from "../AppearAfter";
 import NavItem from "./NavItem";
 import { Logo, Riangle } from "../../assets/svg";
+import { clickEvent } from "../util";
 const styles = require("./Nav.css");
 
 interface NavProps {
 	location: any;
 	lang: string;
+	history: any;
 }
 
 interface NavState {
@@ -28,13 +30,14 @@ class Nav extends Component<NavProps, NavState> {
 		this.setState({ menu: !this.state.menu });
 	};
 
-	closeMenu = () => {
+	closeMenu = (event: any, to: any, push: any) => {
 		this.setState({ menu: false });
+		clickEvent(event, to, push);
 	};
 
 	render() {
 		const { menu } = this.state;
-		const { location, lang } = this.props;
+		const { location, lang, history } = this.props;
 
 		return (
 			<AppearAfter
@@ -42,7 +45,11 @@ class Nav extends Component<NavProps, NavState> {
 				visibleClassName={styles.visible}
 			>
 				<header>
-					<Link to={`/${lang}`} className={styles.logo}>
+					<Link
+						to={`/${lang}`}
+						onClick={(e) => clickEvent(e, `/${lang}`, history.push)}
+						className={styles.logo}
+					>
 						<Logo />
 						<h1>
 							ReactFondue - Minimal boilerplate with code
@@ -78,7 +85,13 @@ class Nav extends Component<NavProps, NavState> {
 									<NavLink
 										to={`/${lang}`}
 										activeClassName={styles.active}
-										onClick={this.closeMenu}
+										onClick={(e: any) =>
+											this.closeMenu(
+												e,
+												`/${lang}`,
+												history.push,
+											)
+										}
 										exact
 									>
 										Introduction
@@ -88,7 +101,13 @@ class Nav extends Component<NavProps, NavState> {
 									<NavLink
 										to={`/${lang}/redux-store`}
 										activeClassName={styles.active}
-										onClick={this.closeMenu}
+										onClick={(e: any) =>
+											this.closeMenu(
+												e,
+												`/${lang}/redux-store`,
+												history.push,
+											)
+										}
 										exact
 									>
 										Redux Store
@@ -111,7 +130,13 @@ class Nav extends Component<NavProps, NavState> {
 									<NavLink
 										to={`/${lang}/about`}
 										activeClassName={styles.active}
-										onClick={this.closeMenu}
+										onClick={(e: any) =>
+											this.closeMenu(
+												e,
+												`/${lang}/about`,
+												history.push,
+											)
+										}
 										exact
 									>
 										ReactFondue
