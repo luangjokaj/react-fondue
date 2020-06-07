@@ -1,7 +1,9 @@
 # [![ReactFondue](https://svgshare.com/i/BAq.svg)](https://www.reactfondue.co/)
  [![CircleCI](https://circleci.com/gh/luangjokaj/react-fondue/tree/master.svg?style=svg)](https://circleci.com/gh/luangjokaj/react-fondue/tree/master) [![Dependencies](https://david-dm.org/luangjokaj/react-fondue/status.svg)](https://david-dm.org/luangjokaj/react-fondue)
 
-[ReactFondue](https://www.reactfondue.co/) is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.
+| Information | Discord | Donate |
+|:------------|:---------|:-------|
+| [ReactFondue](https://www.reactfondue.co/) is minimal React boilerplate with support for code splitting, hot module reload and server side rendering.| [![Discord server](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.icons8.com%2Fcolor%2F2x%2Fdiscord-logo.png&f=1&nofb=1)](https://discord.gg/qE7e93) | [![BuyMeACoffee](https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-1.svg)](https://www.buymeacoffee.com/luangjokaj) |
 
 [![Technologies](https://react-fondue.s3-eu-west-1.amazonaws.com/utlities/tech-stack.svg)](https://www.reactfondue.co/)
 
