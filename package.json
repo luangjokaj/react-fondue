@@ -107,7 +107,7 @@
 		"redux": "^4.0.5",
 		"redux-thunk": "^2.3.0",
 		"sass": "^1.26.9",
-		"sass-loader": "^8.0.2",
+		"sass-loader": "^9.0.1",
 		"serialize-javascript": "^4.0.0",
 		"style-loader": "^1.2.1",
 		"styled-components": "^5.1.1",
