@@ -51,11 +51,11 @@ module.exports = {
 					{
 						loader: "css-loader",
 						options: {
-							onlyLocals: true,
 							modules: {
 								mode: "local",
 								localIdentName:
-									"[name]__[local]--[hash:base64:5]",
+								"[name]__[local]--[hash:base64:5]",
+								namedExport: true,
 							},
 						},
 					},
