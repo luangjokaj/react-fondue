@@ -74,7 +74,6 @@ module.exports = {
 							modules: {
 								mode: 'local',
 								localIdentName: '[hash:base64:5]',
-								namedExport: true,
 							},
 						},
 					},

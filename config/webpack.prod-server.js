@@ -50,9 +50,9 @@ module.exports = {
 						loader: 'css-loader',
 						options: {
 							modules: {
-								namedExport: true,
 								mode: 'local',
 								localIdentName: '[hash:base64:5]',
+								namedExport: true,
 							},
 						},
 					},
