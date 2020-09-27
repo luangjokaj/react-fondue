@@ -80,7 +80,10 @@ module.exports = {
 					{
 						loader: 'postcss-loader',
 						options: {
-							ident: 'postcss',
+							postcssOptions: {
+								config: true,
+								ident: "postcss",
+							},
 						},
 					},
 				],

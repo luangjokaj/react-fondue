@@ -73,7 +73,10 @@ module.exports = {
 						loader: "postcss-loader",
 						options: {
 							sourceMap: true,
-							ident: "postcss",
+							postcssOptions: {
+								config: true,
+								ident: "postcss",
+							},
 						},
 					},
 				],
@@ -144,9 +147,7 @@ module.exports = {
 			},
 		}),
 		new CopyWebpackPlugin({
-			patterns: [
-				{ from: "./**", to: "./", context: "./public" },
-			],
+			patterns: [{ from: "./**", to: "./", context: "./public" }],
 		}),
 		new webpack.HotModuleReplacementPlugin(),
 	],
