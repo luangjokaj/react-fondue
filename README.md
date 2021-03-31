@@ -1,3 +1,4 @@
+# DEPRECATED: This repository is not in use anymore. Please check out: https://www.nextify.me/
 # [![ReactFondue](https://svgshare.com/i/BAq.svg)](https://www.reactfondue.co/)
  [![CircleCI](https://circleci.com/gh/luangjokaj/react-fondue/tree/master.svg?style=svg)](https://circleci.com/gh/luangjokaj/react-fondue/tree/master) [![Dependencies](https://david-dm.org/luangjokaj/react-fondue/status.svg)](https://david-dm.org/luangjokaj/react-fondue)
 
